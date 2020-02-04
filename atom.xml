@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-01-27T14:26:23.796Z</updated>
+    <updated>2020-02-04T10:05:54.875Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
-    <link rel="self" href="https://zjp693.github.io//atom.xml"/>
+    <link rel="self" href="https://zjp693.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://zjp693.github.io//images/avatar.png</logo>
-    <icon>https://zjp693.github.io//favicon.ico</icon>
+    <logo>https://zjp693.github.io/images/avatar.png</logo>
+    <icon>https://zjp693.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[数组]]></title>
-        <id>https://zjp693.github.io//post/shu-zu</id>
-        <link href="https://zjp693.github.io//post/shu-zu">
+        <id>https://zjp693.github.io/post/shu-zu</id>
+        <link href="https://zjp693.github.io/post/shu-zu">
         </link>
         <updated>2020-01-05T16:02:59.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-数组">1 - 数组</h2>
@@ -54,7 +54,7 @@ var  数组名 = ['小白','小黑','大黄','瑞奇'];
 </ul>
 <h3 id="13-获取数组中的元素">1.3 获取数组中的元素</h3>
 <p>​		索引 (下标) ：用来访问数组元素的序号（数组下标从 0 开始）。</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%871.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="images%5C%E5%9B%BE%E7%89%871.png" alt="" loading="lazy"></figure>
 <p>​		数组可以通过索引来访问、设置、修改对应的数组元素，可以通过“数组名[索引]”的形式来获取数组中的元素。</p>
 <pre><code class="language-js">// 定义数组
 var arrStus = [1,2,3];
@@ -143,7 +143,7 @@ function 函数名() {
 </li>
 <li>
 <p>简单理解：封装类似于将电脑配件整合组装到机箱中 ( 类似快递打包）</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%872.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="images%5C%E5%9B%BE%E7%89%872.png" alt="" loading="lazy"></figure>
 <p>例子：封装计算1-100累加和</p>
 <pre><code class="language-js">/* 
    计算1-100之间值的函数
@@ -169,7 +169,7 @@ getSum();
 </li>
 <li>
 <p>实参：函数调用时传入小括号内的真实数据</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%873.png" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="images%5C%E5%9B%BE%E7%89%873.png" alt="" loading="lazy"></figure>
 <p>​	参数的作用 : 在函数内部某些值不能固定，我们可以通过参数在调用函数时传递不同的值进去。</p>
 <p>函数参数的运用：</p>
 <pre><code class="language-js">// 带参数的函数声明
@@ -187,7 +187,7 @@ function 函数名(形参1, 形参2 , 形参3...) { // 可以定义任意多的�
 </li>
 </ul>
 <h4 id="函数形参和实参数量不匹配时">函数形参和实参数量不匹配时</h4>
-<p><img src="images%5C%E5%9B%BE%E7%89%874.png" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="images%5C%E5%9B%BE%E7%89%874.png" alt="" loading="lazy"></figure>
 <pre><code>注意：在JavaScript中，形参的默认值是undefined。
 </code></pre>
 <p>小结：</p>
@@ -272,8 +272,8 @@ fn();
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea+Github快速教程]]></title>
-        <id>https://zjp693.github.io//post/grideagithub-kuai-su-jiao-cheng</id>
-        <link href="https://zjp693.github.io//post/grideagithub-kuai-su-jiao-cheng">
+        <id>https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng</id>
+        <link href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng">
         </link>
         <updated>2020-01-05T11:11:36.000Z</updated>
         <content type="html"><![CDATA[<p>想知道如何使用Gridea吗？<br>
@@ -335,8 +335,8 @@ Defender<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://zjp693.github.io//post/hello-gridea</id>
-        <link href="https://zjp693.github.io//post/hello-gridea">
+        <id>https://zjp693.github.io/post/hello-gridea</id>
+        <link href="https://zjp693.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>

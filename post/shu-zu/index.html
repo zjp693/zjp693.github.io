@@ -2,92 +2,132 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>数组 | Gridea</title>
+<title>Gridea</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1580135180185">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1580810638772">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://zjp693.github.io//atom.xml">
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://zjp693.github.io/">
-  <img class="avatar" src="https://zjp693.github.io//images/avatar.png?v=1580135180185" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://zjp693.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1580810638772" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E6%95%B0%E7%BB%84">1 - 数组</a>
+<ul>
+<li><a href="#11-%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5">1.1 数组的概念</a></li>
+<li><a href="#12-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84">1.2 创建数组</a></li>
+<li><a href="#13-%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0">1.3 获取数组中的元素</a></li>
+<li><a href="#14-%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84">1.4 遍历数组</a></li>
+<li><a href="#15-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0">1.5 数组中新增元素</a></li>
+</ul>
+</li>
+<li><a href="#2-%E5%87%BD%E6%95%B0">2 - 函数</a>
+<ul>
+<li><a href="#21-%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5">2.1 函数的概念</a></li>
+<li><a href="#22-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8">2.2 函数的使用</a>
+<ul>
+<li><a href="#%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0">声明函数</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0">调用函数</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85">函数的封装</a></li>
+</ul>
+</li>
+<li><a href="#23-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">2.3 函数的参数</a>
+<ul>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%AD%E6%B3%95">函数参数语法</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%BD%A2%E5%8F%82%E5%92%8C%E5%AE%9E%E5%8F%82%E6%95%B0%E9%87%8F%E4%B8%8D%E5%8C%B9%E9%85%8D%E6%97%B6">函数形参和实参数量不匹配时</a></li>
+</ul>
+</li>
+<li><a href="#24-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC">2.4 函数的返回值</a>
+<ul>
+<li><a href="#return-%E8%AF%AD%E5%8F%A5">return 语句</a></li>
+<li><a href="#break-continue-return-%E7%9A%84%E5%8C%BA%E5%88%AB">break ,continue ,return 的区别</a></li>
+</ul>
+</li>
+<li><a href="#25-arguments%E7%9A%84%E4%BD%BF%E7%94%A8">2.5 arguments的使用</a></li>
+<li><a href="#26-%E5%87%BD%E6%95%B0%E6%A1%88%E4%BE%8B">2.6 函数案例</a></li>
+<li><a href="#27-%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F">2.7 函数的两种声明方式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
     
       
-        <a href="/" class="menu">
+        <a href="/" class="menu" style="animation-delay: 0s">
           首页
         </a>
       
     
       
-        <a href="/archives" class="menu">
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
           归档
         </a>
       
     
       
-        <a href="/tags" class="menu">
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
           标签
         </a>
       
     
       
-        <a href="/post/about" class="menu">
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
           关于
         </a>
       
     
   </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
-
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              数组
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-01-06
-              </span>
-              <span>
-                3 min read
-              </span>
-              
-            </div>
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="1-数组">1 - 数组</h2>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">数组</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-01-06 / 8 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="1-数组">1 - 数组</h2>
 <h3 id="11-数组的概念">1.1 数组的概念</h3>
 <ul>
 <li>数组可以把一组相关的数据一起存放，并提供方便的访问(获取）方式。</li>
@@ -125,7 +165,7 @@ var  数组名 = ['小白','小黑','大黄','瑞奇'];
 </ul>
 <h3 id="13-获取数组中的元素">1.3 获取数组中的元素</h3>
 <p>​		索引 (下标) ：用来访问数组元素的序号（数组下标从 0 开始）。</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%871.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="images%5C%E5%9B%BE%E7%89%871.png" alt="" loading="lazy"></figure>
 <p>​		数组可以通过索引来访问、设置、修改对应的数组元素，可以通过“数组名[索引]”的形式来获取数组中的元素。</p>
 <pre><code class="language-js">// 定义数组
 var arrStus = [1,2,3];
@@ -214,7 +254,7 @@ function 函数名() {
 </li>
 <li>
 <p>简单理解：封装类似于将电脑配件整合组装到机箱中 ( 类似快递打包）</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%872.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="images%5C%E5%9B%BE%E7%89%872.png" alt="" loading="lazy"></figure>
 <p>例子：封装计算1-100累加和</p>
 <pre><code class="language-js">/* 
    计算1-100之间值的函数
@@ -240,7 +280,7 @@ getSum();
 </li>
 <li>
 <p>实参：函数调用时传入小括号内的真实数据</p>
-<p><img src="images%5C%E5%9B%BE%E7%89%873.png" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="images%5C%E5%9B%BE%E7%89%873.png" alt="" loading="lazy"></figure>
 <p>​	参数的作用 : 在函数内部某些值不能固定，我们可以通过参数在调用函数时传递不同的值进去。</p>
 <p>函数参数的运用：</p>
 <pre><code class="language-js">// 带参数的函数声明
@@ -258,7 +298,7 @@ function 函数名(形参1, 形参2 , 形参3...) { // 可以定义任意多的�
 </li>
 </ul>
 <h4 id="函数形参和实参数量不匹配时">函数形参和实参数量不匹配时</h4>
-<p><img src="images%5C%E5%9B%BE%E7%89%874.png" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="images%5C%E5%9B%BE%E7%89%874.png" alt="" loading="lazy"></figure>
 <pre><code>注意：在JavaScript中，形参的默认值是undefined。
 </code></pre>
 <p>小结：</p>
@@ -340,117 +380,129 @@ fn();
 </li>
 </ul>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#1-%E6%95%B0%E7%BB%84">1 - 数组</a>
-<ul>
-<li><a href="#11-%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5">1.1 数组的概念</a></li>
-<li><a href="#12-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84">1.2 创建数组</a></li>
-<li><a href="#13-%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0">1.3 获取数组中的元素</a></li>
-<li><a href="#14-%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84">1.4 遍历数组</a></li>
-<li><a href="#15-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0">1.5 数组中新增元素</a></li>
-</ul>
-</li>
-<li><a href="#2-%E5%87%BD%E6%95%B0">2 - 函数</a>
-<ul>
-<li><a href="#21-%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5">2.1 函数的概念</a></li>
-<li><a href="#22-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8">2.2 函数的使用</a>
-<ul>
-<li><a href="#%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0">声明函数</a></li>
-<li><a href="#%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0">调用函数</a></li>
-<li><a href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85">函数的封装</a></li>
-</ul>
-</li>
-<li><a href="#23-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0">2.3 函数的参数</a>
-<ul>
-<li><a href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%AD%E6%B3%95">函数参数语法</a></li>
-<li><a href="#%E5%87%BD%E6%95%B0%E5%BD%A2%E5%8F%82%E5%92%8C%E5%AE%9E%E5%8F%82%E6%95%B0%E9%87%8F%E4%B8%8D%E5%8C%B9%E9%85%8D%E6%97%B6">函数形参和实参数量不匹配时</a></li>
-</ul>
-</li>
-<li><a href="#24-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC">2.4 函数的返回值</a>
-<ul>
-<li><a href="#return-%E8%AF%AD%E5%8F%A5">return 语句</a></li>
-<li><a href="#break-continue-return-%E7%9A%84%E5%8C%BA%E5%88%AB">break ,continue ,return 的区别</a></li>
-</ul>
-</li>
-<li><a href="#25-arguments%E7%9A%84%E4%BD%BF%E7%94%A8">2.5 arguments的使用</a></li>
-<li><a href="#26-%E5%87%BD%E6%95%B0%E6%A1%88%E4%BE%8B">2.6 函数案例</a></li>
-<li><a href="#27-%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F">2.7 函数的两种声明方式</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
         </div>
 
         
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://zjp693.github.io//post/grideagithub-kuai-su-jiao-cheng">
-              <h3 class="post-title">
-                Gridea+Github快速教程
-              </h3>
-            </a>
-          </div>
-        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng">
+                <h3 class="post-title">
+                  Gridea+Github快速教程
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
 
         
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
-
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-      }
-      console.log('section.offsetHeight', section.offsetHeight);
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
-  });
-
-</script>
 
       </div>
     </div>
+
+    <script src="https://zjp693.github.io//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
   </body>
 </html>
