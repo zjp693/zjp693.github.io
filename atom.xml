@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-02-18T13:03:50.345Z</updated>
+    <updated>2020-02-21T13:08:05.181Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 学习笔记</rights>
     <entry>
         <title type="html"><![CDATA[大型分钱现场]]></title>
-        <id>https://zjp693.github.io/post/ce-shi-wen-zhang</id>
-        <link href="https://zjp693.github.io/post/ce-shi-wen-zhang">
+        <id>https://zjp693.github.io/post/ce-shi-wen-zhang/</id>
+        <link href="https://zjp693.github.io/post/ce-shi-wen-zhang/">
         </link>
         <updated>2020-02-04T10:19:50.000Z</updated>
         <summary type="html"><![CDATA[<p>真才实料</p>
@@ -26,8 +26,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[数组]]></title>
-        <id>https://zjp693.github.io/post/shu-zu</id>
-        <link href="https://zjp693.github.io/post/shu-zu">
+        <id>https://zjp693.github.io/post/shu-zu/</id>
+        <link href="https://zjp693.github.io/post/shu-zu/">
         </link>
         <updated>2020-01-05T16:02:59.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-数组">1 - 数组</h2>
@@ -286,8 +286,8 @@ fn();
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea+Github快速教程]]></title>
-        <id>https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng</id>
-        <link href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng">
+        <id>https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/</id>
+        <link href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/">
         </link>
         <updated>2020-01-05T11:11:36.000Z</updated>
         <content type="html"><![CDATA[<h5 id="想知道如何使用gridea吗">想知道如何使用Gridea吗？</h5>
@@ -349,8 +349,8 @@ fn();
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://zjp693.github.io/post/hello-gridea</id>
-        <link href="https://zjp693.github.io/post/hello-gridea">
+        <id>https://zjp693.github.io/post/hello-gridea/</id>
+        <link href="https://zjp693.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
