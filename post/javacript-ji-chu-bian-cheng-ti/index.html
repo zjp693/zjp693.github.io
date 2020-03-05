@@ -9,14 +9,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>大型分钱现场 | 学习笔记</title>
+  <title>Javacript基础编程题 | 学习笔记</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://zjp693.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://zjp693.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="大型分钱现场 | 学习笔记 » Feed" href="https://zjp693.github.io//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Javacript基础编程题 | 学习笔记 » Feed" href="https://zjp693.github.io//atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://zjp693.github.io//styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -25,8 +25,8 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-    <meta property="og:description" content="大型分钱现场"/>
-    <meta property="og:url" content="https://zjp693.github.io/post/ce-shi-wen-zhang/"/>
+    <meta property="og:description" content="Javacript基础编程题"/>
+    <meta property="og:url" content="https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/"/>
     <meta property="og:locale" content="zh-CN"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="学习笔记"/>
@@ -81,10 +81,10 @@
           	<span class="tags">
           	 
         </span>
-            <h1>大型分钱现场</h1>
+            <h1>Javacript基础编程题</h1>
             <span class="meta">
             	Posted on
-              2020-02-04，1 min read
+              2020-03-05，3 min read
             </span>
           </div>
         </div>
@@ -97,16 +97,96 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>真才实料</p>
-<!-- more -->
-<p>哈哈哈哈哈哈哈哈哈哈哈。其实我什么都没有，就🎨是随便放的图片<br>
-<img src="https://zjp693.github.io//post-images/1580811640751.png" alt="" loading="lazy"></p>
+          <h5 id="1定义2个数组let-arra-1233-let-arrb-2456求2个数组的并集交集">1.定义2个数组，let arrA = [1,2,3,3]; let arrB = [2,4,5,6]求2个数组的并集，交集</h5>
+<pre><code class="language-js">let arrA = [1, 2, 3, 3];
+let arrB = [2, 4, 5, 6];
+let arrC = []
+let arrD = arrA.concat(arrB)
+console.log(arrD)
+
+for (var i = 0; i &lt; arrA.length - 1; i++) {
+    for (var u = 0; u &lt; arrB.length - 1; u++) {
+        if (arrA[i] == arrB[u]) {
+            arrC.push(arrA[i])
+        }
+    }
+}
+console.log(arrC)
+</code></pre>
+<h5 id="2随机产生一个十六进制的颜色值-例如90e353">2.随机产生一个十六进制的颜色值 ,例如：#90E353</h5>
+<pre><code class="language-js">var str = &quot;#&quot;;
+
+//一个十六进制的值的数组
+
+var arr = [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;];
+
+for (var i = 0; i &lt; 6; i++) {
+
+  //产生的每个随机数都是一个索引,根据索引找到数组中对应的值,拼接到一起
+
+  var num = parseInt(Math.random() * 16);
+
+  str += arr[num];
+
+}
+
+console.log(str)
+</code></pre>
+<h5 id="3封装一个函数把一个时间日期对象转成yyyy-mm-dd-hhmmss">3.封装一个函数，把一个时间日期对象转成yyyy-mm-dd HH:mm:ss</h5>
+<pre><code class="language-js">function time() {
+    var c = new Date()
+    var a = c.getSeconds()  //获取秒
+    var minute = c.getMinutes()  //获取分钟
+    var hour = c.getHours()    //获取小时
+    var math = c.getMonth()    //返回月份   （从0开始）
+    var year = c.getFullYear()  //返回年份
+    var day = c.getDate()
+    if (a &lt; 10) {
+        a = &quot;0&quot; + a
+    }
+    if (minute &lt; 10) {
+        minute = &quot;0&quot; + minute
+    }
+    if (hour &lt; 10) {
+        hour = &quot;0&quot; + hour
+    }
+    if (math &lt; 10) {
+        math = &quot;0&quot; + math
+    }
+    if (day &lt; 10) {
+        day = &quot;0&quot; + day
+    }
+    console.log(year + &quot;-&quot; + math + &quot;-&quot; + day + &quot; &quot; + hour + &quot;:&quot; + minute + &quot;:&quot; + a)
+}
+time()
+</code></pre>
+<h5 id="4获取指定数组中元素值为奇数的元素个数具体要求如下">4.获取指定数组中元素值为奇数的元素个数，具体要求如下：</h5>
+<p>使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
+<p>1).定义一个整数数组arr;<br>
+2).获取4个1~50之间（包含1和50）的随机整数，并存入arr<br>
+3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台<br>
+使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
+<pre><code class="language-js"> 1).定义一个整数数组arr;
+var arr = []
+
+ 2).获取4个1~50之间（包含1和50）的随机整数，并存入arr
+for (var q = 0; q &lt; 4; q++) {
+    arr.push(parseInt(Math.random() * 50 + 1))
+}
+ console.log(arr)
+
+ 3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台
+function getEvens(arr) {
+    console.log(arr);
+}
+getEvens(arr)
+</code></pre>
 
           
           <p class="next-post">下一篇：
-            <a href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/">
+            <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">
               <span class="post-title">
-                Gridea+Github快速教程&rarr;
+                javascript基础简答题&rarr;
               </span>
             </a>
           </p>
