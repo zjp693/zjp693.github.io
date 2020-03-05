@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-03-05T06:02:45.377Z</updated>
+    <updated>2020-03-05T08:56:42.306Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -11,22 +11,95 @@
     <icon>https://zjp693.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 学习笔记</rights>
     <entry>
-        <title type="html"><![CDATA[555]]></title>
+        <title type="html"><![CDATA[javascript基础简答题]]></title>
         <id>https://zjp693.github.io/post/555/</id>
         <link href="https://zjp693.github.io/post/555/">
         </link>
         <updated>2020-03-05T04:11:14.000Z</updated>
-        <content type="html"><![CDATA[<ol start="2">
-<li>列举数组中常用的5个方法，并说明各自的作用？<br>
-unshift(); 添加元素到数组的开头，返回值是新数组的长度<br>
-push(); 添加元素到数组的末尾，返回值是新数组的长度<br>
-shift(); 删除数组开头元素 ，返回值是删除的那个元素<br>
-pop(); 删除数组末尾元素，返回值是删除的那个元素<br>
-indexOf(); 查看某个元素在数组中的下标位置，有返回下标，无返回-1<br>
-splice(开始元素，删除个数，添加元素); 增删改作用集一身<br>
-slice(); 截取元素，返回的是截取之后元素组成的数组<br>
-concat(); 合并数组，返回值是合并之后的新数组</li>
-</ol>
+        <content type="html"><![CDATA[<h5 id="1定义2个数组let-arra-1233-let-arrb-2456求2个数组的并集交集">1.定义2个数组，let arrA = [1,2,3,3]; let arrB = [2,4,5,6]求2个数组的并集，交集</h5>
+<pre><code class="language-js">let arrA = [1, 2, 3, 3];
+let arrB = [2, 4, 5, 6];
+let arrC = []
+let arrD = arrA.concat(arrB)
+console.log(arrD)
+
+for (var i = 0; i &lt; arrA.length - 1; i++) {
+    for (var u = 0; u &lt; arrB.length - 1; u++) {
+        if (arrA[i] == arrB[u]) {
+            arrC.push(arrA[i])
+        }
+    }
+}
+console.log(arrC)
+</code></pre>
+<h5 id="2随机产生一个十六进制的颜色值-例如90e353">2.随机产生一个十六进制的颜色值 ,例如：#90E353</h5>
+<pre><code class="language-js">var str = &quot;#&quot;;
+
+//一个十六进制的值的数组
+
+var arr = [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;];
+
+for (var i = 0; i &lt; 6; i++) {
+
+  //产生的每个随机数都是一个索引,根据索引找到数组中对应的值,拼接到一起
+
+  var num = parseInt(Math.random() * 16);
+
+  str += arr[num];
+
+}
+
+console.log(str)
+</code></pre>
+<h5 id="3封装一个函数把一个时间日期对象转成yyyy-mm-dd-hhmmss">3.封装一个函数，把一个时间日期对象转成yyyy-mm-dd HH:mm:ss</h5>
+<pre><code class="language-js">function time() {
+    var c = new Date()
+    var a = c.getSeconds()  //获取秒
+    var minute = c.getMinutes()  //获取分钟
+    var hour = c.getHours()    //获取小时
+    var math = c.getMonth()    //返回月份   （从0开始）
+    var year = c.getFullYear()  //返回年份
+    var day = c.getDate()
+    if (a &lt; 10) {
+        a = &quot;0&quot; + a
+    }
+    if (minute &lt; 10) {
+        minute = &quot;0&quot; + minute
+    }
+    if (hour &lt; 10) {
+        hour = &quot;0&quot; + hour
+    }
+    if (math &lt; 10) {
+        math = &quot;0&quot; + math
+    }
+    if (day &lt; 10) {
+        day = &quot;0&quot; + day
+    }
+    console.log(year + &quot;-&quot; + math + &quot;-&quot; + day + &quot; &quot; + hour + &quot;:&quot; + minute + &quot;:&quot; + a)
+}
+time()
+</code></pre>
+<h5 id="4获取指定数组中元素值为奇数的元素个数具体要求如下">4.获取指定数组中元素值为奇数的元素个数，具体要求如下：</h5>
+<p>使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
+<p>1).定义一个整数数组arr;<br>
+2).获取4个1~50之间（包含1和50）的随机整数，并存入arr<br>
+3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台<br>
+使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
+<pre><code class="language-js"> 1).定义一个整数数组arr;
+var arr = []
+
+ 2).获取4个1~50之间（包含1和50）的随机整数，并存入arr
+for (var q = 0; q &lt; 4; q++) {
+    arr.push(parseInt(Math.random() * 50 + 1))
+}
+ console.log(arr)
+
+ 3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台
+function getEvens(arr) {
+    console.log(arr);
+}
+getEvens(arr)
+</code></pre>
 ]]></content>
     </entry>
     <entry>
