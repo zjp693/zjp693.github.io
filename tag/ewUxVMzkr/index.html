@@ -1,226 +1,117 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1583383195621">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://zjp693.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1583383195621" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一起努力💪，一起自律👍|顶端相见🎈🎈
-          </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-bookmark-line"></i> javascript
-        </h2>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>学习笔记</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+          <script src="https://zjp693.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://zjp693.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">javascript基础简答题</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p>文章收集于学校上课练习，互联网</p>
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-03-05 / 3 min read</div>
-    </div>
-  </section>
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="header mdui-m-b-3">
+                          <button class="mdui-btn daohang mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu " id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://zjp693.github.io/tags" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/post/about" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+                      <div class="mdui-text-center">
+                      <div class="mdui-typo-display-4 mdui-m-b-3 index-title">学习笔记</div>
+                      <div class="mdui-typo-headline">一起努力💪，一起自律👍|顶端相见🎈🎈</div>
+                      </div>
 
-        <div class="pagination-container animated fadeIn">
-  
-  
+        </header>
+        <div class="mdui-container">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-6 mdui-col-offset-md-3 ">
+                                                     
+                            <article class="mdui-m-t-4 index-list mdui-shadow-15 mdui-hoverable mdui-p-a-2 q">
+                                    <div class="mdui-row">
+                                            <div class="mdui-col-xs-12 ">
+                                              <div class="mdui-row mdui-m-b-2">
+                                                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                                                    <div class="mdui-typo-headline mdui-m-b-2"><a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/" class="index-list-title">javascript基础简答题</a></div>
+                                                    <div class="mdui-typo-body-2 index-list-neirong"><p>文章收集于学校上课练习，互联网</p>
 </div>
+                                                </div>
+                                                <div class="mdui-col-xs-12 mdui-col-sm-4 "><div class="index-list-img mdui-shadow-8"></div></div>
+                                              </div>
+                                              
+                                              <a href="https://zjp693.github.io/tag/ewUxVMzkr/" class="index-list-biaoqian mdui-float-left yinying">javascript</a>
+                                               
+                                              <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/" class="index-list-biaoqian mdui-float-right yinying">2020-03-05</a>
+                                              
 
-      </div>
-    </div>
+                                            </div>
+                                          </div>
 
-    <script src="https://zjp693.github.io//media/prism.js"></script>  
-<script>
+                            </article>
 
-Prism.highlightAll()
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+                                                   <nav class="mdui-m-y-3">
+                         
+                         
+                         </nav>
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
-</script>
-  
-  </body>
+                        </div>
+                 </div>
+          
+        </div>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
 </html>
