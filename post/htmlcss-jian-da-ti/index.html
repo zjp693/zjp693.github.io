@@ -1,22 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zjp693.github.io/</id>
-    <title>学习笔记</title>
-    <updated>2020-03-07T15:27:12.606Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://zjp693.github.io/"/>
-    <link rel="self" href="https://zjp693.github.io/atom.xml"/>
-    <subtitle>一起努力💪，一起自律👍|顶端相见🎈🎈</subtitle>
-    <logo>https://zjp693.github.io/images/avatar.png</logo>
-    <icon>https://zjp693.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 学习笔记</rights>
-    <entry>
-        <title type="html"><![CDATA[HTML+CSS简答题]]></title>
-        <id>https://zjp693.github.io/post/htmlcss-jian-da-ti/</id>
-        <link href="https://zjp693.github.io/post/htmlcss-jian-da-ti/">
-        </link>
-        <updated>2020-03-07T15:22:23.000Z</updated>
-        <content type="html"><![CDATA[<p>[toc]</p>
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>HTML+CSS简答题 | 学习笔记</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://zjp693.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://zjp693.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="HTML+CSS简答题 | 学习笔记 » Feed" href="https://zjp693.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://zjp693.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+    <meta property="og:description" content="HTML+CSS简答题"/>
+    <meta property="og:url" content="https://zjp693.github.io/post/htmlcss-jian-da-ti/"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="学习笔记"/>
+  </head>
+  <body>
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://zjp693.github.io/">学习笔记</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="https://zjp693.github.io/tags">首页</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/archives">归档</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/post/about">关于</a>
+              
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://zjp693.github.io//media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+          	<span class="tags">
+          	 
+        </span>
+            <h1>HTML+CSS简答题</h1>
+            <span class="meta">
+            	Posted on
+              2020-03-07，15 min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>[toc]</p>
 <h5 id="1怎么让一个不定宽高的div水平垂直居中最少2种方式实现">1.怎么让一个不定宽高的div水平垂直居中？（最少2种方式实现）</h5>
 <pre><code class="language-css">方式一：margin：auto：
     position: absolute;
@@ -442,290 +523,91 @@ clear: both;
 <pre><code class="language-css">display: none;是彻底消失，隐藏时不会占位
 visibility: hidden;是视觉上的消失，隐藏时仍然占位
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Javacript基础编程题]]></title>
-        <id>https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/</id>
-        <link href="https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/">
-        </link>
-        <updated>2020-03-05T08:59:14.000Z</updated>
-        <content type="html"><![CDATA[<h5 id="1定义2个数组let-arra-1233-let-arrb-2456求2个数组的并集交集">1.定义2个数组，let arrA = [1,2,3,3]; let arrB = [2,4,5,6]求2个数组的并集，交集</h5>
-<pre><code class="language-js">let arrA = [1, 2, 3, 3];
-let arrB = [2, 4, 5, 6];
-let arrC = []
-let arrD = arrA.concat(arrB)
-console.log(arrD)
 
-for (var i = 0; i &lt; arrA.length - 1; i++) {
-    for (var u = 0; u &lt; arrB.length - 1; u++) {
-        if (arrA[i] == arrB[u]) {
-            arrC.push(arrA[i])
-        }
+          
+          <p class="next-post">下一篇：
+            <a href="https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/">
+              <span class="post-title">
+                Javacript基础编程题&rarr;
+              </span>
+            </a>
+          </p>
+        
+        <div class="comment">
+          
+        </div>
+      </div>
+    </div>
+  </article>
+ <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <li class="list-inline-item">
+              <a href="https://zjp693.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>学习笔记</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
     }
-}
-console.log(arrC)
-</code></pre>
-<h5 id="2随机产生一个十六进制的颜色值-例如90e353">2.随机产生一个十六进制的颜色值 ,例如：#90E353</h5>
-<pre><code class="language-js">var str = &quot;#&quot;;
+  })(this));</script>
+  </body>
+</html>
 
-//一个十六进制的值的数组
-
-var arr = [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;];
-
-for (var i = 0; i &lt; 6; i++) {
-
-  //产生的每个随机数都是一个索引,根据索引找到数组中对应的值,拼接到一起
-
-  var num = parseInt(Math.random() * 16);
-
-  str += arr[num];
-
-}
-
-console.log(str)
-</code></pre>
-<h5 id="3封装一个函数把一个时间日期对象转成yyyy-mm-dd-hhmmss">3.封装一个函数，把一个时间日期对象转成yyyy-mm-dd HH:mm:ss</h5>
-<pre><code class="language-js">function time() {
-    var c = new Date()
-    var a = c.getSeconds()  //获取秒
-    var minute = c.getMinutes()  //获取分钟
-    var hour = c.getHours()    //获取小时
-    var math = c.getMonth()    //返回月份   （从0开始）
-    var year = c.getFullYear()  //返回年份
-    var day = c.getDate()
-    if (a &lt; 10) {
-        a = &quot;0&quot; + a
-    }
-    if (minute &lt; 10) {
-        minute = &quot;0&quot; + minute
-    }
-    if (hour &lt; 10) {
-        hour = &quot;0&quot; + hour
-    }
-    if (math &lt; 10) {
-        math = &quot;0&quot; + math
-    }
-    if (day &lt; 10) {
-        day = &quot;0&quot; + day
-    }
-    console.log(year + &quot;-&quot; + math + &quot;-&quot; + day + &quot; &quot; + hour + &quot;:&quot; + minute + &quot;:&quot; + a)
-}
-time()
-</code></pre>
-<h5 id="4获取指定数组中元素值为奇数的元素个数具体要求如下">4.获取指定数组中元素值为奇数的元素个数，具体要求如下：</h5>
-<p>使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
-<p>1).定义一个整数数组arr;<br>
-2).获取4个1~50之间（包含1和50）的随机整数，并存入arr<br>
-3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台<br>
-使用javascript定义函数getEvens实现要求：获取指定数组arr中元素值为奇数的元素个数，并返回</p>
-<pre><code class="language-js"> 1).定义一个整数数组arr;
-var arr = []
-
- 2).获取4个1~50之间（包含1和50）的随机整数，并存入arr
-for (var q = 0; q &lt; 4; q++) {
-    arr.push(parseInt(Math.random() * 50 + 1))
-}
- console.log(arr)
-
- 3).传递arr调用getEvens(arr)方法，获取返回值，并打印在控制台
-function getEvens(arr) {
-    console.log(arr);
-}
-getEvens(arr)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jsvascript基础简答题]]></title>
-        <id>https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/</id>
-        <link href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">
-        </link>
-        <updated>2020-03-05T04:01:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>文章收集于学校上课练习，互联网</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>文章收集于学校上课练习，互联网</p>
-<!-- more -->
-<ol>
-<li>
-<h5 id="js数据类型有哪些怎么判断一个变量的数据类型">js数据类型有哪些，怎么判断一个变量的数据类型？</h5>
-</li>
-</ol>
-<pre><code class="language-js">jS数据类型有：Number数字、String字符串、Boolean布尔、Null空、Undefined未定义、Object对象
-使用 typeof 变量 可以判断该变量的数据类型，但是typeof只能判断的是简单数据类型，不能判断复杂数据类型。
-</code></pre>
-<ol start="2">
-<li>
-<h5 id="列举数组中常用的方法并说明各自的作用">列举数组中常用的方法，并说明各自的作用？</h5>
-</li>
-</ol>
-<pre><code class="language-js">unshift();向数组的开头添加一个或更多元素，并返回新的长度。			 会改变数组的长度
-push(); 向数组的末尾添加一个或多个元素，并返回新的长度。			 会改变数组的长度
-
-shift();把数组的第一个元素从其中删除，并返回第一个元素的值。		    会改变数组的长度
-pop(); 用于删除数组的最后一个元素并返回删除的元素。				   会改变数组的长度
-
-indexOf(); 查看某个元素在数组中的下标位置，有返回下标，无返回-1
-splice(开始元素，删除个数，添加元素); 增删改作用集一身  			   会改变原始数组。
-
-slice(); 截取元素，返回的是截取之后元素组成的数组					不会改变原始数组
-concat(); 合并数组，返回值是合并之后的新数组
-</code></pre>
-<ol start="3">
-<li>
-<h5 id="javascript中的循环有哪些while循环和dowhile的区别是什么">javascript中的循环有哪些，while循环和do...while的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">for循环、while循环、do...while循环
-
-区别：while先判断条件再执行，do..while先执行一次再判断条件是否继续执行
-</code></pre>
-<ol start="4">
-<li>
-<h5 id="javascript中的有几层含义分别是什么">javascript中的‘+’有几层含义，分别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">第一层意义，当 + 号的两边都是number类型的时候，此时 + 号 代表数学符号加法
-
-第二层意义，当 + 号的两边，只要有一边是string类型的时候，此时 + 号代表字符串的连接符
-
-第三层意义，+可以进行数据类型的隐式转换，给一个string类型的数据前面加上+号，就会把这个字符串变成数字
-</code></pre>
-<ol start="5">
-<li>
-<h5 id="js中break-和-continue-的区别是什么">js中break 和 continue 的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">break：跳出整个循环执行下面的代码
- continue：跳出本轮循环执行下一轮循环
-</code></pre>
-<ol start="6">
-<li>
-<h5 id="列举目前你遇到undefined的情况">列举目前你遇到undefined的情况？</h5>
-</li>
-</ol>
-<pre><code class="language-js">1）变量只声明没有赋值，会返回undefined；
-
-2）当下标超过数组或字符串的范围 ，会返回undefined；
-
-3）当对象调用不存在的属性时，会返回undefined；
-
-4）当return没有返回值，会返回undefined；
-</code></pre>
-<ol start="7">
-<li>
-<h5 id="产生一个10-50的随机数包含10也包含50">产生一个10-50的随机数(包含10也包含50)?</h5>
-</li>
-</ol>
-<pre><code class="language-js">Math.random() * (50 - 10 + 1) + 10
-
-【注意通用公式是: 产生一个[n,m]的整数，包含（n和m）
-
-Math.ceil (Math.random()*(m-n)+n)】
-</code></pre>
-<ol start="8">
-<li>
-<h5 id="列举5个字符串的方法并说明各自的作用">列举5个字符串的方法，并说明各自的作用？</h5>
-</li>
-</ol>
-<pre><code class="language-js">charAt(索引); 返回对象字符
-
-concat(); 拼接字符串
-
-indexOf(); 查找某串字符在字符串内的索引，有返回索引无返回-1
-
-trim(); 去掉字符串前后的空格
-
-slice() 从start位置 截取到end位置
-
-split() 选择字符分割成数组储存
-</code></pre>
-<ol start="9">
-<li>
-<h5 id="join和split的区别是什么">join()和split()的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">join()；是数组方法，把数组中的元素转成字符串连接
-
-split(); 是字符串的方法，方法用于把一个字符串分割成字符串数组
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大型分钱现场]]></title>
-        <id>https://zjp693.github.io/post/ce-shi-wen-zhang/</id>
-        <link href="https://zjp693.github.io/post/ce-shi-wen-zhang/">
-        </link>
-        <updated>2020-02-04T10:19:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>真才实料</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>真才实料</p>
-<!-- more -->
-<p>哈哈哈哈哈哈哈哈哈哈哈。其实我什么都没有，就🎨是随便放的图片<br>
-<img src="https://zjp693.github.io//post-images/1580811640751.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea+Github快速教程]]></title>
-        <id>https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/</id>
-        <link href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/">
-        </link>
-        <updated>2020-01-05T11:11:36.000Z</updated>
-        <content type="html"><![CDATA[<h5 id="想知道如何使用gridea吗">想知道如何使用Gridea吗？</h5>
-<p>Git</p>
-<p>Git https://git-scm.com</p>
-<h5 id="下载后安装">下载后安装</h5>
-<p>安装完之后在桌面右键Git Bash Here，输入以下内容进行配置</p>
-<p>$ git config --global user.name &quot;sailorlisa&quot;</p>
-<p>$ git config --global user.email &quot;sailorlisa@outlook.com&quot;</p>
-<h5 id="github">Github</h5>
-<p>Github账号 https://github.com</p>
-<p>每个github账号有1个免费的github pages</p>
-<p>如果免费的已被占用（例如hexo），得自行注册新的github账号或者自行买域名，在仓库里的github pages里设置好</p>
-<h5 id="仓库">仓库</h5>
-<p>点击create a new repositories</p>
-<p>输入Repository name：Cyberlisa.github.io。固定格式：.github.io</p>
-<p>Description可填可不填。</p>
-<h5 id="勾选public">勾选Public</h5>
-<p>勾选Intialize this repository with a README(可不勾选)</p>
-<p>点击Create repository</p>
-<p>自动跳转到仓库页面，点击Insights后面的Settings</p>
-<p>拉到下面GitHub Pages，看看有没有显示：Your site is published at https://cyberlisa.github.io/</p>
-<p>没有的话稍微等一下再试</p>
-<p>有的话点击链接跳转，看看能否打开</p>
-<h5 id="token">Token</h5>
-<p>在github界面点击头像，点击Settings——&gt;Personal settings——&gt;Developer settings</p>
-<h5 id="找到最后的personal-access-tokensgenerate-new-token填写note勾选repogenerate-token">找到最后的Personal access tokens——&gt;Generate new token——&gt;填写Note——&gt;勾选repo——&gt;Generate token</h5>
-<p>创建个txt文档，把token保存起来。如果不保存，那先不要关闭这个页面，待会儿需要用到token。</p>
-<p>Gridea配置</p>
-<h5 id="下载安装">下载安装</h5>
-<p>在https://gridea.dev下载符合自己系统的客户端，安装。</p>
-<p>安装完之后打开，如果在【文章】里看到一片空白，卸载整个客户端，重新安装。</p>
-<h5 id="填配置">填配置</h5>
-<p>如果打开后能看到默认的2篇文章，点击【配置】：</p>
-<h5 id="platform-github-pages">Platform  Github Pages</h5>
-<p>域名 Github Pages 对应的域名 https://cyberlisa.github.io/</p>
-<p>仓库 github上仓库名 Cyberlisa.github.io</p>
-<p>分支 Github Pages 对应的分支 master</p>
-<p>仓库用户名  仓库所属用户的用户名 Cyberlisa</p>
-<p>邮箱 Git 推送时的邮箱 sailorlisa@163.com</p>
-<p>Token    上面步骤里的token</p>
-<h5 id="cname-可不填">CNAME    可不填</h5>
-<p>填完配置后，点击【保存】</p>
-<p>无误后，点击【检测远程连接】</p>
-<p>点击【预览】，会弹出浏览器，本地预览效果。</p>
-<p>可在【主题】里选择其他内置主题，不要忘记拉到下面选择【保存】</p>
-<p>选择了其他主题后，点击【预览】</p>
-<p>如果没问题，点击【同步】</p>
-<p>稍等3分钟左右，点击同步按钮下面那个像地球的网格图标，会在浏览器自动弹出博客网页。看看有没有什么问题。</p>
-<p>在客户端里进行任何操作，不要忘记点击【保存】。保存了之后先预览，没问题再同步。</p>
-<p>有问题点击https://github.com/getgridea/gridea里的【Issues】，在【Open】和【Closed】里看看有没有和你问题相似的issue。</p>
-<h5 id="defender">Defender</h5>
-<p>如果你是win10用户，在操作时出现异常，看看通知里有没有defender的警告。我一开始根本操作不了客户端，因为defender限制权限。把defender关了之后才能正常使用。</p>
-<h5 id="更换walker主题">更换Walker主题</h5>
-<p>在https://gridea.dev/themes/购买Walker主题，购买完后点击【下载文件】，下载后解压。</p>
-<p>点击客户端里的【系统】，找到【源文件夹】，自己打开路径。退出Gridea客户端。</p>
-<p>点击【themes】，把walker文件夹复制过来，打开Gridea客户端，打开【主题】，选择主题，滚动下鼠标，选中最后的Walker，保存。</p>
-]]></content>
-    </entry>
-</feed>
