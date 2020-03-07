@@ -84,7 +84,7 @@
             <h1>HTML+CSS简答题</h1>
             <span class="meta">
             	Posted on
-              2020-03-07，15 min read
+              2020-03-07，27 min read
             </span>
           </div>
         </div>
@@ -308,16 +308,30 @@ b. 设置rgba透明的元素的子元素不会继承透明效果
 <h5 id="13-css的复合选择器有哪些举列子说明">13、css的复合选择器有哪些？举列子说明</h5>
 <p>复合选择器有：</p>
 <ul>
-<li>后代选择器：<code>div div span {color: red};（选择的是div下的div下的span标签）</code></li>
-<li>子代选择器：<code>div &gt; p {color: red};（选择的是div下的p标签(亲儿子)）</code></li>
-<li>并集选择器：<code>div,span,p {color: red}; （选择的是div标签和span标签和p标签）</code></li>
-<li>伪类选择器：<code>a: hover {color: green};（鼠标悬停在超链接上会显示出的样式(绿色的字体)）</code></li>
+<li>
+<p>后代选择器：<code>div div span {color: red};（选择的是div下的div下的span标签）</code></p>
+</li>
+<li>
+<p>子代选择器：<code>div &gt; p {color: red};（选择的是div下的p标签(亲儿子)）</code></p>
+</li>
+<li>
+<p>并集选择器：<code>div,span,p {color: red}; （选择的是div标签和span标签和p标签）</code></p>
+</li>
+<li>
+<p>伪类选择器：<code>a: hover {color: green};（鼠标悬停在超链接上会显示出的样式(绿色的字体)）</code></p>
+</li>
 </ul>
 <h5 id="14-背景的属性有哪些分别是什么作用">14、背景的属性有哪些？分别是什么作用？</h5>
 <ul>
-<li>背景颜色【background-color：选择引入颜色的格式】：<code>给元素添加背景颜色</code></li>
-<li>背景图片【background-image：url(图片路径);】：<code>给元素添加背景图(默认全局平铺)</code></li>
-<li>背景平铺方式【background-repeat：】：<code>给背景选择平铺的方式</code></li>
+<li>
+<p>背景颜色【background-color：选择引入颜色的格式】：<code>给元素添加背景颜色</code></p>
+</li>
+<li>
+<p>背景图片【background-image：url(图片路径);】：<code>给元素添加背景图(默认全局平铺)</code></p>
+</li>
+<li>
+<p>背景平铺方式【background-repeat：】：<code>给背景选择平铺的方式</code></p>
+</li>
 </ul>
 <pre><code class="language-html">&lt;!--
 	平铺方式的参数有:
@@ -342,7 +356,7 @@ b. 设置rgba透明的元素的子元素不会继承透明效果
 </code></pre>
 <h5 id="15-css的三大特性分别是什么请详细说明并且举例子">15、css的三大特性分别是什么，请详细说明，并且举例子</h5>
 <p>层叠性：<code>层叠也叫覆盖，特点是：在相同选择器中存在相同属性时，根据就近原则，最下面的覆盖上面的。</code></p>
-<pre><code class="language-html">&lt;!-- 例子：
+<pre><code class="language-css">	例子：
 	div {
 	color: red;
 	}
@@ -353,8 +367,6 @@ b. 设置rgba透明的元素的子元素不会继承透明效果
 	color: green;
 	}
 	【div的color的结果是绿色】
-
---&gt;
 </code></pre>
 <p>继承性：<code>相当于儿子继承老爹的财产，称作富二代。继承性的特点就是：父元素有的样式，子元素自然也能有，比如以text-，font-，line-等元素开头的样式，还有color。恰当的使用继承可以简化代码，降低css样式的复杂性。</code></p>
 <pre><code class="language-html">&lt;!-- 例子：
@@ -522,6 +534,452 @@ clear: both;
 <h5 id="30dispaly-none和visibility-hidden的区别是什么">30.dispaly: none和visibility: hidden的区别是什么？</h5>
 <pre><code class="language-css">display: none;是彻底消失，隐藏时不会占位
 visibility: hidden;是视觉上的消失，隐藏时仍然占位
+</code></pre>
+<h5 id="31图片标签是什么其属性有哪些至少四个">31.图片标签是什么，其属性有哪些（至少四个）</h5>
+<p><code>&lt;img&gt;</code>   	<code>src图片路径</code> <code>title鼠标移动显示内容</code> <code>alt图片无法显示的时候显示内容</code> <code>width 图片宽</code> <code>height图片高</code><br>
+链接是什么，其属性有哪些（至少三个）<br>
+<a>标签	 <code>herf路径</code> <code>title提示标题</code> <code>target在新网页打开</code></p>
+<h5 id="32文件路径有哪些">32.文件路径有哪些</h5>
+<p>绝对路径：直接写网址<br>
+相对路径：<code>./</code>当前     <code>../</code>上一层</p>
+<h5 id="33有序列表和无序列表的标签是什么">33.有序列表和无序列表的标签是什么</h5>
+<pre><code class="language-html">有序：&lt;ol&gt;
+	&lt;li&gt;&lt;li&gt;
+	&lt;/ol&gt;
+无序:&lt;ul&gt;m
+	&lt;li&gt;&lt;li&gt;
+	&lt;/ul&gt;
+</code></pre>
+<h5 id="34css的三种书写方式是什么">34.css的三种书写方式是什么</h5>
+<pre><code class="language-html">行内    &lt;标签 style=&quot;css属性名: 属性值;css属性名: 属性值;css属性名: 属性值;...&quot;&gt;&lt;/标签&gt;
+ 内嵌 &lt;head&gt;
+     &lt;style&gt;
+      选择器{
+     属性名：属性值；
+	&lt;/style&gt;
+	&lt;/head&gt;
+</code></pre>
+<h5 id="35css选择器有哪些">35.css选择器有哪些</h5>
+<p>id选择器</p>
+<p>类选择器</p>
+<p>通配符选择器</p>
+<p>标签选择器</p>
+<h5 id="36src和href的区别是什么">36.src和href的区别是什么</h5>
+<p>src的内容是页面不可少的一部分 是引入<br>
+href的内容是与该页面有关联 是引用</p>
+<h5 id="37什么是外边距塌陷怎么解决把方法都写出来">37.什么是外边距塌陷，怎么解决，把方法都写出来</h5>
+<p>假设b是父级盒子 a是子级 当给a margin-top时候 b本应该不动 但是却随a动了<br>
+解决办法：给父元素添加border<br>
+给父元素overflow：hidden</p>
+<h5 id="38什么是外边距合并怎么解决把方法都写出来">38.什么是外边距合并，怎么解决，把方法都写出来、</h5>
+<p>当两个盒子上下挨着且上下都有margin时候 他们的距离<br>
+本应该是两个外边距的和 但却是最大的一个外边距<br>
+解决方案：只给一个就可以</p>
+<h5 id="39什么是盒模型一个盒子的width200pxpadding20pxborder1px-solid-ccc盒子的实际宽度是多少怎么计算的">39.什么是盒模型，一个盒子的width:200px,padding:20px,border:1px solid #ccc，盒子的实际宽度是多少，怎么计算的？</h5>
+<p>盒子本身宽度200px   加上外边距左右20一共40 还有1px实线  左右两边 所以再加2px  等于242px</p>
+<h5 id="40表格标签有哪些属性有哪些至少3个">40.表格标签有哪些，属性有哪些（至少3个）</h5>
+<pre><code class="language-css">&lt;tr&gt; 行  &lt;td&gt;列  &lt;th&gt;单元格标题
+border给table标签和td添加边框
+cellspacing 设置单元格之间的距离
+cellpadding 设置内容与单元格边框之间的距离
+rowspan 跨行 从自己算1 跨一行+1
+colspan 跨列 从自己算1 跨一行+1
+</code></pre>
+<h5 id="41如何合并单元格的行和列">41.如何合并单元格的行和列</h5>
+<pre><code class="language-css">rowspan 跨行 从自己算1 跨一行+1
+colspan 跨列 从自己算1 跨一行+1
+</code></pre>
+<h5 id="42文本装饰属性是什么其属性值有哪些至少3个">42.文本装饰属性是什么，其属性值有哪些（至少3个）</h5>
+<pre><code class="language-css">text-decoration
+none 取消装饰
+underline 下划线
+overline 上边线
+line-through 删除线
+</code></pre>
+<h5 id="43怎么让元素垂直居中属性是哪个">43.怎么让元素垂直居中，属性是哪个</h5>
+<pre><code class="language-css">让文字等于行高
+line-height=行高
+</code></pre>
+<h5 id="44怎么让元素水平居中属性是哪个">44.怎么让元素水平居中，属性是哪个</h5>
+<pre><code class="language-css">text-glign：center 居中
+left 左对齐  right右对齐
+</code></pre>
+<h5 id="45字体大小-种类-粗细-风格的属性和属性值有哪些">45.字体大小、种类、粗细、风格的属性和属性值有哪些</h5>
+<pre><code class="language-css">字体大小 font-size
+字体种类 fout-family
+字体粗细 font-weight
+字体样式 font-style
+normal正常  italic斜体
+</code></pre>
+<h5 id="46个标签可以有几个伪元素分别是哪几个">46.个标签可以有几个伪元素，分别是哪几个</h5>
+<pre><code class="language-css">两个  before和after
+</code></pre>
+<h5 id="47怎么让一个不定宽高的盒子在另一个盒子中水平垂直居中写2种方式">47.怎么让一个不定宽高的盒子在另一个盒子中水平垂直居中（写2种方式）</h5>
+<pre><code class="language-css">方式一margin：auto：
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	margin: auto;
+
+方式二translate：
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+
+方式三flex：
+    /* 给父盒子添加 */
+    display: flex;
+	justify-content: cent ;
+    align-items: center;
+</code></pre>
+<h5 id="48精灵图的使用方法">48.精灵图的使用方法？</h5>
+<ul>
+<li>定宽高，存放所需的精灵图</li>
+<li>添加background-image: url(&quot;精灵图路径&quot;); 引入精灵图</li>
+<li>调整位置选择需要的精灵图：background-position: -x -y;</li>
+<li>如果需要再调整精灵图大小使用：background-size: ;</li>
+</ul>
+<h5 id="49em和rem的区别是什么">49.em和rem的区别是什么？</h5>
+<p>em相对的是当前元素文本字体大小计算，如没有则相对浏览器默认的font-size值计算</p>
+<p>rem相对的是根元素html的字体大小进行计算的</p>
+<h5 id="50css中-link-和import-的区别是什么">50.CSS中 link 和@import 的区别是什么？</h5>
+<p>a. link属于HTML标签，而@import是CSS提供的，且只能加载 CSS<br>
+b. 页面被加载时，link会同时被加载，而@import引用的CSS会等到页面被加载完后再加载<br>
+c. @import只在IE5以上才能识别，而link是HTML标签，无兼容问题<br>
+d. link引入方式的权重,高于@import的权重</p>
+<h5 id="51rgba和opacity的透明效果有什么不同">51.rgba()和opacity的透明效果有什么不同？</h5>
+<p>a.opacity作用于元素，以及元素内的所有内容的透明度，rgba()只作用于元素的颜色或其背景色。</p>
+<p>b. 设置rgba透明的元素的子元素不会继承透明效果</p>
+<h5 id="52image标签上title属性与alt属性的区别是什么">52.<image>标签上title属性与alt属性的区别是什么？</h5>
+<p>title属性：鼠标移到图片上显示&quot;标题内容&quot;</p>
+<p>alt属性：当<img>加载不出来的时候，alt属性内容会替代<img>显示</p>
+<h5 id="53css元素的三种显示模式">53.CSS元素的三种显示模式？</h5>
+<p>行内元素：inline</p>
+<p>块元素：block</p>
+<p>行内块元素：inline-block</p>
+<h5 id="54行内元素有哪些块级元素有哪些行内块元素有哪些">54.行内元素有哪些？块级元素有哪些？行内块元素有哪些？</h5>
+<p>行内元素：<br>
+span、a、b (加粗)、strong、s (删除线)、del、i (斜体)、em、、、、、、、</p>
+<p>块级元素：<br>
+h1~h6、p、div、ul、ol、li、、、、、、</p>
+<p>行内块元素：<br>
+input、img、textarea、</p>
+<h5 id="55请至少写出5个h5的新标签">55.请至少写出5个H5的新标签？</h5>
+<pre><code class="language-html">&lt; header &gt;&lt;/header &gt;  // 头部 
+&lt;nav&gt;&lt;/nav&gt;     // 导航
+&lt;main&gt;&lt;/main&gt;    // 主体
+&lt;aside&gt;&lt;/aside&gt;   // 侧边
+&lt;footer&gt;&lt;/footer&gt;  // 底部
+</code></pre>
+<ol start="56">
+<li>
+<h5 id="怎么定义动画怎么使用动画">怎么定义动画？怎么使用动画？</h5>
+</li>
+</ol>
+<p>定义：<br>
+<code>@keyframes</code> 动画名字 {<br>
+&quot;定义需要的动画&quot;<br>
+}<br>
+使用：<br>
+给需要的元素添加<code>animation</code>: 动画名 动画完成所需时间 动画速度 延迟、、、</p>
+<p>具体代码：</p>
+<pre><code class="language-css">定义动画1：from、to动画
+@keyframes 动画名 {
+            from {
+                开始状态;
+            }
+            to {
+                结束状态
+            }
+        }
+定义动画2：百分比动画
+@keyframes 动画名 {
+            0% {
+                开始状态
+            }
+            ···
+            50% {
+                过程n状态
+            }
+            ···
+            100% {
+                结束状态
+            }
+        }
+使用：
+/* 规定的动画名 */
+            animation-name: name;
+            /* 动画所需时长 */
+            animation-duration: 时间;
+            /* 动画运动曲线 */
+            animation-timing-function: linear;
+            /* 动画延迟时间（多久后开始动画） */
+            animation-delay: 时间;
+            /* 动画播放次数 */
+            animation-iteration-count: infinite;
+
+连写：animation: 动画名 运动所需时长 ···;没有顺序要求，也可缺省书写，但是动画名和所需时长必写，当同时出现动画时长和动画延迟时左数第一个会被识别为时长
+</code></pre>
+<h5 id="57说明css渐变有哪些分别是什么怎么使用">57.说明CSS渐变有哪些？分别是什么？怎么使用？</h5>
+<ul>
+<li>线性渐变：<code>linear-gradient</code>: 方向 初始色 结束色</li>
+<li><code>background-image: linear-gradient</code>(to  渐变的最终方向, 初始颜色 最终颜色);</li>
+<li>径向(圆形)渐变：<code>radial-gradient</code>: 主轴 次轴 at 原点x 原点y 初始色 结束色</li>
+<li><code>background-image: radial-gradient</code>(圆心X 圆心Y at 渐变的X的起点 渐变的Y轴的起点, 渐变之的距离（可省略） 圆心中间的颜色, 扩散的颜色);<br>
+<code>Background-image: radial-gradient(50px 50px at center center, hotpink 0%, skyblue 50%);</code></li>
+</ul>
+<h5 id="58css选择器优先级从大到小排序">58.CSS选择器优先级从大到小排序？</h5>
+<p>!important(权重无穷大) &gt; 行内样式 &gt; ID选择器 &gt; 类选择器 = 伪类选择器 &gt; 标签选择器 &gt;继承(子承父)或*(通配符)</p>
+<h5 id="59怎么用css实现多行文字超出显示为省略号">59.怎么用css实现多行文字超出显示为省略号？</h5>
+<p><code>overflow: hidden;</code><br>
+将对象作为弹性伸缩盒子模型显示<br>
+<code>display: -webkit-box;</code><br>
+设置子元素排列方式<br>
+<code>-webkit-box-orient: vertical;</code><br>
+设置显示的行数，多出的部分会显示为...<br>
+<code>-webkit-line-clamp: 3;</code></p>
+<h5 id="60实现左边固定200px右边自适应的方法2种方式">60.实现左边固定200px,右边自适应的方法（2种方式）</h5>
+<p>说明：这是其中的2种，你可以通过别的方式实现也算：<br>
+方式一flex法：<br>
+html代码</p>
+<pre><code class="language-html">&lt; div class=&quot;left&quot; &gt;&lt;/div &gt;
+&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css代码</p>
+<pre><code class="language-css">html,
+body {
+display: flex;   
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+.left {
+width: 200px;
+height: 100%;
+background-color: red;
+}
+.right {
+flex: 1;
+background-color: blue;
+}
+</code></pre>
+<p>方式二浮动法：<br>
+Html代码</p>
+<pre><code class="language-html">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css代码</p>
+<pre><code class="language-css">html,
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+position: relative;
+}
+.left {
+float: left;
+width: 200px;
+height: 100%;
+background-color: red;
+}
+.right {
+height: 100%;
+/* 挤开左边盒子 */
+margin-left: 200px;
+background-color: blue;
+}
+</code></pre>
+<h5 id="62实现左边固定200px中间自适应右边固定200px的方法2种方式实现">62.实现左边固定200px,中间自适应，右边固定200px的方法(2种方式实现)？</h5>
+<p>方式一浮动法：<br>
+html代码：</p>
+<pre><code class="language-html">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css代码：</p>
+<pre><code class="language-css">html,
+body {
+width: 100%;
+height: 100px;
+    
+/* 重置样式 */
+margin: 0;
+padding: 0;
+}
+
+/* 左浮动 */
+.left {
+float: left;
+width: 100px;
+height: 100%;
+background-color: red;
+}
+
+/* 中间自适应 */
+.center {
+height: 100%;
+background-color: pink;
+    
+/* 挤开左右 */
+margin-left: 100px;
+margin-right: 100px;
+}
+
+/* 右浮动 */
+.right {
+float: right;
+width: 100px;
+height: 100%;
+background-color: blue;
+}
+</code></pre>
+<p>方式二定位法：<br>
+html代码：</p>
+<pre><code class="language-html">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css代码：</p>
+<pre><code class="language-css">html,
+body {
+position: relative;
+width: 100%;
+height: 100px;
+
+/* 重置样式 */
+margin: 0;
+padding: 0;
+}
+
+/* 左定位 */
+.left {
+position: absolute;
+top: 0;
+left: 0;
+width: 100px;
+height: 100%;
+background-color: red;
+}
+
+/* 中间自适应 */
+.center {
+height: 100%;
+background-color: pink;
+
+/* 挤开左右 */
+margin-left: 100px;
+margin-right: 100px;
+}
+
+/* 右定位 */
+.right {
+position: absolute;
+top: 0;
+right: 0;
+width: 100px;
+height: 100%;
+background-color: blue;
+}
+</code></pre>
+<p>方式三flex法：<br>
+html代码：</p>
+<pre><code class="language-html">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>css代码</p>
+<pre><code class="language-css">html,
+body {
+
+/* 伸缩盒子 */
+display: flex;
+width: 100%;
+height: 100px;
+
+/* 重置样式 */
+margin: 0;
+padding: 0;
+}
+
+.left {
+width: 100px;
+height: 100%;
+background-color: red;
+}
+
+.center {
+/* 剩余空间占比 */
+flex: 1;
+background-color: pink;
+}
+
+.right {
+width: 100px;
+height: 100%;
+background-color: blue;
+}
+</code></pre>
+<h5 id="63说你对sass的理解和一些常用的语法有什么sass和less的有什么区别">63.说你对Sass的理解，和一些常用的语法有什么？Sass和Less的有什么区别？</h5>
+<p>（找个题是开放性的，这个仅供参考，自己根据自己的理解去写，扩散思维）<br>
+理解：Sass是一门css预处理语言，扩展css语言，添加了变量，函数等特性，让css更容易维护和扩展。</p>
+<p>常用语法：①嵌套 ②&amp;  ③变量  ④混合器 ⑤继承、、</p>
+<p>区别：1）在语法定义方面，比方说定义变量方面，Less通过@定义变量，Sass通过$定义变量，像混合器方面，			Less是通过.minxin的方式定义，Sass是通过@minxin的方式<br>
+2）Sass支持条件语句，可以使用if{}else{},for{}循环等等，而Less不支持</p>
+<h5 id="64css3的新属性有哪些举例说明5个中英文都写">64.css3的新属性有哪些？(举例说明5个，中英文都写)</h5>
+<p>下面的必须牢记5个</p>
+<pre><code class="language-css">1.圆角
+border-radius	
+2.阴影
+1）文本阴影：text-shadow
+2）盒子阴影：border-shadow
+3.渐变
+1）线性渐变：background-image: linear-gradient(方向,起始色,结束色);
+2）圆形渐变：background-image: radial-gradient(主轴 次轴 at 圆点X 圆点Y, 起始色，结束色);
+4.过渡
+transition: ; 
+5.2D转换
+transform
+6.转换原点
+Transform-origin
+7.3D变换
+perspective
+8.3D呈现
+transform-style
+9.动画
+1）定义动画 @keyframes 动画名(identifier){ }
+2）调用动画 animation
+10.伸缩盒子（弹性盒子）
+display: flex;
+11.媒体查询
+min-width、min-height、max-midth、max-height、、
+</code></pre>
+<h5 id="65-请列举6种表单元素">65. 请列举6种表单元素？</h5>
+<pre><code class="language-css"> 表单元素有：
+    ①	form（表单域）
+    ②	input（表单控件）
+    ③	button（按钮）
+    ④	textarea（文本域）
+    ⑤	select（下拉列表）
+    ⑥	option（下拉列表选项）	
+    下面的供参考：
+    ⑦	fieldset（表单线框）
+    ⑧	
+    ⑨	legend（线框标题）
+    ⑩	label（关联标签）
+
+//  组合6个表单就可以，下面都是常用的,只要能写出6个就可以
+&lt;input type=&quot;text&quot;&gt;        // 文本框
+&lt;input type=&quot;radio&quot;&gt;       // 单选框
+&lt;input type=&quot;checkbox&quot;&gt;    // 复选框
+&lt;input type=&quot;password&quot;&gt;    //  密码框
+&lt;form action=&quot;&quot;&gt;&lt;/form&gt;    // 表单
+&lt;textarea  cols=&quot;&quot; rows=&quot;&quot;&gt;&lt;/textarea&gt;   // 文本框
+&lt;select name=&quot;&quot; id=&quot;&quot;&gt;&lt;/select&gt;     // 下拉框
 </code></pre>
 
           
