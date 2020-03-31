@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-03-31T02:41:25.774Z</updated>
+    <updated>2020-03-31T03:06:54.248Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -34,7 +34,7 @@
 <h2 id="11-web-api介绍">1.1. Web API介绍</h2>
 <h3 id="111-api的概念">1.1.1 API的概念</h3>
 <p>API（Application Programming Interface，应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，无需理解其内部工作机制细节，只需直接调用使用即可。</p>
-<figure data-type="image" tabindex="1"><img src="images/1550719355829.png" alt="1550719355829" loading="lazy"></figure>
+<p><a href="images/1550719355829.png">1550719355829</a></p>
 <blockquote>
 <p>举例解释什么是API。</p>
 <p>例如，</p>
@@ -71,14 +71,14 @@
 <p>DOM是W3C组织制定的一套处理 html和xml文档的规范，所有的浏览器都遵循了这套标准。</p>
 </blockquote>
 <h3 id="122-dom树">1.2.2. DOM树</h3>
-<figure data-type="image" tabindex="2"><img src="images/1550731974575.png" alt="1550731974575" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="images/1550731974575.png" alt="1550731974575" loading="lazy"></figure>
 <p>DOM树 又称为文档树模型，把文档映射成树形结构，通过节点对象对其处理，处理的结果可以加入到当前的页面。</p>
 <ul>
 <li>文档：一个页面就是一个文档，DOM中使用document表示</li>
 <li>节点：网页中的所有内容，在文档树中都是节点（标签、属性、文本、注释等），使用node表示</li>
 <li>标签节点：网页中的所有标签，通常称为元素节点，又简称为“元素”，使用element表示</li>
 </ul>
-<figure data-type="image" tabindex="3"><img src="images/1550732362134.png" alt="1550732362134" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="images/1550732362134.png" alt="1550732362134" loading="lazy"></figure>
 <h2 id="13-获取元素">1.3. 获取元素</h2>
 <p>为什么要获取页面元素？</p>
 <p>例如：我们想要操作页面上的某部分(显示/隐藏，动画)，需要先获取到该部分对应的元素，再对其进行操作。</p>
@@ -139,11 +139,11 @@
     &lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
-<figure data-type="image" tabindex="4"><img src="images/1550733441663.png" alt="1550733441663" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="images/1550733441663.png" alt="1550733441663" loading="lazy"></figure>
 <p>注意：getElementsByTagName()获取到是动态集合，即：当页面增加了标签，这个集合中也就增加了元素。</p>
 <h3 id="133-h5新增获取元素方式">1.3.3. H5新增获取元素方式</h3>
-<figure data-type="image" tabindex="5"><img src="images/1550733518278.png" alt="1550733518278" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="images/1550733734425.png" alt="1550733734425" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="images/1550733518278.png" alt="1550733518278" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="images/1550733734425.png" alt="1550733734425" loading="lazy"></figure>
 <p><strong>案例代码</strong></p>
 <pre><code class="language-js">&lt;body&gt;
     &lt;div class=&quot;box&quot;&gt;盒子1&lt;/div&gt;
@@ -174,7 +174,7 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="134-获取特殊元素bodyhtml">1.3.4 获取特殊元素（body，html）</h3>
-<figure data-type="image" tabindex="7"><img src="images/1550733794816.png" alt="1550733794816" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="images/1550733794816.png" alt="1550733794816" loading="lazy"></figure>
 <h2 id="14-事件基础">1.4. 事件基础</h2>
 <h3 id="141-事件概述">1.4.1. 事件概述</h3>
 <p>JavaScript 使我们有能力创建动态页面，而事件是可以被 JavaScript 侦测到的行为。</p>
@@ -203,7 +203,7 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="143-执行事件的步骤">1.4.3. 执行事件的步骤</h3>
-<figure data-type="image" tabindex="8"><img src="images/1550734387056.png" alt="1550734387056" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="images/1550734387056.png" alt="1550734387056" loading="lazy"></figure>
 <p><strong>案例代码</strong></p>
 <pre><code class="language-js">&lt;body&gt;
     &lt;div&gt;123&lt;/div&gt;
@@ -222,7 +222,7 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="144-常见的鼠标事件">1.4.4. 常见的鼠标事件</h3>
-<figure data-type="image" tabindex="9"><img src="images/1550734506084.png" alt="1550734506084" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="images/1550734506084.png" alt="1550734506084" loading="lazy"></figure>
 <h3 id="145-分析事件三要素">1.4.5. 分析事件三要素</h3>
 <ul>
 <li>
@@ -235,7 +235,7 @@
 <h2 id="15-操作元素">1.5. 操作元素</h2>
 <p>​	JavaScript的 DOM 操作可以改变网页内容、结构和样式，我们可以利用 DOM 操作元素来改变元素里面的内容、属性等。（注意：这些操作都是通过元素对象的属性实现的）</p>
 <h3 id="151-改变元素内容获取或设置">1.5.1. 改变元素内容（获取或设置）</h3>
-<figure data-type="image" tabindex="10"><img src="images/1550735016756.png" alt="1550735016756" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="images/1550735016756.png" alt="1550735016756" loading="lazy"></figure>
 <p><strong>innerText改变元素内容</strong></p>
 <pre><code class="language-js">&lt;body&gt;
     &lt;button&gt;显示当前系统时间&lt;/button&gt;
@@ -295,7 +295,7 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="152-常用元素的属性操作">1.5.2. 常用元素的属性操作</h3>
-<figure data-type="image" tabindex="11"><img src="images/1550735556297.png" alt="1550735556297" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="images/1550735556297.png" alt="1550735556297" loading="lazy"></figure>
 <p><strong>获取属性的值</strong></p>
 <blockquote>
 <p>元素对象.属性名</p>
@@ -328,10 +328,10 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="153-案例分时问候">1.5.3. 案例：分时问候</h3>
-<figure data-type="image" tabindex="12"><img src="images/1550735858049.png" alt="1550735858049" loading="lazy"></figure>
-<figure data-type="image" tabindex="13"><img src="images/1550735877145.png" alt="1550735877145" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="images/1550735858049.png" alt="1550735858049" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="images/1550735877145.png" alt="1550735877145" loading="lazy"></figure>
 <h3 id="154-表单元素的属性操作">1.5.4. 表单元素的属性操作</h3>
-<figure data-type="image" tabindex="14"><img src="images/1550736039005.png" alt="1550736039005" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="images/1550736039005.png" alt="1550736039005" loading="lazy"></figure>
 <p><strong>获取属性的值</strong></p>
 <blockquote>
 <p>元素对象.属性名</p>
@@ -362,18 +362,18 @@
 &lt;/body&gt;
 </code></pre>
 <h3 id="155-案例仿京东显示密码">1.5.5. 案例：仿京东显示密码</h3>
-<figure data-type="image" tabindex="15"><img src="images/1550736330331.png" alt="1550736330331" loading="lazy"></figure>
-<figure data-type="image" tabindex="16"><img src="images/1550736346822.png" alt="1550736346822" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="images/1550736330331.png" alt="1550736330331" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="images/1550736346822.png" alt="1550736346822" loading="lazy"></figure>
 <h3 id="156-样式属性操作">1.5.6. 样式属性操作</h3>
 <p>我们可以通过 JS 修改元素的大小、颜色、位置等样式。</p>
 <p><strong>常用方式</strong></p>
-<figure data-type="image" tabindex="17"><img src="images/1550736488634.png" alt="1550736488634" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="images/1550736488634.png" alt="1550736488634" loading="lazy"></figure>
 <h4 id="方式1通过操作style属性">方式1：通过操作style属性</h4>
 <blockquote>
 <p>元素对象的style属性也是一个对象！</p>
 <p>元素对象.style.样式属性 = 值;</p>
 </blockquote>
-<figure data-type="image" tabindex="18"><img src="images/1550736620181.png" alt="1550736620181" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="images/1550736620181.png" alt="1550736620181" loading="lazy"></figure>
 <p><strong>案例代码</strong></p>
 <pre><code class="language-js">&lt;body&gt;
     &lt;div&gt;&lt;/div&gt;
@@ -390,20 +390,20 @@
 &lt;/body&gt;
 </code></pre>
 <h4 id="案例淘宝点击关闭二维码">案例：淘宝点击关闭二维码</h4>
-<figure data-type="image" tabindex="19"><img src="images/1550736843659.png" alt="1550736843659" loading="lazy"></figure>
-<figure data-type="image" tabindex="20"><img src="images/1550736881832.png" alt="1550736881832" loading="lazy"></figure>
+<figure data-type="image" tabindex="18"><img src="images/1550736843659.png" alt="1550736843659" loading="lazy"></figure>
+<figure data-type="image" tabindex="19"><img src="images/1550736881832.png" alt="1550736881832" loading="lazy"></figure>
 <h4 id="案例循环精灵图背景">案例：循环精灵图背景</h4>
-<figure data-type="image" tabindex="21"><img src="images/1550736940082.png" alt="1550736940082" loading="lazy"></figure>
-<figure data-type="image" tabindex="22"><img src="images/1550736956754.png" alt="1550736956754" loading="lazy"></figure>
+<figure data-type="image" tabindex="20"><img src="images/1550736940082.png" alt="1550736940082" loading="lazy"></figure>
+<figure data-type="image" tabindex="21"><img src="images/1550736956754.png" alt="1550736956754" loading="lazy"></figure>
 <h4 id="案例显示隐藏文本框内容">案例：显示隐藏文本框内容</h4>
-<figure data-type="image" tabindex="23"><img src="images/1550737006593.png" alt="1550737006593" loading="lazy"></figure>
-<figure data-type="image" tabindex="24"><img src="images/1550737019729.png" alt="1550737019729" loading="lazy"></figure>
+<figure data-type="image" tabindex="22"><img src="images/1550737006593.png" alt="1550737006593" loading="lazy"></figure>
+<figure data-type="image" tabindex="23"><img src="images/1550737019729.png" alt="1550737019729" loading="lazy"></figure>
 <h4 id="方式2通过操作classname属性">方式2：通过操作className属性</h4>
 <blockquote>
 <p>元素对象.className = 值;</p>
 <p>因为class是关键字，所有使用className。</p>
 </blockquote>
-<figure data-type="image" tabindex="25"><img src="images/1550737214510.png" alt="1550737214510" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="images/1550737214510.png" alt="1550737214510" loading="lazy"></figure>
 <p><strong>案例代码</strong></p>
 <pre><code class="language-js">&lt;body&gt;
     &lt;div class=&quot;first&quot;&gt;文本&lt;/div&gt;
@@ -425,10 +425,10 @@
 &lt;/body&gt;
 </code></pre>
 <h4 id="案例密码框格式提示错误信息">案例：密码框格式提示错误信息</h4>
-<figure data-type="image" tabindex="26"><img src="images/1550737269546.png" alt="1550737269546" loading="lazy"></figure>
-<figure data-type="image" tabindex="27"><img src="images/1550737284218.png" alt="1550737284218" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="images/1550737269546.png" alt="1550737269546" loading="lazy"></figure>
+<figure data-type="image" tabindex="26"><img src="images/1550737284218.png" alt="1550737284218" loading="lazy"></figure>
 <h2 id="16-今日总结">1.6. 今日总结</h2>
-<figure data-type="image" tabindex="28"><img src="images/1550737354861.png" alt="1550737354861" loading="lazy"></figure>
+<figure data-type="image" tabindex="27"><img src="images/1550737354861.png" alt="1550737354861" loading="lazy"></figure>
 <h1 id="day02-web-apis">day02 - Web APIs</h1>
 <blockquote>
 <p>学习目标：</p>
@@ -2136,8 +2136,8 @@ this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
 <li>如果大于遮挡层最大的移动距离，就把坐标设置为最大的移动距离</li>
 <li>遮挡层的最大移动距离：小图片盒子宽度 减去 遮挡层盒子宽度</li>
 </ol>
-<figure data-type="image" tabindex="29"><img src="images%5C1551881487(1).png" alt="1551881487(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day05/4-笔记/images/1551881487(1).png)" loading="lazy"></figure>
-<figure data-type="image" tabindex="30"><img src="images%5C1551881563(1).jpg" alt="1551881563(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day05/4-笔记/images/1551881563(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="28"><img src="images%5C1551881487(1).png" alt="1551881487(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day05/4-笔记/images/1551881487(1).png)" loading="lazy"></figure>
+<figure data-type="image" tabindex="29"><img src="images%5C1551881563(1).jpg" alt="1551881563(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day05/4-笔记/images/1551881563(1).jpg)" loading="lazy"></figure>
 <pre><code class="language-javascript">window.addEventListener('load', function() {
     var preview_img = document.querySelector('.preview_img');
     var mask = document.querySelector('.mask');
@@ -2724,7 +2724,7 @@ this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
 </li>
 <li>
 <p>此时图片，去掉过渡效果，然后移动</p>
-<figure data-type="image" tabindex="31"><img src="images%5C1551795483(1).jpg" alt="1551795483(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551795483(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="30"><img src="images%5C1551795483(1).jpg" alt="1551795483(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551795483(1).jpg)" loading="lazy"></figure>
 </li>
 </ol>
 <h2 id="123-classlist-属性">1.2.3 classList 属性</h2>
@@ -2756,7 +2756,7 @@ this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
 </li>
 <li>
 <p>但是，是等着过渡结束之后变化，所以这个写到 transitionend 事件里面</p>
-<figure data-type="image" tabindex="32"><img src="images%5C1551796072(1).jpg" alt="1551796072(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796072(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="31"><img src="images%5C1551796072(1).jpg" alt="1551796072(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796072(1).jpg)" loading="lazy"></figure>
 </li>
 <li>
 <p>手指滑动轮播图</p>
@@ -2789,8 +2789,8 @@ this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
 <p>如果是右滑就播放上一张  (index--)</p>
 </li>
 </ol>
-<figure data-type="image" tabindex="33"><img src="images%5C1551796363(1).jpg" alt="1551796363(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796363(1).jpg)" loading="lazy"></figure>
-<figure data-type="image" tabindex="34"><img src="images%5C1551796502(1).jpg" alt="1551796502(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796502(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="32"><img src="images%5C1551796363(1).jpg" alt="1551796363(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796363(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="33"><img src="images%5C1551796502(1).jpg" alt="1551796502(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551796502(1).jpg)" loading="lazy"></figure>
 <h3 id="131-案例返回顶部">1.3.1. 案例：返回顶部</h3>
 <p>当页面滚动某个地方，就显示，否则隐藏</p>
 <p>点击可以返回顶部</p>
@@ -2801,7 +2801,7 @@ this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
 <li>如果被卷去的头部（window.pageYOffset ）大于某个数值</li>
 <li>点击，window.scroll(0,0) 返回顶部</li>
 </ol>
-<figure data-type="image" tabindex="35"><img src="images%5C1551797003(1).jpg" alt="1551797003(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551797003(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="34"><img src="images%5C1551797003(1).jpg" alt="1551797003(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551797003(1).jpg)" loading="lazy"></figure>
 <h2 id="14-click-延时解决方案">1.4. click 延时解决方案</h2>
 <p>移动端 click 事件会有 300ms 的延时，原因是移动端屏幕双击会缩放(double tap to zoom) 页面。</p>
 <p>解决方案：</p>
@@ -2841,7 +2841,7 @@ function tap (obj, callback) {
 <ol start="3">
 <li>
 <p>使用插件。fastclick 插件解决300ms 延迟。</p>
-<figure data-type="image" tabindex="36"><img src="images%5C1551797533(1).jpg" alt="1551797533(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551797533(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="35"><img src="images%5C1551797533(1).jpg" alt="1551797533(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551797533(1).jpg)" loading="lazy"></figure>
 </li>
 </ol>
 <h2 id="15-移动端常用开发插件">1.5. 移动端常用开发插件</h2>
@@ -2967,9 +2967,19 @@ function tap (obj, callback) {
 </li>
 <li>
 <p>如果勾选，就存储，否则就移除</p>
-<figure data-type="image" tabindex="37"><img src="images%5C1551800263(1).jpg" alt="1551800263(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551800263(1).jpg)" loading="lazy"></figure>
+<figure data-type="image" tabindex="36"><img src="images%5C1551800263(1).jpg" alt="1551800263(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551800263(1).jpg)" loading="lazy"></figure>
 </li>
 </ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[对对对]]></title>
+        <id>https://zjp693.github.io/post/dui-dui-dui/</id>
+        <link href="https://zjp693.github.io/post/dui-dui-dui/">
+        </link>
+        <updated>2020-03-31T02:49:55.000Z</updated>
+        <content type="html"><![CDATA[<p>安哥拉好来化工i哈这个举办了几年</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5C%E5%BC%A0%E5%BB%BA%E5%B9%B3%5CDesktop%5C%E8%AF%BE%E5%A0%82%E6%88%AA%E5%9B%BE%5Cv2-7fbdb98c77a0efd4de69c05dfaa7fdd9_r.jpg" alt="v2-7fbdb98c77a0efd4de69c05dfaa7fdd9_r" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
