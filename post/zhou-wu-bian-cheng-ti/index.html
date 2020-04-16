@@ -1,97 +1,94 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587053135685">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <meta charset="utf-8" >
 
+<title>周五编程题 | 学习笔记</title>
+<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587055276331">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
 
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://zjp693.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587053135685" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#tab%E5%88%87%E6%8D%A2">tab切换</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://zjp693.github.io/">学习笔记</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="https://zjp693.github.io/tags" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="menu-container">
-  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">周五编程题</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-04-16 / 3 min read
-        </div>
-        
-        <div class="post-content yue">
-          <h2 id="tab切换">tab切换</h2>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>周五编程题</h1>
+            <p class="article-meta">
+              2020-04-16
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="tab切换">tab切换</h2>
 <pre><code class="language-js">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
@@ -193,129 +190,2190 @@
 
 &lt;/html&gt;
 </code></pre>
+<h2 id="隔行变色">隔行变色</h2>
+<pre><code class="language-js">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;style&gt;
+    ul {
+      list-style-type: none;
+      width: 200px;
+      position: absolute;
+      left: 500px;
+    }
+
+    ul li {
+      margin-top: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 20px;
+
+    }
+
+    .odd {
+      color: red;
+      background-color: green;
+    }
+
+    .even {
+      color: green;
+      background-color: red;
+    }
+  &lt;/style&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;input type=&quot;button&quot; value=&quot;隔行变色&quot; id=&quot;btn&quot; /&gt;
+  &lt;ul id=&quot;uu&quot;&gt;
+    &lt;li&gt;乔峰:降龙十八掌&lt;/li&gt;
+    &lt;li&gt;张无忌:乾坤大挪移&lt;/li&gt;
+    &lt;li&gt;段誉:鳞波微步&lt;/li&gt;
+    &lt;li&gt;丁棚:天外流星贱&lt;/li&gt;
+    &lt;li&gt;张三丰:太极掌&lt;/li&gt;
+    &lt;li&gt;段飞:极乐神功&lt;/li&gt;
+    &lt;li&gt;云飞扬:天馋功&lt;/li&gt;
+    &lt;li&gt;杨过:黯然销魂掌&lt;/li&gt;
+    &lt;li&gt;那谁谁:如来神掌&lt;/li&gt;
+    &lt;li&gt;孟星魂:流星蝴蝶剑&lt;/li&gt;
+    &lt;li&gt;楠哥:少女萌萌拳&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+    // 1.给btn添加点击事件
+    // $('#btn').click(function () {
+    //   // 2.获取到索引为偶数的li 添加类名
+    //   $('li:even').addClass('even');
+    //   // 3.获取到索引为奇数的li 添加类名
+    //   $('li:odd').addClass('odd');
+    // })
+    $(&quot;#btn&quot;).click(function () {
+      $(&quot;li:even&quot;).addClass(&quot;even&quot;)
+      $(&quot;li:odd&quot;).addClass(&quot;odd&quot;)
+    })
+
+
+
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="百度换肤">百度换肤</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      margin: 100px auto;
+      width: 400px;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+      width: 100px;
+    }
+
+    img {
+      width: 100%;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(./image/1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;img src=&quot;./image/1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;./image/2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;./image/3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;./image/4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+
+
+    $(&quot;li&quot;).click(function () {
+      var img = $(this).find(&quot;img&quot;).attr(&quot;src&quot;)
+      $(&quot;body&quot;).css(&quot;backgroundImage&quot;, `url(${img}`)
+
+    })
+
+
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="淘宝精品案例">淘宝精品案例</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrapper {
+      width: 298px;
+      height: 248px;
+      margin: 100px auto 0;
+      border: 1px solid pink;
+      overflow: hidden;
+    }
+
+    #left,
+    #center,
+    #right {
+      float: left;
+    }
+
+    #left li,
+    #right li {
+      background: url(image/lili.jpg) repeat-x;
+    }
+
+    #left li a,
+    #right li a {
+      display: block;
+      width: 48px;
+      height: 27px;
+      border-bottom: 1px solid pink;
+      line-height: 27px;
+      text-align: center;
+      color: black;
+    }
+
+    #left li a:hover,
+    #right li a:hover {
+      background-image: url(image/abg.gif);
+    }
+
+    #center {
+      border-left: 1px solid pink;
+      border-right: 1px solid pink;
+    }
+  &lt;/style&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;ul id=&quot;left&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;女靴&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;雪地靴&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;冬裙&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;呢大衣&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;毛衣&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;棉服&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;女裤&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;羽绒服&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;牛仔裤&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul id=&quot;center&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/女靴.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/雪地靴.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/冬裙.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/呢大衣.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/毛衣.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/棉服.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/女裤.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/羽绒服.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/牛仔裤.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/女包.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/男包.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/登山鞋.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/皮带.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/围巾.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/皮衣.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/男毛衣.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/男棉服.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/男靴.jpg&quot; width=&quot;200&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul id=&quot;right&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;女包&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;男包&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;登山鞋&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;皮带&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;围巾&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;皮衣&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;男毛衣&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;男棉服&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;男靴&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+
+    $(&quot;#left li&quot;).mouseover(function () {
+      $(&quot;#center li&quot;).hide()
+      let index = $(this).index()
+      $(&quot;#center li&quot;).eq(index).show()
+    })
+    $(&quot;#right li&quot;).mouseover(function () {
+      $(&quot;#center li&quot;).hide()
+      let index = $(this).index()
+      $(&quot;#center li&quot;).eq(index).show()
+    })
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="脸谱">脸谱</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      background: #000;
+    }
+
+    .wrap {
+      margin: 100px auto 0;
+      width: 630px;
+      height: 394px;
+      padding: 10px 0 0 10px;
+      background: #000;
+      overflow: hidden;
+      border: 1px solid #fff;
+    }
+
+    .wrap li {
+      float: left;
+      margin: 0 10px 10px 0;
+
+    }
+
+    .wrap img {
+      display: block;
+      border: 0;
+    }
+  &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/02.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/04.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/06.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 上课
+    // // 1.鼠标移入 让移入到的这个li 它的opacity为1 让除了这个li以外的liopacity为0.5
+    // $('li').mouseenter(function () {
+    //   $(this).css('opacity', 1);
+    //   $(this).siblings().css('opacity', 0.5);
+    // })
+    // // 2.鼠标移出 让所有的li opacity为0.5
+    // $('li').mouseleave(function () {
+    //   $('li').css('opacity', 1);
+    // })
+
+
+
+    // 原来
+    //获取所有的li,添加鼠标进入事件
+    $(&quot;.wrap&gt;ul&gt;li&quot;).mouseenter(function () {
+      //设置当前的li的透明度的同时修改当前的li的所有的兄弟元素li的透明度
+      $(this).css(&quot;opacity&quot;, 1)
+      $(this).siblings(&quot;li&quot;).css(&quot;opacity&quot;, 0.5);
+    });
+    //鼠标离开事件
+    $(&quot;.wrap&quot;).mouseleave(function () {
+      //从当前的div中所有的li,设置透明度
+      $(this).find(&quot;li&quot;).css(&quot;opacity&quot;, 1);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="固定导航">固定导航</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .w {
+      width: 1191px;
+      margin: 0 auto;
+    }
+
+    .box1 {
+      height: 935px;
+    }
+
+    .box2 {
+      height: 107px;
+      position: static;
+    }
+
+    .box2.active {
+      position: fixed;
+      top: 0;
+    }
+
+    .top {
+      width: 50px;
+      height: 50px;
+      font: bold 50px/50px '宋体';
+      text-align: center;
+      color: #fff;
+      background-color: blue;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 0;
+      display: none;
+    }
+
+    .top.active {
+      display: block;
+      position: absolute;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;w&quot;&gt;
+    &lt;div class=&quot;box1&quot;&gt;
+      &lt;image src=&quot;./image/01.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;!-- 今日团 --&gt;
+    &lt;div class=&quot;box2&quot; id=&quot;box2&quot;&gt;
+      &lt;image src=&quot;./image/02.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;box3&quot;&gt;
+      &lt;image src=&quot;./image/03.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;box4&quot;&gt;
+      &lt;image src=&quot;./image/04.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;top&quot; id=&quot;_top&quot;&gt;▲&lt;/div&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+
+    $(document).scroll(function () {
+      console.log($(document).scrollTop(), $('#box2').offset().top)
+      if ($(document).scrollTop() &gt;= $(&quot;#box2&quot;).offset().top) {
+        $('.box2').css(
+          'position', 'fixed',
+        )
+        $(&quot;.box2&quot;).css(
+          'top', 0
+        )
+      }
+      else {
+        // 3.否则不固定
+        $('.box2').css({
+          'position': 'static'
+        })
+      }
+
+    })
+
+
+
+
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="返回顶部">返回顶部</h3>
+<pre><code class="language-js">    $(document).scroll(function () {
+      // 获取页面的卷曲的高度
+      // 判断页面跑出浏览器顶部的高度 是不是大于500
+      if ($(document).scrollTop() &gt;= 500) {
+        // 如果大于500 让返回顶部按钮 显示
+        $('a').show();
+      } else {
+        // 如果不大于500 让返回按钮  隐藏
+        $('a').hide();
+      }
+    })
+    // 功能2: 点击a标签 让滚动条回到0的位置
+    $('a').click(function () {
+      $(document).scrollTop(0)
+    })
+    ```
+    ### 淘宝侧边栏
+    ```js
+    &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    .slider-bar {
+      position: absolute;
+      left: 50%;
+      top: 300px;
+      margin-left: 600px;
+      width: 45px;
+      height: 130px;
+      background-color: pink;
+    }
+
+    .w {
+      width: 1200px;
+      margin: 10px auto;
+    }
+
+    .header {
+      height: 150px;
+      background-color: purple;
+    }
+
+    .banner {
+      height: 250px;
+      background-color: skyblue;
+    }
+
+    .main {
+      height: 1000px;
+      background-color: yellowgreen;
+    }
+
+    span {
+      display: none;
+      position: absolute;
+      bottom: 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;slider-bar&quot;&gt;
+    &lt;span class=&quot;goback&quot;&gt;返回顶部&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;header w&quot;&gt;头部区域&lt;/div&gt;
+  &lt;div class=&quot;banner w&quot;&gt;banner区域&lt;/div&gt;
+  &lt;div class=&quot;main w&quot;&gt;主体部分&lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+
+    // jQuery版本
+    // 当滚动条往下滚动的时候 到banner刚好到顶部的时候 侧边栏固定 否则 正常走
+    let sliderBarTop = $('.slider-bar').offset().top - $('.banner').offset().top;
+    let mainTop = $('.main').offset().top;
+    let bannerTop = $('.banner').offset().top;
+    // console.log(sliderBarTop);
+    $(document).scroll(function () {
+      // 功能1
+      if ($(document).scrollTop() &gt;= bannerTop) {
+        $('.slider-bar').css({
+          'position': 'fixed',
+          'top': sliderBarTop
+        })
+      } else {
+        $('.slider-bar').css({
+          'position': 'absolute',
+          'top': 300
+        })
+      }
+      // 功能2 如果页面卷曲的高度 &gt;= main距离页面顶部的距离 那就显示返回顶部 否则不显示
+      if ($(document).scrollTop() &gt; mainTop) {
+        $('.goback').show();
+      } else {
+        $('.goback').hide();
+      }
+    })
+
+
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="表格编辑">表格编辑</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .wrap {
+      width: 410px;
+      margin: 100px auto 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #c0c0c0;
+    }
+
+    th,
+    td {
+      border: 1px solid #d0d0d0;
+      color: #404060;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #09c;
+      font: bold 16px &quot;微软雅黑&quot;;
+      color: #fff;
+    }
+
+    td {
+      font: 14px &quot;微软雅黑&quot;;
+    }
+
+    td a.get {
+      text-decoration: none;
+    }
+
+    a.del:hover {
+      text-decoration: underline;
+    }
+
+    tbody tr {
+      background-color: #f0f0f0;
+    }
+
+    tbody tr:hover {
+      cursor: pointer;
+      background-color: #fafafa;
+    }
+
+    .btnAdd {
+      width: 110px;
+      height: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .form-item {
+      height: 100%;
+      position: relative;
+      padding-left: 100px;
+      padding-right: 20px;
+      margin-bottom: 34px;
+      line-height: 36px;
+    }
+
+    .form-item&gt;.lb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100px;
+      text-align: right;
+    }
+
+    .form-item&gt;.txt {
+      width: 300px;
+      height: 32px;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.15;
+      display: none;
+    }
+
+    .form-add {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      margin-left: -197px;
+      padding-bottom: 20px;
+      background: #fff;
+      display: none;
+    }
+
+    .form-add-title {
+      background-color: #f7f7f7;
+      border-width: 1px 1px 0 1px;
+      border-bottom: 0;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .form-add-title span {
+      width: auto;
+      height: 18px;
+      font-size: 16px;
+      font-family: 宋体;
+      font-weight: bold;
+      color: rgb(102, 102, 102);
+      text-indent: 12px;
+      padding: 8px 0px 10px;
+      margin-right: 10px;
+      display: block;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .form-add-title div {
+      width: 16px;
+      height: 20px;
+      position: absolute;
+      right: 10px;
+      top: 6px;
+      font-size: 30px;
+      line-height: 16px;
+      cursor: pointer;
+    }
+
+    .form-submit {
+      text-align: center;
+    }
+
+    .form-submit input {
+      width: 170px;
+      height: 32px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div&gt;
+      &lt;input type=&quot;button&quot; value=&quot;添加数据&quot; id=&quot;j_btnAddData&quot; class=&quot;btnAdd&quot; /&gt;
+    &lt;/div&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;课程名称&lt;/th&gt;
+          &lt;th&gt;所属学院&lt;/th&gt;
+          &lt;th&gt;已学会&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody id=&quot;j_tb&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;JavaScript&lt;/td&gt;
+          &lt;td&gt;传智播客-前端与移动开发学院&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;javascrip:;&quot; class=&quot;get&quot;&gt;GET&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;CSS&lt;/td&gt;
+          &lt;td&gt;传智播客-前端与移动开发学院&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;javascrip:;&quot; class=&quot;get&quot;&gt;GET&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;HTML&lt;/td&gt;
+          &lt;td&gt;传智播客-前端与移动开发学院&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;javascrip:;&quot; class=&quot;get&quot;&gt;GET&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;jQuery&lt;/td&gt;
+          &lt;td&gt;传智播客-前端与移动开发学院&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;javascrip:;&quot; class=&quot;get&quot;&gt;GET&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;!--遮挡的div--&gt;
+  &lt;div id=&quot;j_mask&quot; class=&quot;mask&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;j_formAdd&quot; class=&quot;form-add&quot;&gt;
+    &lt;div class=&quot;form-add-title&quot;&gt;
+      &lt;span&gt;添加数据&lt;/span&gt;
+
+      &lt;div id=&quot;j_hideFormAdd&quot;&gt;x&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item&quot;&gt;
+      &lt;label class=&quot;lb&quot; for=&quot;j_txtLesson&quot;&gt;课程名称：&lt;/label&gt;
+      &lt;input class=&quot;txt&quot; type=&quot;text&quot; id=&quot;j_txtLesson&quot; placeholder=&quot;请输入课程名称&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item&quot;&gt;
+      &lt;label class=&quot;lb&quot; for=&quot;j_txtBelSch&quot;&gt;所属学院：&lt;/label&gt;
+      &lt;input class=&quot;txt&quot; type=&quot;text&quot; id=&quot;j_txtBelSch&quot; value=&quot;传智播客-前端与移动开发学院&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-submit&quot;&gt;
+      &lt;input type=&quot;button&quot; value=&quot;添加&quot; id=&quot;j_btnAdd&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // jQuery版本
+    //  - 当点击表格中的&quot;GET&quot;可以删除当前行
+    // 父元素.on(事件类型, [触发事件的元素], 事件处理函数)
+    // $('tbody .get').click(function () {
+    //   $(this).parent().parent().remove()
+    // })
+
+    $('tbody').on('click', '.get', function () {
+      // $(this).parent().parent().remove()
+      $(this).parents('tr').remove();
+    })
+
+    // 在jquery中任何情况都用on
+
+
+    //  - 当点击&quot;添加数据&quot;遮罩层和添加数据的文本框都会显示
+    $('.btnAdd').click(function () {
+      $('.mask').show();
+      $('.form-add').show();
+    })
+    //  - 当点击文本框对应盒子右上角&quot;X&quot;遮罩层和这个盒子都会隐藏
+    $('#j_hideFormAdd').click(function () {
+      $('.mask').hide();
+      $('.form-add').hide();
+    })
+    //  - 当课程文本框或者是所属学院文本框的内容都为空，或者是有一个为空，那么点击&quot;添加&quot;按钮，都不会在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+    //  - 当在课程文本框和所属学院文本框中都输入内容的时候，点击“添加”按钮，根据数据在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+    $('#j_btnAdd').on('click', function () {
+      let lessonValue = $('#j_txtLesson').val().trim();
+      let schoolValue = $('#j_txtBelSch').val().trim();
+      if (lessonValue.length !== 0 &amp;&amp; schoolValue.length !== 0) {
+        $('tbody').append(`
+        &lt;tr&gt;
+          &lt;td&gt;${lessonValue}&lt;/td&gt;
+          &lt;td&gt;${schoolValue}&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;javascrip:;&quot; class=&quot;get&quot;&gt;GET&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        `)
+      }
+
+      $('.mask').hide();
+      $('.form-add').hide();
+
+      $('#j_txtLesson').val('')
+      $('#j_txtBelSch').val('')
+    })
+    //  - 注意：当根据数据表格中的添加一行之后，再次点击&quot;GET&quot;这一行还能删除当前行
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="键盘">键盘</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      width: 800px;
+      margin: 100px auto;
+    }
+
+    li {
+      border: 1px solid #f00;
+      width: 80px;
+      float: left;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .active {
+      background-color: #0F0
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;ul class=&quot;box&quot;&gt;
+
+  &lt;/ul&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // - 把给定的数据渲染到页面上
+    //  - 键盘按下对应的数据的哪个键，页面中对应的那个数据的就会选中，添加背景色
+    var allKey = [&quot;1&quot;, '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U',
+      'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+    ];
+
+    // jQuery版
+    // 1.遍历allkey，把allkey的元素写入到li中去 并且给li添加一个属性 id id的值就是元素的ascii码值
+    $.each(allKey, function (index, item) {
+      $('.box').append(`&lt;li id=&quot;${item.charCodeAt()}&quot;&gt;${item}&lt;/li&gt;`
+      );
+    })
+    // 2.给document添加keydown事件 e.keyCode a+健码 = id 通过id找到这个元素 让这个元素高亮
+    $(document).keydown(function (e) {
+      $(`#${e.keyCode}`).addClass('active');
+    })
+    // 3.给document添加keyup事件 e.keyCode a+健码 = id 通过id找到这个元素 让这个元素去除active
+    $(document).keyup(function (e) {
+      $(`#${e.keyCode}`).removeClass('active');
+    })
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="拖动的模态框">拖动的模态框</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    .login-header {
+      width: 100%;
+      text-align: center;
+      height: 30px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    ul,
+    li,
+    ol,
+    dl,
+    dt,
+    dd,
+    div,
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .login {
+      display: none;
+      width: 512px;
+      height: 280px;
+      position: fixed;
+      border: #ebebeb solid 1px;
+      left: 50%;
+      top: 50%;
+      margin-left: -256px;
+      margin-top: -140px;
+      background: #ffffff;
+      box-shadow: 0px 0px 20px #ddd;
+      z-index: 9999;
+      /* transform: translate(-50%, -50%); */
+    }
+
+    .login-title {
+      width: 100%;
+      margin: 10px 0px 0px 0px;
+      text-align: center;
+      line-height: 40px;
+      height: 40px;
+      font-size: 18px;
+      position: relative;
+      cursor: move;
+    }
+
+    .login-input-content {
+      margin-top: 20px;
+    }
+
+    .login-button {
+      width: 50%;
+      margin: 30px auto 0px auto;
+      line-height: 40px;
+      font-size: 14px;
+      border: #ebebeb 1px solid;
+      text-align: center;
+    }
+
+    .login-bg {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background: rgba(0, 0, 0, .3);
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .login-button a {
+      display: block;
+    }
+
+    .login-input input.list-input {
+      float: left;
+      line-height: 35px;
+      height: 35px;
+      width: 350px;
+      border: #ebebeb 1px solid;
+      text-indent: 5px;
+    }
+
+    .login-input {
+      overflow: hidden;
+      margin: 0px 0px 20px 0px;
+    }
+
+    .login-input label {
+      float: left;
+      width: 90px;
+      padding-right: 10px;
+      text-align: right;
+      line-height: 35px;
+      height: 35px;
+      font-size: 14px;
+    }
+
+    .login-title span {
+      position: absolute;
+      font-size: 12px;
+      right: -20px;
+      top: -30px;
+      background: #ffffff;
+      border: #ebebeb solid 1px;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;login-header&quot;&gt;&lt;a id=&quot;link&quot; href=&quot;javascript:;&quot;&gt;点击，弹出登录框&lt;/a&gt;&lt;/div&gt;
+  &lt;div id=&quot;login&quot; class=&quot;login&quot;&gt;
+    &lt;div id=&quot;title&quot; class=&quot;login-title&quot;&gt;登录会员
+      &lt;span&gt;&lt;a id=&quot;closeBtn&quot; href=&quot;javascript:void(0);&quot; class=&quot;close-login&quot;&gt;关闭&lt;/a&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;login-input-content&quot;&gt;
+      &lt;div class=&quot;login-input&quot;&gt;
+        &lt;label&gt;用户名：&lt;/label&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名&quot; name=&quot;username&quot; id=&quot;username&quot; class=&quot;list-input&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;login-input&quot;&gt;
+        &lt;label&gt;登录密码：&lt;/label&gt;
+        &lt;input type=&quot;password&quot; placeholder=&quot;请输入登录密码&quot; name=&quot;password&quot; id=&quot;password&quot; class=&quot;list-input&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;loginBtn&quot; class=&quot;login-button&quot;&gt;&lt;a href=&quot;javascript:void(0);&quot; id=&quot;login-button-submit&quot;&gt;登录会员&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- 遮盖层 --&gt;
+  &lt;div id=&quot;bg&quot; class=&quot;login-bg&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+
+    // 功能1: 点击  点击弹出登录框按钮 弹出登录框
+    $('#link').on('click', function () {
+      $('#login').show();
+      $('#bg').show();
+    })
+    // 功能2: 点击 关闭按钮  关闭登录框
+    $('#closeBtn').on('click', function () {
+      $('#login').hide();
+      $('#bg').hide();
+    })
+    // 功能3: 鼠标按下头 能拖动登录框 鼠标松开 登录框放下
+    $('#title').on('mousedown', function (e) {
+      let x = e.pageX - $('#login').offset().left;
+      let y = e.pageY - $('#login').offset().top;
+
+      $(document).on('mousemove', function (e) {
+        $('#login').css({
+          left: e.pageX - x + 256,
+          top: e.pageY - y + 140
+        })
+      })
+
+      $(document).on('mouseup', function () {
+        $(document).off('mousemove');
+      })
+    })
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="消失的头">消失的头</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;style&gt;
+    div {
+      width: 400px;
+    }
+
+    img {
+      width: 90px;
+      height: 90px;
+      vertical-align: top;
+    }
+  &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;input type=&quot;button&quot; value=&quot;隐藏动画&quot; id=&quot;btn1&quot; /&gt;
+  &lt;input type=&quot;button&quot; value=&quot;显示动画&quot; id=&quot;btn2&quot; /&gt;
+  &lt;div&gt;
+    &lt;img src=&quot;image/1.jpg&quot; /&gt;
+    &lt;img src=&quot;image/2.jpg&quot; /&gt;
+    &lt;img src=&quot;image/3.jpg&quot; /&gt;
+    &lt;img src=&quot;image/4.jpg&quot; /&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 点击第一个按钮让图片隐藏
+    // 1.点击第一个按钮
+    $('#btn1').on('click', function () {
+      // 1.1 找到div中的最后一个img 它的前面一个兄弟元素也隐藏掉
+      $('div img:last-child').hide(300, function f1() {
+        $(this).prev().hide(300, f1)
+      })
+    })
+
+    // 2.点击第二个按钮 让每个头慢慢出来
+    $('#btn2').on('click', function () {
+      // 1.1 找到div中的最后一个img 它的前面一个兄弟元素也隐藏掉
+      $('div img:first-child').show(300, function f1() {
+        $(this).next().show(300, f1)
+      })
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="滑动动画">滑动动画</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    div {
+      width: 300px;
+      height: 300px;
+      background-color: green;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- html代码 --&gt;
+  &lt;button class=&quot;showbtn&quot;&gt;下拉&lt;/button&gt;
+  &lt;button class=&quot;hidebtn&quot;&gt;卷曲&lt;/button&gt;
+  &lt;button class=&quot;togglebtn&quot;&gt;下拉/卷曲&lt;/button&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;!-- JavaScript代码 --&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // slideDown([speed],[easing],[fn])
+    $('.showbtn').on('click', function () {
+      // 让div经过1秒完全下拉出来，当完全下拉出来之后 弹出一句话，完全下拉
+      $('div').slideDown(1000, function () {
+        alert(&quot;下拉下来&quot;)
+      })
+    })
+
+    // slideUp([speed,[easing],[fn]])
+    $('.hidebtn').on('click', function () {
+      // 让div经过3秒完全隐藏起来，当完全隐藏起来之后 弹出一句话，完全隐藏起来了
+      $('div').slideUp(1000, function () {
+        alert(&quot;卷曲上去&quot;)
+      })
+    })
+
+
+    // slideToggle([speed],[easing],[fn])
+    $('.togglebtn').on('click', function () {
+      // 让div经过3秒完全隐藏起来，当完全隐藏起来之后 弹出一句话，完全隐藏起来了
+      $('div').slideToggle(1000, function () {
+        alert(&quot;切换&quot;)
+      })
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="新浪下拉菜单">新浪下拉菜单</h3>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav {
+      margin: 100px;
+    }
+
+    .nav&gt;li {
+      position: relative;
+      float: left;
+      width: 80px;
+      height: 41px;
+      text-align: center;
+    }
+
+    .nav li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 41px;
+      color: #333;
+    }
+
+    .nav&gt;li&gt;a:hover {
+      background-color: #eee;
+    }
+
+    .nav ul {
+      display: none;
+      position: absolute;
+      top: 41px;
+      left: 0;
+      width: 100%;
+      border-left: 1px solid #FECC5B;
+      border-right: 1px solid #FECC5B;
+    }
+
+    .nav ul li {
+      border-bottom: 1px solid #FECC5B;
+    }
+
+    .nav ul li a:hover {
+      background-color: #FFF5DA;
+    }
+  &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;微博&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;私信&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;评论&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;@我&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;微博&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;私信&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;评论&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;@我&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;微博&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;私信&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;评论&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;@我&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;微博&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;私信&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;评论&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;&quot;&gt;@我&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 鼠标移动到每个li上 让对应的ul显示出来
+    $('.nav&gt;li').on('mouseover', function () {
+      // 当鼠标进入li 让这个li里面的ul的所有动画都停止
+    })
+
+    $('.nav&gt;li').on('mouseout', function () {
+
+      // $(this).children('ul').stop()
+      // $(this).children('ul').slideUp();
+
+      $(this).children('ul').stop().slideUp();
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="京东轮播图">京东轮播图</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;京东商城&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .slider {
+      height: 340px;
+      width: 790px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    .slider li {
+      position: absolute;
+      display: none;
+    }
+
+    .slider li:first-child {
+      display: block;
+    }
+
+
+    .arrow {
+      display: none;
+    }
+
+    .slider:hover .arrow {
+      display: block;
+    }
+
+    .arrow-left,
+    .arrow-right {
+      font-family: &quot;SimSun&quot;, &quot;宋体&quot;;
+      width: 30px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    .arrow-left:hover,
+    .arrow-right:hover {
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .arrow-left {
+      left: 0;
+    }
+
+    .arrow-right {
+      right: 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;slider&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd1.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd2.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd3.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd4.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd5.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd6.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd7.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+          &lt;image src=&quot;image/jd8.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!--箭头--&gt;
+    &lt;div class=&quot;arrow&quot;&gt;
+      &lt;span class=&quot;arrow-left&quot;&gt;&amp;lt;&lt;/span&gt;
+      &lt;span class=&quot;arrow-right&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 0.准备工作
+    // 0.1 声明变量 用来记录点击次数
+    let index = 0;
+    // 1.点击arrow-right按钮 让轮播图往左走(切换图片)
+    // 1.1 给arrow-right按钮添加点击事件
+    $('.arrow-right').on('click', function () {
+      // 1.1.1 点击一次 记录次数的变量应该+1
+      index++;
+      // 1.1.2 给轮播图的图片做限制
+      if (index &gt; $('.slider li').length - 1) {
+        index = 0;
+      }
+      // 1.1.3 让图片进行切换 
+      // $('.slider li').eq(index).fadeIn(500);
+      // $('.slider li').eq(index).siblings('li').fadeOut(500)
+
+      $('.slider li').eq(index).fadeIn(500).siblings('li').fadeOut(500)
+    })
+
+    // 2.点击arrow-left按钮  让轮播图往右走(切换图片)
+    // 2.1 arrow-right 按钮提那就点击事件
+    $('.arrow-left').on('click', function () {
+      // 2.1.1 点击一次 记录次数的变量应该-1
+      index--;
+      // 2.1.2 给轮播图的图片做限制
+      if (index &lt; 0) {
+        index = $('.slider li').length - 1;
+      }
+      // 2.1.3 让图片进行切换
+      $('.slider li').eq(index).fadeIn(500).siblings('li').fadeOut(500)
+    })
+
+    // 3.自动走(往左走)
+    setInterval(function () {
+      $('.arrow-right').click();
+    }, 5000)
+  &lt;/script&gt;
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="手风琴">手风琴</h2>
+<pre><code class="language-js">&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;手风琴案例&lt;/title&gt;
+
+  &lt;style type=&quot;text/css&quot;&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .king {
+      width: 852px;
+      margin: 100px auto;
+      background: url(image/bg.png) no-repeat;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .king ul {
+      overflow: hidden;
+    }
+
+    .king li {
+      position: relative;
+      float: left;
+      width: 69px;
+      height: 69px;
+      margin-right: 10px;
+    }
+
+    .king li.current {
+      width: 224px;
+    }
+
+    .king li.current .big {
+      display: block;
+    }
+
+    .king li.current .small {
+      display: none;
+    }
+
+    .big {
+      width: 224px;
+      display: none;
+    }
+
+    .small {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 69px;
+      height: 69px;
+      border-radius: 5px;
+    }
+  &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class=&quot;king&quot;&gt;
+    &lt;ul&gt;
+      &lt;li class=&quot;current&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/m1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/m.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/l1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/l.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/c1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/c.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/w1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/w.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/z1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/z.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/h1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/h.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+          &lt;img src=&quot;image/t1.jpg&quot; alt=&quot;&quot; class=&quot;small&quot;&gt;
+          &lt;img src=&quot;image/t.png&quot; alt=&quot;&quot; class=&quot;big&quot;&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 鼠标经过某个li，
+    $('.king li').on('mouseover', function () {
+      // 1.当前的这个小li的宽度要变成224px 里面的小图片要淡出 大图片要淡入
+      $(this).stop().animate({
+        width: 224
+      }).find('.small').stop().fadeOut().siblings('.big').stop().fadeIn()
+      // 2.其余的兄弟li要变成69 里面的小图片要淡入 大图片要淡出
+      $(this).siblings('li').stop().animate({
+        width: 69
+      }).find('.small').stop().fadeIn().siblings('.big').stop().fadeOut();
+    })
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="旋转木马">旋转木马</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;旋转木马轮播图&lt;/title&gt;
+  &lt;style&gt;
+    @charset &quot;UTF-8&quot;;
+
+    /*初始化  reset*/
+    blockquote,
+    body,
+    button,
+    dd,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    input,
+    legend,
+    li,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+      margin: 0;
+      padding: 0
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font: 12px/1.5 &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;, SimSun, &quot;宋体&quot;, sans-serif;
+      color: #666;
+    }
+
+    ol,
+    ul {
+      list-style: none
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    fieldset,
+    img {
+      border: 0;
+      vertical-align: top;
+    }
+
+    a,
+    input,
+    button,
+    select,
+    textarea {
+      outline: none;
+    }
+
+    a,
+    button {
+      cursor: pointer;
+    }
+
+    .wrap {
+      width: 1200px;
+      margin: 100px auto;
+    }
+
+    .slide {
+      height: 500px;
+      position: relative;
+    }
+
+    .slide li {
+      position: absolute;
+      left: 200px;
+      top: 0;
+    }
+
+    .slide li img {
+      width: 100%;
+    }
+
+    .arrow {
+      opacity: 0;
+    }
+
+    .prev,
+    .next {
+      width: 76px;
+      height: 112px;
+      position: absolute;
+      top: 50%;
+      margin-top: -56px;
+      background: url(./image/prev.png) no-repeat;
+      z-index: 99;
+    }
+
+    .next {
+      right: 0;
+      background-image: url(./image/next.png);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;wrap&quot; id=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;slide&quot; id=&quot;slide&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/slidepic1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/slidepic2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/slidepic3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/slidepic4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/slidepic5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class=&quot;arrow&quot; id=&quot;arrow&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;prev&quot; id=&quot;arrLeft&quot;&gt;&lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;next&quot; id=&quot;arrRight&quot;&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 位置信息
+    var config = [
+      {
+        width: 400,
+        top: 20,
+        left: 50,
+        opacity: 0.2,
+        zIndex: 2
+      },//0
+      {
+        width: 600,
+        top: 70,
+        left: 0,
+        opacity: 0.8,
+        zIndex: 3
+      },//1
+      {
+        width: 800,
+        top: 100,
+        left: 200,
+        opacity: 1,
+        zIndex: 4
+      },//2
+      {
+        width: 600,
+        top: 70,
+        left: 600,
+        opacity: 0.8,
+        zIndex: 3
+      },//3
+      {
+        width: 400,
+        top: 20,
+        left: 750,
+        opacity: 0.2,
+        zIndex: 2
+      }//4
+
+    ];
+
+    // 页面载入事件
+    $(function () {
+      // 让左右按钮出来
+      $('.slide').on('mouseenter', function () {
+        $('.arrow').fadeTo(200, 1)
+      })
+      $('.slide').on('mouseleave', function () {
+        $('.arrow').fadeTo(200, 0)
+      })
+
+      // let flag = true;
+      // 1.图片散开
+      function assign() {
+        $.each($('.slide li'), function (i, n) {
+          // console.log(i, n)
+          $(n).animate(config[i])
+        })
+      }
+      assign();
+
+      // 点击右边按钮
+      $('#arrRight').on('click', function () {
+        config.push(config.shift())
+        assign();
+      })
+
+      $('#arrLeft').on('click', function () {
+        config.unshift(config.pop())
+        assign();
+      })
+
+
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="历史记录">历史记录</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head lang=&quot;en&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;首页&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin-left: 300px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li,
+    div {
+      width: 250px;
+      padding: 10px 0;
+      margin-left: 10px;
+      border-bottom: 1px dashed #ccc;
+      height: 20px;
+    }
+
+    a {
+      float: right;
+    }
+
+    input {
+      padding: 5px;
+      margin: 10px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;input type=&quot;search&quot; placeholder=&quot;输入搜索关键字&quot; /&gt;
+  &lt;input type=&quot;button&quot; value=&quot;搜索&quot; /&gt;
+  &lt;div&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;清空搜索记录&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;!-- &lt;li&gt;没有搜索记录&lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;手机&lt;/span&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;删除&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 历史搜索记录
+    // 1.展示历史记录列表
+    // 2.点击搜索
+    // 3.删除一条数据
+    // 4.删除全部
+
+
+    // 2.点击搜索
+    // 2.1 获取搜索按钮 获取搜索框
+
+    // 2.2 给按钮添加点击事件
+    $('input[type=&quot;button&quot;]').click(function () {
+      // 2.3 获取文本框中的内容
+      var keywords = $('input[type=&quot;search&quot;]').val();
+      // 2.4 把文本框中的内容添加到历史记录中
+      if (keywords.trim() == '') {
+        alert(&quot;请输入搜索关键字&quot;);
+      } else {
+        setHistory(keywords);
+        showHistory();
+      }
+    })
+    // 1.展示历史记录列表
+    showHistory();
+    // 4.删除全部
+    $(&quot;div a&quot;).click(function () {
+      clearHistory();
+      showHistory();
+    })
+
+    // 3.删除一条数据
+    // 3.1 点击删除按钮的时候找到自己的兄弟元素中的文本
+    $(&quot;ul&quot;).on('click', &quot;a&quot;, function () {
+      // 找到自己的兄弟元素中的文本
+      var text = $(this).siblings('span').html();
+      // console.log(text);
+      delHistory(text);
+      showHistory();
+    })
+    // 获取历史记录(把我们的关键字存在localStorage中)
+    function getHistory() {
+      // var result = 
+      // console.log(result);
+      return JSON.parse(window.localStorage.getItem('history') || '[]');
+    }
+    // 设置历史记录 value = 关键字
+    function setHistory(value) {
+      // 获取历史记录
+      var historyList = getHistory(); // history = [&quot;手机&quot;,&quot;电脑&quot;]
+      // console.log(historyList);
+      // 判断数组中是否已经有了我输入的关键字(1.把获取来的数据做一个遍历 2.如果遍历过程中有一个数组的值和我输入的值一样 找到那个值对应的索引 3.用数组的切割方法 把那个替换一次)
+      $.each(historyList, function (index, item) {
+        // console.log(index,item);
+        if (item == value) {
+          historyList.splice(index, 1);
+        }
+      })
+      // 把关键字追加到数组中
+      historyList.push(value);
+      // 把数组变成json存储到localStorage中
+      window.localStorage.setItem('history', JSON.stringify(historyList));
+    }
+    // 删除数据
+    function delHistory(value) {
+      // 3.2 获取历史记录
+      var historyList = getHistory();
+      // 3.3 对比我要删除的这个数据在不在数组中
+      $.each(historyList, function (index, item) {
+        // 3.4 如果在 就splice
+        if (item == value) {
+          historyList.splice(index, 1);
+        }
+        // 3.5 删除完 把新的数据重新添加到localStorage中就可以了
+        window.localStorage.setItem('history', JSON.stringify(historyList));
+      })
+    }
+
+    // 清空历史记录
+    // 禁止用localStorage.clear(); 
+
+    // 应该的思路是localStorage.removeItem()
+    function clearHistory() {
+      window.localStorage.removeItem('history');
+    }
+
+    // 展示历史记录列表
+    function showHistory() {
+      // 1. 获取历史记录数据
+      var historyList = getHistory();
+      // 2. 判断历史记录有没有数据
+      if (historyList.length == 0) {
+        // 3. 如果没有历史记录数据 打出一句话  &lt;li&gt;没有搜索记录&lt;/li&gt;
+        $(&quot;ul&quot;).html(&quot;&lt;li&gt;没有搜索记录&lt;/li&gt;&quot;);
+      } else {
+        // 4. 如果有历史记录 遍历 显示在浏览器上 
+        // 声明一个空字符串
+        var html = &quot;&quot;;
+        // 遍历所有数据组成长字符串
+        $.each(historyList, function (index, item) {
+          html += '&lt;li&gt;&lt;span&gt;' + item + '&lt;/span&gt;&lt;a href=&quot;javascript:;&quot;&gt;删除&lt;/a&gt;&lt;/li&gt;'
+        })
+        // 把长字符串添加到ul中
+        $(&quot;ul&quot;).html(html);
+      }
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+            </div>
+          </article>
         </div>
-
-        
-
-
-        <div class="flex justify-between py-8">
-          
-
+        <div class="paper" data-aos="fade-in">
           
             <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
               <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
                 <h3 class="post-title">
                   周五简答题
-                  <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
             </div>
           
         </div>
-
         
-
       </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://zjp693.github.io//images/avatar.png?v=1587055276331" class="no-responsive avatar">
+    <div class="text-muted">一起努力💪，一起自律👍|顶端相见🎈🎈</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/zhou-wu-bian-cheng-ti/">周五编程题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">周五简答题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/zhou-wu-xuan-ze-ti/">周五选择题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/web-apis-bi-ji/">Web APIs笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/javas-ji-chu-xuan-ze-ti/">Javacript基础选择题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/htmlcss-xuan-ze-ti/">HTML+CSS选择题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/htmlcss-jian-da-ti/">HTML+CSS简答题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/">Javacript基础编程题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">Jsvascript基础简答题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/">Gridea+Github快速教程</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://zjp693.github.io/tag/ewUxVMzkr/" class="badge secondary">
+          javascript
+        </a>
+      
+        <a href="https://zjp693.github.io/tag/Knvzf19HH/" class="badge secondary">
+          HTML CSS
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
     </div>
 
-    <script src="https://zjp693.github.io//media/prism.js"></script>  
-<script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-Prism.highlightAll()
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+<script type="application/javascript">
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+AOS.init();
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+hljs.initHighlightingOnLoad()
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
+
+
+
+
   </body>
 </html>
