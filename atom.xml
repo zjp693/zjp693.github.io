@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-04-16T16:41:45.078Z</updated>
+    <updated>2020-04-16T16:44:56.373Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -17,91 +17,7 @@
         </link>
         <updated>2020-04-16T15:43:38.000Z</updated>
         <content type="html"><![CDATA[<h2 id="tab切换">tab切换</h2>
-<pre><code class="language-js">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;title&gt;Document&lt;/title&gt;
-  &lt;style&gt;
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      list-style-type: none;
-    }
-
-    .tab {
-      width: 978px;
-      margin: 100px auto;
-    }
-
-    .tab_list {
-      height: 39px;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-
-    .tab_list li {
-      float: left;
-      height: 39px;
-      line-height: 39px;
-      padding: 0 20px;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .tab_list .current {
-      background-color: #c81623;
-      color: #fff;
-    }
-
-    .item_info {
-      padding: 20px 0 0 20px;
-    }
-
-    .item {
-      display: none;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-  &lt;div class=&quot;tab&quot;&gt;
-    &lt;div class=&quot;tab_list&quot;&gt;
-      &lt;ul&gt;
-        &lt;li class=&quot;current&quot;&gt;商品介绍&lt;/li&gt;
-        &lt;li&gt;规格与包装&lt;/li&gt;
-        &lt;li&gt;售后保障&lt;/li&gt;
-        &lt;li&gt;商品评价（50000）&lt;/li&gt;
-        &lt;li&gt;手机社区&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tab_con&quot;&gt;
-      &lt;div class=&quot;item&quot;&gt;
-        商品介绍模块内容
-      &lt;/div&gt;
-      &lt;div class=&quot;item&quot;&gt;
-        规格与包装模块内容
-      &lt;/div&gt;
-      &lt;div class=&quot;item&quot;&gt;
-        售后保障模块内容
-      &lt;/div&gt;
-      &lt;div class=&quot;item&quot;&gt;
-        商品评价（50000）模块内容
-      &lt;/div&gt;
-      &lt;div class=&quot;item&quot;&gt;
-        手机社区模块内容
-      &lt;/div&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script&gt;
+<pre><code class="language-js">  &lt;script&gt;
     // 1.给li添加点击事件
     $('li').click(function () {
       // 1.1 让所有的item隐藏
@@ -114,9 +30,6 @@
 
 
   &lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
 </code></pre>
 <h2 id="隔行变色">隔行变色</h2>
 <pre><code class="language-js">
