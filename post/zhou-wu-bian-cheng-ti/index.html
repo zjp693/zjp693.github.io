@@ -30,30 +30,17 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一起努力💪，一起自律👍|顶端相见🎈🎈
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#tab%E5%88%87%E6%8D%A2">tab切换</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -97,119 +84,138 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">周五编程题</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-04-16 / 3 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="tab切换">tab切换</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .tab {
+      width: 978px;
+      margin: 100px auto;
+    }
+
+    .tab_list {
+      height: 39px;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab_list li {
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .tab_list .current {
+      background-color: #c81623;
+      color: #fff;
+    }
+
+    .item_info {
+      padding: 20px 0 0 20px;
+    }
+
+    .item {
+      display: none;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;tab&quot;&gt;
+    &lt;div class=&quot;tab_list&quot;&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;current&quot;&gt;商品介绍&lt;/li&gt;
+        &lt;li&gt;规格与包装&lt;/li&gt;
+        &lt;li&gt;售后保障&lt;/li&gt;
+        &lt;li&gt;商品评价（50000）&lt;/li&gt;
+        &lt;li&gt;手机社区&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab_con&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        商品介绍模块内容
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        规格与包装模块内容
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        售后保障模块内容
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        商品评价（50000）模块内容
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        手机社区模块内容
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 1.给li添加点击事件
+    $('li').click(function () {
+      // 1.1 让所有的item隐藏
+      $('.item').hide();
+      // 1.2 让点击的这个li的索引对应的那个item显示
+      let index = $(this).index();
+      // console.log(index);
+      $('.item').eq(index).show();
+    })
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+        </div>
+
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2020
-            </h2>
-            
-              
-                <a href="https://zjp693.github.io/post/zhou-wu-bian-cheng-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    周五编程题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-04-16</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    周五简答题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-04-16</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/zhou-wu-xuan-ze-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    周五选择题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-04-16</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/web-apis-bi-ji/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Web APIs笔记
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-04-01</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/javas-ji-chu-xuan-ze-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Javacript基础选择题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-08</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/htmlcss-xuan-ze-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    HTML+CSS选择题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-08</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/htmlcss-jian-da-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    HTML+CSS简答题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-07</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/javacript-ji-chu-bian-cheng-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Javacript基础编程题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-05</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Jsvascript基础简答题
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-03-05</div>
-              
-            
-              
-                <a href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Gridea+Github快速教程
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-01-05</div>
-              
-            
+
+          
+            <div class="next-post">
+              <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
+                <h3 class="post-title">
+                  周五简答题
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
 
-        </div>
       </div>
     </div>
 

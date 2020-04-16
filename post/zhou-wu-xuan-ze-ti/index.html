@@ -1,0 +1,526 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>学习笔记</title>
+<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587052444788">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://zjp693.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587052444788" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">周五选择题</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-04-16 / 13 min read
+        </div>
+        
+        <div class="post-content yue">
+          <ol>
+<li>
+<p>下列选项中不属于jQuery的选择器的是(D )</p>
+<p>A、 基本选择器</p>
+<p>B、 后代选择器</p>
+<p>C、 类选择器</p>
+<p>D、 进一步选择器</p>
+</li>
+<li>
+<p>在jquery中想要找到所有元素的同辈元素，下面哪一个是可以实现的（C）</p>
+<p>A、 eq(index)</p>
+<p>B、 find()</p>
+<p>C、 siblings()</p>
+<p>D、 next()</p>
+</li>
+<li>
+<p>在jQuery中指定一个类，如果存在就执行删除功能，如果不存在就执行添加功能，下面哪个选项是可以直接完成这个功能的(B)</p>
+</li>
+</ol>
+<p>​      A、removeClass()</p>
+<p>​      B、toggleClass()</p>
+<p>​      C、addClass()</p>
+<p>​      D、hasClass()</p>
+<ol start="4">
+<li>在网页中有如下HTML代码：</li>
+</ol>
+<pre><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;man&quot;/&gt;男
+
+&lt;input tpe=&quot;radio&quot; name=&quot;sex&quot; value=&quot;woman&quot;/&gt;女
+</code></pre>
+<p>则设置选择状态为“女”，正确jQuery实现代码为( C   )</p>
+<p>​      A、$(&quot;input:radio&quot;).get(0).attr(&quot;checked&quot;,true);</p>
+<p>​      B、$(&quot;input[type=radio]&quot;)[1].attr(&quot;checked&quot;,true);</p>
+<p>​      C、$(&quot;input[type=radio]&quot;).eq(1).attr(&quot;checked&quot;,true);</p>
+<p>​      D、$(&quot;sex:radio&quot;).eq(1).attr(&quot;checked&quot;,true)</p>
+<ol start="5">
+<li>以下选项不能正确地得到input标签的是( B)</li>
+</ol>
+<pre><code class="language-js">&lt;input id=&quot;btnGo&quot; type=&quot;button&quot; value=&quot;点击&quot; class=&quot;btn&quot;&gt;
+
+</code></pre>
+<p>​      A、$(&quot;#btnGo&quot;)</p>
+<p>​      B、$(&quot;.btnGo&quot;)</p>
+<p>​      C、$(&quot;.btn&quot;)</p>
+<p>​      D、$(&quot;input[type=’button’]&quot;)</p>
+<ol start="6">
+<li>
+<p>不属于jQuery入口方法的使用的选项是( B)</p>
+<p>A、$(document).ready( function(){//写代码} )</p>
+<p>B、$().ready( function(){//写代码} )</p>
+<p>C、window.onload=function(){//写代码}</p>
+<p>D、$(function(){//写代码});</p>
+<ol>
+<li>在jQuery中，下面哪项( D  )是遍历同辈节点的方法</li>
+</ol>
+<p>A、find( )</p>
+<p>find：返回所选元素的后代元素一直向下寻找，直到找到最后一个后代，可以传入参数</p>
+<p>B、parent( )</p>
+<p>parent（），返回元素的直接父节点</p>
+<p>C、children( )</p>
+<p>children：返回所有的直接子节点，可以传入参数</p>
+<p>D、prev()、</p>
+<p>prev（）：获取元素上一个同胞元素</p>
+</li>
+<li>
+<p>在JQuery中，用于获取和设置元素属性值的方法是( B  )</p>
+<p>A、val( )val() 方法返回或设置被选元素的值</p>
+<p>B、attr( )获取或设置属性值</p>
+<p>C、removeAttr( )removeAttr() 方法从被选元素中移除属性</p>
+<p>D、css( )css() 方法设置或返回被选元素的一个或多个样式属性</p>
+</li>
+<li>
+<p>关于jQuery对象与DOM对象相互转化的描述，以下错误的是(A )</p>
+<p>A、将jQuery对象转换成DOM对象的语法：对象.[index] 或 对象.get(index);</p>
+<p><strong>用jquery的内置函数get，来获取dom对象</strong></p>
+<p><strong>因为jquery对象的属性是一个集合，所以我们可以像数组那样，取出其中一项</strong>：$(&quot;#aijquery&quot;)[0];</p>
+<p>B、将DOM对象转换成jQuery对象的语法：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>D</mi><mi>O</mi><mi>M</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">：</mi></mrow><annotation encoding="application/x-tex">(DOM对象);：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">：</span></span></span></span>(&quot;#aijquery&quot;).get(0);</p>
+<p>dom对象直接用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>)</mo><mi mathvariant="normal">就</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">转</mi><mi mathvariant="normal">换</mi><mi mathvariant="normal">成</mi><mi>j</mi><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">：</mi></mrow><annotation encoding="application/x-tex">()就可以转换成jquery对象：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">换</span><span class="mord cjk_fallback">成</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">：</span></span></span></span>(document.getElementById(&quot;aijquery&quot;))</p>
+<p>C、实际开发过程中为更好的使用jQuery特性， 经常涉及DOM对象到jQuery对象的转换;</p>
+<p>D、转换之后会影响浏览器之间的兼容性;</p>
+</li>
+<li>
+<p>以下关于toggle( )方法，说法正确的是( B )</p>
+<p>A、可用于模拟鼠标连续点击事件，使用语法：toggle(f1,f2,…,fN);</p>
+<p>B、它还用于切换元素的可见状态，此时使用无参的toggle( )即可</p>
+<p>C、可以实现元素的渐变效果</p>
+<p>D、可以实现元素的滑动效果</p>
+</li>
+<li>
+<p>以下()选项不能够正确地得到这个标签:( B D)</p>
+</li>
+</ol>
+<pre><code class="language-js">&lt;input id=&quot;btnGo&quot;type=&quot;button&quot; value=&quot;点击&quot; class=&quot;btn&quot;&gt;
+</code></pre>
+<p>​     A、<code>$(&quot;#btnGo&quot;)</code>               B、$(&quot;.btnGo&quot;)</p>
+<p>​     C、 <code>$(&quot;.btn&quot;)</code>                 D、$(&quot;input[type=&quot;button&quot;]&quot;)</p>
+<ol start="6">
+<li>
+<p>在jQuery中，能够改变列表中索引值为2的<li>元素背景颜色，应选用的是( A  )</p>
+<p>A、$(&quot;li&quot;).index(2).css(&quot;background-color&quot;,&quot;#ccc&quot;)</p>
+<p>B、$(&quot;li&quot;).eq(2).css(&quot;background-color&quot;,&quot;#ccc&quot;)</p>
+<p>:eq() 选择器选取带有指定 index 值的元素。</p>
+<p>选择第二个 <p> 元素：</p>
+<pre><code>$(&quot;p:eq(1)&quot;)
+</code></pre>
+<p>C、$(&quot;li:odd(2)&quot;).css(&quot;background-color&quot;,&quot;#ccc&quot;)//奇数</p>
+<p>D、$(&quot;li:lt(2)&quot;).css(&quot;background-color&quot;,&quot;#ccc&quot;)//指定索引的前面的元素</p>
+</li>
+<li>
+<p>在jQuery中，既可模拟鼠标连续单击事件，又可以切换元素可见状态的方法是( B  )</p>
+<p>A、hide( )                      B、 toggle( )</p>
+<p>C、hover( )                   D、slideUp( )</p>
+<p>hover() 方法规定当鼠标指针悬停在被选元素上时要运行的两个函数。mouseenter和mouseover</p>
+<p>通过使用滑动效果，隐藏被选元素，如果元素已显示出来的话。</p>
+</li>
+<li>
+<p>jQuery中,以下对遍历同辈元素的说法正确的是( D  )</p>
+</li>
+</ol>
+<p>​      A、next( ) 用于获取紧邻匹配元素之后的一个同辈元素。</p>
+<p>​     B、prev( ) 用于获取紧邻匹配元素之前的一个同辈元素。</p>
+<p>​     C、siblings( )用于获取位于匹配元素前后所有同辈元素。</p>
+<p>​     D、以上说法均正确</p>
+<ol>
+<li>
+<p>在jQuery中，如果想要获取当前窗口的宽度值，下面哪个是实现该功能的  ( A)</p>
+<p>A、width()</p>
+<p>B、width(val)</p>
+<p>C、width</p>
+<p>D、innerWidth()</p>
+</li>
+<li>
+<p>在jQuery中，返回元素内容宽高下列描述正确的是(A )<br>
+      <br>
+A、width()方法设置或返回元素的宽度（不包括内边距、边框或外边距）</p>
+</li>
+</ol>
+<p>​       B、height()方法设置或返回元素的高度（包括内边距、边框或外边距）</p>
+<p>C、innerwidth() 方法设置或返回元素的宽度（包括内边距和外边距）</p>
+<p>D、innerheight() 方法设置或返回元素的高度（不包括内边距、边框或外边距）</p>
+<ol start="3">
+<li>
+<p>下列选项中关于jQuery操作元素的位置说法错误的是(BD)</p>
+<p>A、$(A).offset()方法获取的是元素的位置，永远参照文档对象，和定位没有关系</p>
+<p>B、$(A).position()方法获取的是元素的位置，参照最近的定位元素，和定位有关系</p>
+<p>参照的是最近的定位的父元素或祖先元素如果父元素或祖先元素都没有定位的话，就参照body</p>
+<p>C、$(A).scrollTop()是用来获取A元素相对滚动条顶部的偏移，返回值是一个数字</p>
+<p>D、$(A).offset()方法获取的是元素的位置,返回值是一个数字//返回的是一个对象</p>
+</li>
+<li>
+<p>在jquery中，想要给指定的元素添加样式，下面哪一个是正确的(D)</p>
+<p>A、first</p>
+<p>B、eq(1)</p>
+<p>C、css(name)  //传一个参数是获取</p>
+<p>D、css(name,value)	 //传两个参数是设置</p>
+</li>
+<li>
+<p>下列选项关于jQuery中遍历节点的方法，错误的是(D)</p>
+</li>
+</ol>
+<p>A、next() 取得匹配元素后面紧邻的同辈元素//nextAll() 取得匹配元素后面所有的的同辈元素</p>
+<p>B、prev() 取得匹配元素前面紧邻的同辈元素//prevAll()  取得匹配元素前面所有的的同辈元素</p>
+<p>C、siblings() 取得匹配元素的所有同辈元素</p>
+<p>D、children() 取得匹配元素的所有后代元素// 取得匹配元素的所有子代代元素（只取其亲儿子元素）</p>
+<p>find()取得匹配元素的所有后代元素</p>
+<ol>
+<li>下面选项中，关于jQuery阻止事件冒泡的选项正确的是(B)</li>
+</ol>
+<p>​       A、return false;</p>
+<p>缺点：直接返回了函数，函数后面的语句没法执行了；</p>
+<pre><code>$('.btn').on('click',function(event){
+    do something ...
+    return false    
+}）
+</code></pre>
+<p>​       B、e.cancelBubble = true;</p>
+<p>​       C、e.stopPropagation()阻止事件冒泡</p>
+<p>​       D、e.preventDefault()阻止默认事件的冒泡</p>
+<ol start="2">
+<li>
+<p>下列关于jQuery给元素绑定事件的方式错误的是(D)</p>
+<p>A、$(A).mouseenter(function(){})</p>
+<p>B、$(A).on('click',function(){})</p>
+<p>C、$(A).onclick(function(){})</p>
+<p>D、$(A).on('mouseleave','B',function(){})</p>
+</li>
+<li>
+<p>在jQuery中，关于jQuery事件的说法错误的是(C)</p>
+</li>
+</ol>
+<p>​       A、hover()方法相当于mouseenter与mouseleave的结合使用</p>
+<p>​       B、hover(fn1,fn2)在鼠标移动到元素上时触发fn1方法，移出元素触发fn2方法</p>
+<p>​       C、toggle(fn1,fn2)第一次点击元素时触发fn1方法，第二次点击元素触发fn2方法，第三次点击则不会再触发任何函数</p>
+<p>​       D、toggle()方法参数可以为两个或多个处理函数</p>
+<ol start="4">
+<li>下列选项关于事件坐标说法错误的是( D)</li>
+</ol>
+<p>​     A、e.pageX是鼠标在元素内相对于页面左上角边缘的坐标</p>
+<p>​     B、e.clientX是鼠标在元素内相当于可视区域左上角边缘的距离</p>
+<p>​     C、e.offsetX是鼠标在元素内相对于元素左边缘的距离</p>
+<p>​     D、无论页面中有没有滚动条，e.pageX和e.clientX获取到的值永远都是一样的</p>
+<p>当有滚动条时clientX 小于 pageX</p>
+<ol start="5">
+<li>在jQuery中，下列关于一些方法说法错误的是( D  )</li>
+</ol>
+<p>​     A、attr( )方法获取或设置元素的属性值</p>
+<p>​     B、val( )方法获取或设置元素的value属性值</p>
+<p>元素的值是通过 value 属性设置的</p>
+<p>​     C、$('h2').attr('value,'asdf')执行时，由于h2元素没有value属性，所有该代码不会产生任何效果</p>
+<p>​     D、<code>$('#btn').val('asdf')</code>和$('#btn').attr('value','asdf')可以实现相同的效果('#btn'为按钮)</p>
+<ol>
+<li>在jQuery中，下列选项能隐藏下面的元素的是(C)</li>
+</ol>
+<pre><code class="language-js">&lt;input id=&quot;id_txt&quot; name=&quot;txt&quot; type=&quot;text&quot; /&gt;
+</code></pre>
+<p>​      A、$(&quot;id_txt&quot;).hide()</p>
+<p>​      B、$(#id_txt).remove()</p>
+<p>​      C、$(&quot;#id_txt&quot;).hide()</p>
+<p>​      D、$(&quot;#id_txt&quot;).remove()</p>
+<ol start="2">
+<li>
+<p>在jQuery中，关于fadeIn( )方法正确的是( D  )</p>
+<p>A、可以改变元素的高度//slideUp,slideDown</p>
+<p>B、可以改变元素的透明度</p>
+<p>C、可以改变元素的宽度</p>
+<p>D、与fadeIn( )相对的方法是fadeOn( )，fadeIn( )淡入fade</p>
+</li>
+<li>
+<p>jQuery中提供了对动画效果的支持，以下说法中错误的是( D )</p>
+<p>A、show( )和hide( )可控制元素的显示和隐藏</p>
+<p>B、show([speed],[fn]),其中，speed代表速度，fn代表处理函数</p>
+<p>C、hide([speed],[fn]),其中，speed代表速度，fn代表处理函数</p>
+<p>D、以上参数中的speed默认值为“0”，可能值：秒、slow、fast、normal</p>
+</li>
+<li>
+<p>关于改变高度动画效果，以下说法错误的是( D  )</p>
+</li>
+</ol>
+<p>​      A、slideUp( )和slideDown( )用于改变元素的高度</p>
+<p>​      B、slideUp( )会使元素从下往上逐渐隐藏//让元素卷曲</p>
+<p>​      C、slideDown( )会使元素从上往下逐渐展示</p>
+<p>​      D、slideUp( )或slideDown( )只能用毫秒作为速度参数//slow、fast、normal</p>
+<ol start="5">
+<li>在下列的选项中，不能够实现图片隐藏效果的是( B  )</li>
+</ol>
+<p>​     A、$(&quot;img&quot;).hide(1000)</p>
+<p>​     B、$(&quot;img&quot;).slideDown(1000)</p>
+<p>​     C、$(&quot;img&quot;).fadeOut(1000)</p>
+<p>​     D、$(&quot;img&quot;).slideUp(1000)</p>
+<ol>
+<li>
+<p>在jquery中，如果想要从DOM中删除所有匹配的元素，下面哪一个是正确的(C )</p>
+<p>A、delete()</p>
+<p>B、empty()</p>
+<p>C、remove()</p>
+<p>D、removeAll()</p>
+</li>
+<li>
+<p>以下jQuery代码运行后，对应的HTML代码变为( C )</p>
+</li>
+</ol>
+<pre><code class="language-js">HTML代码：&lt;p&gt;你好&lt;/p&gt;
+
+jQuery代码：$(&quot;p&quot;).append(&quot;&lt;b&gt;快乐编程&lt;/b&gt;&quot;);
+
+​      A、&lt;p&gt;你好&lt;/p&gt;&lt;b&gt;快乐编程&lt;/b&gt;	
+
+​      B、&lt;p&gt;你好&lt;b&gt;快乐编程&lt;/b&gt;&lt;/p&gt;	
+
+​     C、&lt;b&gt;快乐编程&lt;/b&gt;&lt;p&gt;你好&lt;/p&gt;	 
+
+​     D、&lt;p&gt;&lt;b&gt;快乐编程&lt;/b&gt;你好&lt;/p&gt;	
+</code></pre>
+<ol start="3">
+<li>
+<p>在Jquery中，下列关于DOM操作的说法错误的是(  D )</p>
+<p>A、$(A).append(B)表示将B追加到A末尾</p>
+<p>B、$(A).appendTo(B)表示把A追加到B末尾</p>
+<p>C、$(A).prepend(B)表示将A插入到B的前面</p>
+<p>D、$(A).prependTo(B)表示将B插入到A的前面</p>
+</li>
+<li>
+<p>在jQuery中<code>$( '#hello' ).css ( &quot;color&quot;，&quot;#f0000&quot; )</code>表示的含义是(B)</p>
+<p>A、 $( '#hello' ).css( &quot;color&quot;,&quot;#f0000&quot; )表示选择id为hello的元素，并且取到该元素字体显示的颜色</p>
+</li>
+</ol>
+<p>B、 $(‘#hello' )css(&quot;color&quot;,&quot;#f0000&quot;)表示选择类为hello的元素，并设置颜色为&quot;f0000&quot;</p>
+<p>​      C、 $('hello')css(&quot;color&quot;,&quot;#f0000&quot;)表示选择类为hello的元素，并且取到该元素字休显示的颜色</p>
+<p>​      D、 $(‘#hello’).css(&quot;color&quot;,&quot;#f0000&quot; )表示选择id为hello的元素，并设置颜色为&quot;f0000&quot;</p>
+<ol start="5">
+<li>在页面中有一个ul元素，代码如下:</li>
+</ol>
+<pre><code class="language-html">  &lt;ul&gt;
+     &lt;li&gt;苹果&lt;/li&gt;
+     &lt;li&gt;橘子&lt;/li&gt;
+     &lt;li&gt;香蕉&lt;/li&gt;
+     &lt;li&gt;西瓜&lt;/li&gt;
+   &lt;/ul&gt;
+
+</code></pre>
+<p>下面选项对节点的操作哪个选项说法是不正确的是(B)</p>
+<p>​     A、var $li = $('<li>菠萝<li>');是创建节点</p>
+<p>​     B、$('ul li:eq(1)').remove();是删除ul下&quot;橘子&quot;的那个节点</p>
+<p>​     C、$('ul').append('<li>哈密瓜</li>');是将&quot;哈密瓜&quot;添加到ul的末尾</p>
+<p>​     D、以上说法都不正确</p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  周五简答题
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://zjp693.github.io/post/web-apis-bi-ji/">
+                <h3 class="post-title">
+                  Web APIs笔记
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://zjp693.github.io//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
