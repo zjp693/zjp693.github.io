@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-04-16T16:49:20.692Z</updated>
+    <updated>2020-04-16T17:06:40.103Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -10,6 +10,608 @@
     <logo>https://zjp693.github.io/images/avatar.png</logo>
     <icon>https://zjp693.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[每日作业的编程题]]></title>
+        <id>https://zjp693.github.io/post/mei-ri-zuo-ye-de-bian-cheng-ti/</id>
+        <link href="https://zjp693.github.io/post/mei-ri-zuo-ye-de-bian-cheng-ti/">
+        </link>
+        <updated>2020-04-16T16:54:25.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="购物车">购物车</h2>
+<pre><code class="language-js">$(function () {
+
+    //- 功能1：点击&quot;全选&quot;复选框，下面的4个复选框都会选中，点击取消，下面也都不会被选中
+    $('input#all').click(function () {
+        $('tr input[type=&quot;checkbox&quot;]').prop('checked', $(this).prop('checked'));
+    })
+
+    // - 功能2：点击下面左边的那4个复选框，只有当下面4个复选框全部选中的时候，上面的全选才会被选中，否则不会被选中
+    let arr = $('tr input[type=&quot;checkbox&quot;][id!=all]');
+    $('tr input[type=&quot;checkbox&quot;][id!=all]').click(function () {
+        arr.each(function (i) {
+            $('input#all').prop('checked', true);
+            if (!arr.eq(i).prop('checked')) {
+                $('input#all').prop('checked', false);
+                return false;
+            }
+        })
+
+    })
+    // - 功能3：点击&quot;商品数量&quot;的&quot;+&quot;号，当前的这个行前面的复选框也被选中，同时中间的数字也会改变，每次增量是1，后面的小计也会跟着变化，
+    $('tr .reduce').click(function () {
+        $(this).parent().parent().siblings('td').children('input[type=&quot;checkbox&quot;]').prop('checked', true)
+        let num = $(this).next('input').val();
+        num--;
+        if (num &lt; 1) num = 1;
+        $(this).next('input').val(num);
+        $(this).parent().parent().next('td').html(`${num * 20}￥`);
+
+        if ($('tr input[type=&quot;checkbox&quot;][id!=all]:checked').length == $('tbody &gt; tr').length) $('input#all').prop('checked', true);
+    })
+
+    // - 功能4：点击&quot;商品数量&quot;的&quot;-&quot;号，当前的这个行前面的复选框也被选中，同时中间的数字也会改变，每次减量是1，后面的小计也会跟着变化，当 数量是1的时候，就不能在减少了
+    $('tr .add').click(function () {
+        $(this).parent().parent().siblings('td').children('input[type=&quot;checkbox&quot;]').prop('checked', true)
+        let num = $(this).prev('input').val();
+        num++;
+        $(this).prev('input').val(num);
+        $(this).parent().parent().next('td').html(`${num * 20}￥`);
+
+        if ($('tr input[type=&quot;checkbox&quot;][id!=all]:checked').length == $('tbody &gt; tr').length) $('input#all').prop('checked', true);
+    })
+
+
+})
+</code></pre>
+<h2 id="qq留言">qq留言</h2>
+<pre><code class="language-js">$(function () {
+    var $content = $('.content');
+    // console.log($content)
+    var $btn = $('input[type=&quot;button&quot;]')
+    // console.log($btn)
+    var $msgFrame = $('.msgFrame')
+    // console.log($msgFrame)
+    var $num = $('.numofmessage')
+
+    $btn.click(function () {
+        var count = 0
+        if ($content.val().trim().length == null) {
+            alert('您还没有输入任何内容')
+        } else {
+            $msgFrame.prepend(`
+        &lt;div class=&quot;content_1&quot;&gt;
+    	         &lt;img class=&quot;name&quot; src=&quot;http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124&quot; alt=&quot;photo&quot;&gt;
+    	         &lt;div class=&quot;mainInfo&quot;&gt;
+    		         &lt;div class=&quot;userId&quot;&gt;&lt;a href=&quot;#&quot;&gt;zipple&lt;/a&gt;&lt;/div&gt;
+    		         &lt;div class=&quot;conInfo&quot;&gt;
+    				      ${$content.text()}
+    		            &lt;/div&gt;
+    		         &lt;div class=&quot;time&quot;&gt;${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}&lt;/div&gt;
+    		    &lt;/div&gt;
+              `)
+            count = $msgFrame.children().length
+        }
+
+        $content.html('')
+
+        $num.html(`留言(${count})`)
+    })
+
+})
+</code></pre>
+<h2 id="楼梯导航">楼梯导航</h2>
+<pre><code class="language-js">	&lt;script&gt;
+		// - 页面已经给定，只需要写功能，不能随意编辑里面的html和css
+		// 各个楼层的高度
+		// var wtop = $(document).scrollTop()
+		var jiatop = $(&quot;.jia&quot;).offset().top
+		var diantop = $(&quot;.dian&quot;).offset().top
+		var futop = $(&quot;.fu&quot;).offset().top
+		var meitop = $(&quot;.mei&quot;).offset().top
+		$(document).scroll(function () {
+			// 	- 功能1: 随着滚动条的滚动，滚动到一定距离，右边的侧边栏就会显示，否则就是隐藏
+			if ($(document).scrollTop() &gt; jiatop) {
+				$(&quot;.subnav&quot;).show()
+			} else {
+				$(&quot;.subnav&quot;).hide()
+			}
+		})
+		// 		- 功能2：点击侧边栏的&quot;返回&quot;，页面就会回到最开始的位置
+		$(&quot;.back&quot;).click(function () {
+			$(document).scrollTop(0)
+		})
+		// 			- 功能3: 随着滚动条的滚动，页面滚动到某一个楼层的时候，右侧的侧边栏对应的就会被选中，添加current这个类名
+		$(document).scroll(function () {
+
+			// 到达相应位置选中对应导航
+			let bbb = $(document).scrollTop();
+			if (bbb &gt;= meitop) {
+				$('.subnav &gt; ul &gt;li').eq(3).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= futop) {
+				$('.subnav &gt; ul &gt;li').eq(2).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= diantop) {
+				$('.subnav &gt; ul &gt;li').eq(1).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= jiatop) {
+				// alert(1)
+				$('.subnav &gt; ul &gt;li').eq(0).addClass('current').siblings().removeClass('current');
+			}
+		})
+
+	&lt;/script&gt;
+    ```
+    ## 许愿墙
+    ```js 
+     &lt;script&gt;
+    var list = [{
+      nicknane: &quot;拉拉&quot;,
+      content: &quot;大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成&quot;
+    },
+    {
+      nicknane: &quot;哈哈&quot;,
+      content: &quot;今天天气不错，风和日丽的&quot;
+    },
+    {
+      nicknane: &quot;秀秀&quot;,
+      content: &quot;真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，&quot;
+    },
+    {
+      nicknane: &quot;萌萌&quot;,
+      content: &quot;今天你拿苹果支付了么&quot;
+    },
+    {
+      nicknane: &quot;帅帅&quot;,
+      content: &quot;新的一年，所有的人健康快乐&quot;
+    },
+    {
+      nicknane: &quot;姚姚&quot;,
+      content: &quot;希望疫情早日过去&quot;
+    },
+    {
+      nicknane: &quot;老杨&quot;,
+      content: &quot;我在学校等你们来&quot;
+    },
+    {
+      nicknane: &quot;丁丁&quot;,
+      content: &quot;今天的新校区好美丽，风景无限好&quot;
+    }
+    ]
+    // - 功能1：根据页面中给定的数据，创建许愿签到页面中，(许愿签的模板已经在页面中给定)
+    // 让 main 相对定位，所有许愿签基于main绝对定位
+    $(&quot;main&quot;).css({
+      position: &quot;relative&quot;
+    })
+    $.each(list, function (i, j) {
+      // - 功能3：每个许愿签上面的时间(时和分)是和系统当前的时间一样的
+      let date = new Date()
+      let hours = date.getHours() &gt; 9 ? date.getHours() : &quot;0&quot; + date.getHours();
+      let minutes = date.getMinutes() &gt; 9 ? date.getMinutes() : &quot;0&quot; + date.getMinutes();
+      // - 功能2：每个许愿签的位置是随机产生的
+      let randomLeft = Math.floor(Math.random() * ($(&quot;main&quot;).innerWidth() - 237 + 1))
+      let randomTop = Math.floor(Math.random() * 300);
+      // 插入模板字符串
+      $(&quot;main&quot;).prepend(`
+      &lt;div class=&quot;list&quot; style=&quot;top: ${randomTop}px; left:${randomLeft}px&quot;&gt;
+      &lt;div class=&quot;list-top&quot;&gt;
+        &lt;span&gt;${j.nicknane}&lt;/span&gt;
+        &lt;span&gt;No.00001&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-center&quot;&gt;
+        ${j.content}
+      &lt;/div&gt;
+      &lt;div class=&quot;list-bottom&quot;&gt;
+        &lt;span&gt;今天${hours}:${minutes}&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`)
+    })
+
+    // - 功能4：鼠标移动到每个许愿签上面的&quot;X&quot;的时候，这个”X“的背景图的位置在改变(这个小X是一个精灵图)，鼠标离开恢复原样子
+    $('main').on(&quot;mouseenter&quot;, &quot;.list-bottom span:nth-child(2)&quot;, enterCloseBtn)
+    function enterCloseBtn() {
+      $(this).css({
+        backgroundPosition: &quot;-43px top&quot;
+      })
+    }
+    // 鼠标离开，恢复原样
+    $('main').on(&quot;mouseleave&quot;, &quot;.list-bottom span:nth-child(2)&quot;, leaveCloseBtn)
+    function leaveCloseBtn() {
+      $(this).css({
+        backgroundPosition: &quot;left top&quot;
+      })
+    }
+    // - 功能5: 当鼠标点击每个许愿签上面的&quot;X&quot;的时候，当前这个许愿签就会从页面中消失
+    $('main').on(&quot;click&quot;, &quot;.list-bottom span:nth-child(2)&quot;, closeBtn)
+    function closeBtn() {
+      $(this).parents(&quot;div.list&quot;).remove()
+    }
+    // - 功能6：当许愿签堆叠在一起的时候，点击某个许愿签，当前这个许愿签就会在最上面，覆盖住别的许愿签
+    // 准备一个变量保留z-index的最高值
+    let highest = 1
+    $('main').on(&quot;click&quot;, &quot;.list&quot;, coverOthers)
+    function coverOthers() {
+      // 让当前的z-index值为一个最高值
+      $(this).css({
+        zIndex: highest++
+      })
+    }
+    // - 功能7：点击”我要许愿“，就会显示遮罩层
+    $(&quot;.send&quot;).on(&quot;click&quot;, showSend)
+    function showSend() {
+      $(&quot;.mask&quot;).show()
+    }
+    // - 功能8：点击”遮罩层“右上角的&quot;X&quot;,这个遮罩层就会隐藏
+    $(&quot;.close&quot;).on(&quot;click&quot;, closeSend)
+    function closeSend() {
+      $(&quot;.mask&quot;).hide()
+    }
+    // - 功能9：在遮罩层的第二个输入框，不断的输入内容，上面的&quot;50&quot;这个文字在随着内容的输入在不断的减少，最大长度是50
+    $(&quot;.mask-wish textarea&quot;).on(&quot;input&quot;, inputWish)
+    function inputWish() {
+      // 计算还可以输入的字数
+      let num = 50 - $(this).val().trim().length
+      // 赋值给i
+      $(this).prev().find(&quot;i&quot;).html(num)
+    }
+    // - 功能10：在遮罩层的2个输入框中输入内容，如果有一个输入框内容为空，或者是输入的都是空格键的话，点击”发布“之后，遮罩层关闭，但是页面中不会添加新的许愿签，
+    // - 如果2个用户都输入了内容，并且不是空格键的话，就会添加一条新的许愿签到页面中，遮罩层关闭，2个输入框的内容都清空
+    $(&quot;.release&quot;).on(&quot;click&quot;, sendNew)
+    function sendNew() {
+      if ($(&quot;.mask-content input&quot;).val().trim().length != 0 &amp;&amp; $(&quot;.mask-content textarea&quot;).val().trim().length != 0) {
+        let date = new Date()
+        let hours = date.getHours() &gt; 9 ? date.getHours() : &quot;0&quot; + date.getHours();
+        let minutes = date.getMinutes() &gt; 9 ? date.getMinutes() : &quot;0&quot; + date.getMinutes();
+        // - 功能2：每个许愿签的位置是随机产生的
+        let randomLeft = Math.floor(Math.random() * ($(&quot;main&quot;).innerWidth() - 237 + 1))
+        let randomTop = Math.floor(Math.random() * 300);
+        // 插入模板字符串
+        $(&quot;main&quot;).prepend(`
+      &lt;div class=&quot;list&quot; style=&quot;top: ${randomTop}px; left:${randomLeft}px; z-index: ${highest++}&quot;&gt;
+      &lt;div class=&quot;list-top&quot;&gt;
+        &lt;span&gt;${$(&quot;.mask-content input&quot;).val()}&lt;/span&gt;
+        &lt;span&gt;No.00001&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-center&quot;&gt;
+        ${$(&quot;.mask-content textarea&quot;).val()}
+      &lt;/div&gt;
+      &lt;div class=&quot;list-bottom&quot;&gt;
+        &lt;span&gt;今天${hours}:${minutes}&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`)
+
+      }
+      closeSend()
+    }
+//   注意:当我通过&quot;我要许愿&quot;添加的许愿签，上面的功能都还是没有问题的，点击许愿签上面的&quot;x&quot;的功能还能用
+  &lt;/script&gt;
+</code></pre>
+<h2 id="折叠面板">折叠面板</h2>
+<pre><code class="language-js">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        html,
+        body {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            border: 1px solid #f3f3f3;
+            margin: 30px auto;
+            width: 800px;
+        }
+
+        div {
+            position: relative;
+            margin: 20px 30px;
+            /* line-height: 45px; */
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f3f3f3;
+
+        }
+
+        a {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            background: url(./img/select.png) no-repeat;
+            transform: rotate(270deg);
+        }
+
+        .box a.active {
+            transform: rotate(0);
+        }
+
+        div p {
+            display: none;
+            padding: 5px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;div&gt;&lt;a&gt;&lt;/a&gt;
+            一致性 Consistency
+            &lt;p&gt;与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+                在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            反馈 Feedback&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
+                页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            效率 Efficiency&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;
+                简化流程：设计简洁直观的操作流程；
+                清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
+                帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;可控 Controllability&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；
+                结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        $(&quot;.box div&quot;).click(function () {
+
+            $(this).children(&quot;p&quot;).stop().slideToggle()
+            if ($(this).children(&quot;a&quot;).hasClass(&quot;active&quot;)) {
+                $(this).children(&quot;a&quot;).removeClass(&quot;active&quot;);
+            } else {
+                $(this).children(&quot;a&quot;).addClass(&quot;active&quot;);
+            }
+        })
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="京东轮播图">京东轮播图</h2>
+<pre><code class="language-js">    $(function () {
+      //  - 功能1：显示小圆点，第一个小圆点是有current这个类名的
+      // 有几张图片创建几个li
+      $(&quot;.slider ul li&quot;).each(function (index, element) {
+        // console.log(index);
+        $(&quot;ol&quot;).append(&quot;&lt;li&gt;&lt;/li&gt;&quot;)
+      })
+      $(&quot;ol li:first&quot;).addClass(&quot;current&quot;)
+      // - 功能2：鼠标移动到大盒子上面，左右的箭头就会显示出来，鼠标离开就会隐藏
+      $(&quot;.slider&quot;).hover(function () {
+        // over
+        $(&quot;.arrow&quot;).fadeIn();
+        // 自动轮播停止
+        clearInterval(timer);
+        timer = null;
+      }, function () {
+        // out
+        $(&quot;.arrow&quot;).fadeOut();
+        // 自动轮播开始
+        timer = setInterval(() =&gt; {
+          $(&quot;.arrow-right&quot;).click();
+        }, 1000);
+      });
+      // - 功能3：鼠标经过哪个小圆点上面，这个小圆点的背景色就是红色(current类名已经提供)，同时大图也在跟着切换
+      $(&quot;ol li&quot;).on(&quot;mouseenter&quot;, function () {
+        $(this).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;)
+        // 得到对应的索引
+        let index = $(this).index();
+        // 图片淡入淡出
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+      })
+      // - 功能4：点击右箭头，图片进行下一张的切换，当切换到最后一张的时候，接着从第一张开始，下面的小圆点也在跟着在切换，对应的背景色变红
+      let index = 0;
+      $(&quot;.arrow-right&quot;).on(&quot;click&quot;, function () {
+        // 得到要切换的图片的索引
+        $(&quot;ol li&quot;).each(function (i, element) {
+          if ($(&quot;ol li&quot;).eq(i).hasClass(&quot;current&quot;)) {
+            // console.log(i);
+            index = i;
+          }
+        });
+        // 得到图片的数量
+        let num = $(&quot;.slider ul li&quot;).length;
+        index++;
+        if (index == num) {
+          index = 0;
+        }
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+        $(&quot;ol li&quot;).eq(index).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+      });
+      // - 功能5：点击左箭头，图片进行上一张的切换，当切换到第一张的时候，接着从最后一张继续倒着切换，下面的小圆点也在跟着切换，对应的背景色变红
+      $(&quot;.arrow-left&quot;).on(&quot;click&quot;, function () {
+        // 得到要切换的图片的索引
+        $(&quot;ol li&quot;).each(function (i, element) {
+          if ($(&quot;ol li&quot;).eq(i).hasClass(&quot;current&quot;)) {
+            index = i;
+            // console.log(index);
+          }
+        });
+        // 得到图片的数量
+        let num = $(&quot;.slider ul li&quot;).length;
+        if (index == 0) {
+          index = num;
+          // console.log(index);
+        }
+        index--;
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+        $(&quot;ol li&quot;).eq(index).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+
+      });
+      // - 功能6： 自动轮播的效果
+      let timer = setInterval(() =&gt; {
+        $(&quot;.arrow-right&quot;).click();
+      }, 1000);
+      // - 功能7： 当鼠标移动到大盒子上面的时候，停止自动轮播，鼠标离开，自动轮播继续
+
+      //   注意： 在点你鼠标移动上去自动轮播停止，你再去测试上面那些功能，看上面的效果是否依旧没有问题
+    });
+  &lt;/script&gt;
+</code></pre>
+<h2 id="二级联动">二级联动</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+
+&lt;style&gt;
+  select {
+    width: 100px;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;select id=&quot;selid&quot;&gt;
+  &lt;option&gt;选择省市&lt;/option&gt;
+  &lt;option&gt;北京&lt;/option&gt;
+  &lt;option&gt;山东&lt;/option&gt;
+  &lt;option&gt;辽宁&lt;/option&gt;
+  &lt;option&gt;河北&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select id=&quot;subselid&quot;&gt;
+  &lt;option&gt;选择城市&lt;/option&gt;
+&lt;/select&gt;
+&lt;script src=&quot;../../../lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  var collCities = [
+    ['选择城市'],
+    ['海淀区', '朝阳区', '东城区', '西城区'],
+    ['济南', '青岛', '烟台', '威海'],
+    ['沈阳', '大连', '鞍山', '抚顺'],
+    ['石家庄', '保定', '邯郸', '廊坊']
+  ];
+  // 点击选择省，城市也再跟着变
+  $('#selid').on('change', function () {
+    // 根据城市的改变，然后选择省
+    var $index = $(this).find('option:selected').index()
+    // 根据索引选择省
+    var cities = collCities[$index]
+    // 但是在创建之前，需要把之前的$(&quot;#subselid&quot;)清空
+    $(&quot;#subselid&quot;).html(&quot;&quot;);
+    //然后遍历数据创建option
+    cities.forEach(function (item, index) {
+      $(&quot;#subselid&quot;).append($(`&lt;option&gt;${item}&lt;/option&gt;`))
+    })
+
+  })
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="五星好评">五星好评</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .container {
+      width: 400px;
+      height: 100px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+
+    }
+
+    ul {
+      display: flex;
+      float: left;
+      margin-right: 10px;
+    }
+
+    ul li {
+      width: 16px;
+      height: 16px;
+      background-image: url(./star2.png);
+    }
+
+    /* 添加类名 */
+    ul li.on {
+      background-image: url(./star1.png);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;!-- 自己引入jq --&gt;
+  &lt;script&gt;
+   // 把文字放到数组里面
+    var textArr = [&quot;极差&quot;, &quot;失望&quot;, &quot;一般&quot;, &quot;满意&quot;, &quot;惊喜&quot;]
+    // 定义全局变量
+    var $num;
+    $('.container li').hover(function () {
+        // 之后获取索引
+        var $index = $(this).index()
+        // 鼠标经过当前的和前面的都有添加类名on,后面的则不添加,addClass不会断链
+        $(this).addClass('on').prevAll().addClass('on')
+        // 后面的都不添加
+        $(this).nextAll().removeClass('on')
+        // 根据不断的滑动，后面显示不同的文字
+        $('.container span').text(textArr[$index])
+        
+      }, function () {
+        // 鼠标离开li
+        // 鼠标离开所有的都移除on类名
+        $('.container li').removeClass('on')
+        // 并且后面的文字清空
+        $('.container span').text(&quot;&quot;)
+        // 让点击的包括之前的都添加on类名
+        $('.container li').eq($num).addClass('on').prevAll().addClass('on')
+        // 并且后面的文字显示
+        $('.container span').text(textArr[$num])
+      })
+      .click(function () {
+        // 鼠标点击li保存索引
+        $num = $(this).index();
+      })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[周五编程题]]></title>
         <id>https://zjp693.github.io/post/zhou-wu-bian-cheng-ti/</id>
@@ -7426,69 +8028,6 @@ split() 选择字符分割成数组储存
 
 split(); 是字符串的方法，方法用于把一个字符串分割成字符串数组
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea+Github快速教程]]></title>
-        <id>https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/</id>
-        <link href="https://zjp693.github.io/post/grideagithub-kuai-su-jiao-cheng/">
-        </link>
-        <updated>2020-01-05T11:11:36.000Z</updated>
-        <content type="html"><![CDATA[<h5 id="想知道如何使用gridea吗">想知道如何使用Gridea吗？</h5>
-<p>Git</p>
-<p>Git https://git-scm.com</p>
-<h5 id="下载后安装">下载后安装</h5>
-<p>安装完之后在桌面右键Git Bash Here，输入以下内容进行配置</p>
-<p>$ git config --global user.name &quot;sailorlisa&quot;</p>
-<p>$ git config --global user.email &quot;sailorlisa@outlook.com&quot;</p>
-<h5 id="github">Github</h5>
-<p>Github账号 https://github.com</p>
-<p>每个github账号有1个免费的github pages</p>
-<p>如果免费的已被占用（例如hexo），得自行注册新的github账号或者自行买域名，在仓库里的github pages里设置好</p>
-<h5 id="仓库">仓库</h5>
-<p>点击create a new repositories</p>
-<p>输入Repository name：Cyberlisa.github.io。固定格式：.github.io</p>
-<p>Description可填可不填。</p>
-<h5 id="勾选public">勾选Public</h5>
-<p>勾选Intialize this repository with a README(可不勾选)</p>
-<p>点击Create repository</p>
-<p>自动跳转到仓库页面，点击Insights后面的Settings</p>
-<p>拉到下面GitHub Pages，看看有没有显示：Your site is published at https://cyberlisa.github.io/</p>
-<p>没有的话稍微等一下再试</p>
-<p>有的话点击链接跳转，看看能否打开</p>
-<h5 id="token">Token</h5>
-<p>在github界面点击头像，点击Settings——&gt;Personal settings——&gt;Developer settings</p>
-<h5 id="找到最后的personal-access-tokensgenerate-new-token填写note勾选repogenerate-token">找到最后的Personal access tokens——&gt;Generate new token——&gt;填写Note——&gt;勾选repo——&gt;Generate token</h5>
-<p>创建个txt文档，把token保存起来。如果不保存，那先不要关闭这个页面，待会儿需要用到token。</p>
-<p>Gridea配置</p>
-<h5 id="下载安装">下载安装</h5>
-<p>在https://gridea.dev下载符合自己系统的客户端，安装。</p>
-<p>安装完之后打开，如果在【文章】里看到一片空白，卸载整个客户端，重新安装。</p>
-<h5 id="填配置">填配置</h5>
-<p>如果打开后能看到默认的2篇文章，点击【配置】：</p>
-<h5 id="platform-github-pages">Platform  Github Pages</h5>
-<p>域名 Github Pages 对应的域名 https://cyberlisa.github.io/</p>
-<p>仓库 github上仓库名 Cyberlisa.github.io</p>
-<p>分支 Github Pages 对应的分支 master</p>
-<p>仓库用户名  仓库所属用户的用户名 Cyberlisa</p>
-<p>邮箱 Git 推送时的邮箱 sailorlisa@163.com</p>
-<p>Token    上面步骤里的token</p>
-<h5 id="cname-可不填">CNAME    可不填</h5>
-<p>填完配置后，点击【保存】</p>
-<p>无误后，点击【检测远程连接】</p>
-<p>点击【预览】，会弹出浏览器，本地预览效果。</p>
-<p>可在【主题】里选择其他内置主题，不要忘记拉到下面选择【保存】</p>
-<p>选择了其他主题后，点击【预览】</p>
-<p>如果没问题，点击【同步】</p>
-<p>稍等3分钟左右，点击同步按钮下面那个像地球的网格图标，会在浏览器自动弹出博客网页。看看有没有什么问题。</p>
-<p>在客户端里进行任何操作，不要忘记点击【保存】。保存了之后先预览，没问题再同步。</p>
-<p>有问题点击https://github.com/getgridea/gridea里的【Issues】，在【Open】和【Closed】里看看有没有和你问题相似的issue。</p>
-<h5 id="defender">Defender</h5>
-<p>如果你是win10用户，在操作时出现异常，看看通知里有没有defender的警告。我一开始根本操作不了客户端，因为defender限制权限。把defender关了之后才能正常使用。</p>
-<h5 id="更换walker主题">更换Walker主题</h5>
-<p>在https://gridea.dev/themes/购买Walker主题，购买完后点击【下载文件】，下载后解压。</p>
-<p>点击客户端里的【系统】，找到【源文件夹】，自己打开路径。退出Gridea客户端。</p>
-<p>点击【themes】，把walker文件夹复制过来，打开Gridea客户端，打开【主题】，选择主题，滚动下鼠标，选中最后的Walker，保存。</p>
 ]]></content>
     </entry>
 </feed>

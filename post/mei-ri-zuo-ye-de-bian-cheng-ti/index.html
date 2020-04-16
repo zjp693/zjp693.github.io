@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>每日作业的编程题 | 学习笔记</title>
+<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587056794160">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zjp693.github.io/">
+        <img src="https://zjp693.github.io//images/avatar.png?v=1587056794160" class="site-logo">
+        <h1 class="site-title">学习笔记</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://zjp693.github.io/tags" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一起努力💪，一起自律👍|顶端相见🎈🎈
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">每日作业的编程题</h2>
+            <div class="post-date">2020-04-17</div>
+            
+            <div class="post-content">
+              <h2 id="购物车">购物车</h2>
+<pre><code class="language-js">$(function () {
+
+    //- 功能1：点击&quot;全选&quot;复选框，下面的4个复选框都会选中，点击取消，下面也都不会被选中
+    $('input#all').click(function () {
+        $('tr input[type=&quot;checkbox&quot;]').prop('checked', $(this).prop('checked'));
+    })
+
+    // - 功能2：点击下面左边的那4个复选框，只有当下面4个复选框全部选中的时候，上面的全选才会被选中，否则不会被选中
+    let arr = $('tr input[type=&quot;checkbox&quot;][id!=all]');
+    $('tr input[type=&quot;checkbox&quot;][id!=all]').click(function () {
+        arr.each(function (i) {
+            $('input#all').prop('checked', true);
+            if (!arr.eq(i).prop('checked')) {
+                $('input#all').prop('checked', false);
+                return false;
+            }
+        })
+
+    })
+    // - 功能3：点击&quot;商品数量&quot;的&quot;+&quot;号，当前的这个行前面的复选框也被选中，同时中间的数字也会改变，每次增量是1，后面的小计也会跟着变化，
+    $('tr .reduce').click(function () {
+        $(this).parent().parent().siblings('td').children('input[type=&quot;checkbox&quot;]').prop('checked', true)
+        let num = $(this).next('input').val();
+        num--;
+        if (num &lt; 1) num = 1;
+        $(this).next('input').val(num);
+        $(this).parent().parent().next('td').html(`${num * 20}￥`);
+
+        if ($('tr input[type=&quot;checkbox&quot;][id!=all]:checked').length == $('tbody &gt; tr').length) $('input#all').prop('checked', true);
+    })
+
+    // - 功能4：点击&quot;商品数量&quot;的&quot;-&quot;号，当前的这个行前面的复选框也被选中，同时中间的数字也会改变，每次减量是1，后面的小计也会跟着变化，当 数量是1的时候，就不能在减少了
+    $('tr .add').click(function () {
+        $(this).parent().parent().siblings('td').children('input[type=&quot;checkbox&quot;]').prop('checked', true)
+        let num = $(this).prev('input').val();
+        num++;
+        $(this).prev('input').val(num);
+        $(this).parent().parent().next('td').html(`${num * 20}￥`);
+
+        if ($('tr input[type=&quot;checkbox&quot;][id!=all]:checked').length == $('tbody &gt; tr').length) $('input#all').prop('checked', true);
+    })
+
+
+})
+</code></pre>
+<h2 id="qq留言">qq留言</h2>
+<pre><code class="language-js">$(function () {
+    var $content = $('.content');
+    // console.log($content)
+    var $btn = $('input[type=&quot;button&quot;]')
+    // console.log($btn)
+    var $msgFrame = $('.msgFrame')
+    // console.log($msgFrame)
+    var $num = $('.numofmessage')
+
+    $btn.click(function () {
+        var count = 0
+        if ($content.val().trim().length == null) {
+            alert('您还没有输入任何内容')
+        } else {
+            $msgFrame.prepend(`
+        &lt;div class=&quot;content_1&quot;&gt;
+    	         &lt;img class=&quot;name&quot; src=&quot;http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124&quot; alt=&quot;photo&quot;&gt;
+    	         &lt;div class=&quot;mainInfo&quot;&gt;
+    		         &lt;div class=&quot;userId&quot;&gt;&lt;a href=&quot;#&quot;&gt;zipple&lt;/a&gt;&lt;/div&gt;
+    		         &lt;div class=&quot;conInfo&quot;&gt;
+    				      ${$content.text()}
+    		            &lt;/div&gt;
+    		         &lt;div class=&quot;time&quot;&gt;${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}&lt;/div&gt;
+    		    &lt;/div&gt;
+              `)
+            count = $msgFrame.children().length
+        }
+
+        $content.html('')
+
+        $num.html(`留言(${count})`)
+    })
+
+})
+</code></pre>
+<h2 id="楼梯导航">楼梯导航</h2>
+<pre><code class="language-js">	&lt;script&gt;
+		// - 页面已经给定，只需要写功能，不能随意编辑里面的html和css
+		// 各个楼层的高度
+		// var wtop = $(document).scrollTop()
+		var jiatop = $(&quot;.jia&quot;).offset().top
+		var diantop = $(&quot;.dian&quot;).offset().top
+		var futop = $(&quot;.fu&quot;).offset().top
+		var meitop = $(&quot;.mei&quot;).offset().top
+		$(document).scroll(function () {
+			// 	- 功能1: 随着滚动条的滚动，滚动到一定距离，右边的侧边栏就会显示，否则就是隐藏
+			if ($(document).scrollTop() &gt; jiatop) {
+				$(&quot;.subnav&quot;).show()
+			} else {
+				$(&quot;.subnav&quot;).hide()
+			}
+		})
+		// 		- 功能2：点击侧边栏的&quot;返回&quot;，页面就会回到最开始的位置
+		$(&quot;.back&quot;).click(function () {
+			$(document).scrollTop(0)
+		})
+		// 			- 功能3: 随着滚动条的滚动，页面滚动到某一个楼层的时候，右侧的侧边栏对应的就会被选中，添加current这个类名
+		$(document).scroll(function () {
+
+			// 到达相应位置选中对应导航
+			let bbb = $(document).scrollTop();
+			if (bbb &gt;= meitop) {
+				$('.subnav &gt; ul &gt;li').eq(3).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= futop) {
+				$('.subnav &gt; ul &gt;li').eq(2).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= diantop) {
+				$('.subnav &gt; ul &gt;li').eq(1).addClass('current').siblings().removeClass('current');
+			} else if (bbb &gt;= jiatop) {
+				// alert(1)
+				$('.subnav &gt; ul &gt;li').eq(0).addClass('current').siblings().removeClass('current');
+			}
+		})
+
+	&lt;/script&gt;
+    ```
+    ## 许愿墙
+    ```js 
+     &lt;script&gt;
+    var list = [{
+      nicknane: &quot;拉拉&quot;,
+      content: &quot;大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成&quot;
+    },
+    {
+      nicknane: &quot;哈哈&quot;,
+      content: &quot;今天天气不错，风和日丽的&quot;
+    },
+    {
+      nicknane: &quot;秀秀&quot;,
+      content: &quot;真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，&quot;
+    },
+    {
+      nicknane: &quot;萌萌&quot;,
+      content: &quot;今天你拿苹果支付了么&quot;
+    },
+    {
+      nicknane: &quot;帅帅&quot;,
+      content: &quot;新的一年，所有的人健康快乐&quot;
+    },
+    {
+      nicknane: &quot;姚姚&quot;,
+      content: &quot;希望疫情早日过去&quot;
+    },
+    {
+      nicknane: &quot;老杨&quot;,
+      content: &quot;我在学校等你们来&quot;
+    },
+    {
+      nicknane: &quot;丁丁&quot;,
+      content: &quot;今天的新校区好美丽，风景无限好&quot;
+    }
+    ]
+    // - 功能1：根据页面中给定的数据，创建许愿签到页面中，(许愿签的模板已经在页面中给定)
+    // 让 main 相对定位，所有许愿签基于main绝对定位
+    $(&quot;main&quot;).css({
+      position: &quot;relative&quot;
+    })
+    $.each(list, function (i, j) {
+      // - 功能3：每个许愿签上面的时间(时和分)是和系统当前的时间一样的
+      let date = new Date()
+      let hours = date.getHours() &gt; 9 ? date.getHours() : &quot;0&quot; + date.getHours();
+      let minutes = date.getMinutes() &gt; 9 ? date.getMinutes() : &quot;0&quot; + date.getMinutes();
+      // - 功能2：每个许愿签的位置是随机产生的
+      let randomLeft = Math.floor(Math.random() * ($(&quot;main&quot;).innerWidth() - 237 + 1))
+      let randomTop = Math.floor(Math.random() * 300);
+      // 插入模板字符串
+      $(&quot;main&quot;).prepend(`
+      &lt;div class=&quot;list&quot; style=&quot;top: ${randomTop}px; left:${randomLeft}px&quot;&gt;
+      &lt;div class=&quot;list-top&quot;&gt;
+        &lt;span&gt;${j.nicknane}&lt;/span&gt;
+        &lt;span&gt;No.00001&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-center&quot;&gt;
+        ${j.content}
+      &lt;/div&gt;
+      &lt;div class=&quot;list-bottom&quot;&gt;
+        &lt;span&gt;今天${hours}:${minutes}&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`)
+    })
+
+    // - 功能4：鼠标移动到每个许愿签上面的&quot;X&quot;的时候，这个”X“的背景图的位置在改变(这个小X是一个精灵图)，鼠标离开恢复原样子
+    $('main').on(&quot;mouseenter&quot;, &quot;.list-bottom span:nth-child(2)&quot;, enterCloseBtn)
+    function enterCloseBtn() {
+      $(this).css({
+        backgroundPosition: &quot;-43px top&quot;
+      })
+    }
+    // 鼠标离开，恢复原样
+    $('main').on(&quot;mouseleave&quot;, &quot;.list-bottom span:nth-child(2)&quot;, leaveCloseBtn)
+    function leaveCloseBtn() {
+      $(this).css({
+        backgroundPosition: &quot;left top&quot;
+      })
+    }
+    // - 功能5: 当鼠标点击每个许愿签上面的&quot;X&quot;的时候，当前这个许愿签就会从页面中消失
+    $('main').on(&quot;click&quot;, &quot;.list-bottom span:nth-child(2)&quot;, closeBtn)
+    function closeBtn() {
+      $(this).parents(&quot;div.list&quot;).remove()
+    }
+    // - 功能6：当许愿签堆叠在一起的时候，点击某个许愿签，当前这个许愿签就会在最上面，覆盖住别的许愿签
+    // 准备一个变量保留z-index的最高值
+    let highest = 1
+    $('main').on(&quot;click&quot;, &quot;.list&quot;, coverOthers)
+    function coverOthers() {
+      // 让当前的z-index值为一个最高值
+      $(this).css({
+        zIndex: highest++
+      })
+    }
+    // - 功能7：点击”我要许愿“，就会显示遮罩层
+    $(&quot;.send&quot;).on(&quot;click&quot;, showSend)
+    function showSend() {
+      $(&quot;.mask&quot;).show()
+    }
+    // - 功能8：点击”遮罩层“右上角的&quot;X&quot;,这个遮罩层就会隐藏
+    $(&quot;.close&quot;).on(&quot;click&quot;, closeSend)
+    function closeSend() {
+      $(&quot;.mask&quot;).hide()
+    }
+    // - 功能9：在遮罩层的第二个输入框，不断的输入内容，上面的&quot;50&quot;这个文字在随着内容的输入在不断的减少，最大长度是50
+    $(&quot;.mask-wish textarea&quot;).on(&quot;input&quot;, inputWish)
+    function inputWish() {
+      // 计算还可以输入的字数
+      let num = 50 - $(this).val().trim().length
+      // 赋值给i
+      $(this).prev().find(&quot;i&quot;).html(num)
+    }
+    // - 功能10：在遮罩层的2个输入框中输入内容，如果有一个输入框内容为空，或者是输入的都是空格键的话，点击”发布“之后，遮罩层关闭，但是页面中不会添加新的许愿签，
+    // - 如果2个用户都输入了内容，并且不是空格键的话，就会添加一条新的许愿签到页面中，遮罩层关闭，2个输入框的内容都清空
+    $(&quot;.release&quot;).on(&quot;click&quot;, sendNew)
+    function sendNew() {
+      if ($(&quot;.mask-content input&quot;).val().trim().length != 0 &amp;&amp; $(&quot;.mask-content textarea&quot;).val().trim().length != 0) {
+        let date = new Date()
+        let hours = date.getHours() &gt; 9 ? date.getHours() : &quot;0&quot; + date.getHours();
+        let minutes = date.getMinutes() &gt; 9 ? date.getMinutes() : &quot;0&quot; + date.getMinutes();
+        // - 功能2：每个许愿签的位置是随机产生的
+        let randomLeft = Math.floor(Math.random() * ($(&quot;main&quot;).innerWidth() - 237 + 1))
+        let randomTop = Math.floor(Math.random() * 300);
+        // 插入模板字符串
+        $(&quot;main&quot;).prepend(`
+      &lt;div class=&quot;list&quot; style=&quot;top: ${randomTop}px; left:${randomLeft}px; z-index: ${highest++}&quot;&gt;
+      &lt;div class=&quot;list-top&quot;&gt;
+        &lt;span&gt;${$(&quot;.mask-content input&quot;).val()}&lt;/span&gt;
+        &lt;span&gt;No.00001&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-center&quot;&gt;
+        ${$(&quot;.mask-content textarea&quot;).val()}
+      &lt;/div&gt;
+      &lt;div class=&quot;list-bottom&quot;&gt;
+        &lt;span&gt;今天${hours}:${minutes}&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`)
+
+      }
+      closeSend()
+    }
+//   注意:当我通过&quot;我要许愿&quot;添加的许愿签，上面的功能都还是没有问题的，点击许愿签上面的&quot;x&quot;的功能还能用
+  &lt;/script&gt;
+</code></pre>
+<h2 id="折叠面板">折叠面板</h2>
+<pre><code class="language-js">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script src=&quot;./lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        html,
+        body {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            border: 1px solid #f3f3f3;
+            margin: 30px auto;
+            width: 800px;
+        }
+
+        div {
+            position: relative;
+            margin: 20px 30px;
+            /* line-height: 45px; */
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f3f3f3;
+
+        }
+
+        a {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            background: url(./img/select.png) no-repeat;
+            transform: rotate(270deg);
+        }
+
+        .box a.active {
+            transform: rotate(0);
+        }
+
+        div p {
+            display: none;
+            padding: 5px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;div&gt;&lt;a&gt;&lt;/a&gt;
+            一致性 Consistency
+            &lt;p&gt;与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+                在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            反馈 Feedback&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
+                页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            效率 Efficiency&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;
+                简化流程：设计简洁直观的操作流程；
+                清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
+                帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;可控 Controllability&lt;a&gt;&lt;/a&gt;
+            &lt;p&gt;用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；
+                结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        $(&quot;.box div&quot;).click(function () {
+
+            $(this).children(&quot;p&quot;).stop().slideToggle()
+            if ($(this).children(&quot;a&quot;).hasClass(&quot;active&quot;)) {
+                $(this).children(&quot;a&quot;).removeClass(&quot;active&quot;);
+            } else {
+                $(this).children(&quot;a&quot;).addClass(&quot;active&quot;);
+            }
+        })
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="京东轮播图">京东轮播图</h2>
+<pre><code class="language-js">    $(function () {
+      //  - 功能1：显示小圆点，第一个小圆点是有current这个类名的
+      // 有几张图片创建几个li
+      $(&quot;.slider ul li&quot;).each(function (index, element) {
+        // console.log(index);
+        $(&quot;ol&quot;).append(&quot;&lt;li&gt;&lt;/li&gt;&quot;)
+      })
+      $(&quot;ol li:first&quot;).addClass(&quot;current&quot;)
+      // - 功能2：鼠标移动到大盒子上面，左右的箭头就会显示出来，鼠标离开就会隐藏
+      $(&quot;.slider&quot;).hover(function () {
+        // over
+        $(&quot;.arrow&quot;).fadeIn();
+        // 自动轮播停止
+        clearInterval(timer);
+        timer = null;
+      }, function () {
+        // out
+        $(&quot;.arrow&quot;).fadeOut();
+        // 自动轮播开始
+        timer = setInterval(() =&gt; {
+          $(&quot;.arrow-right&quot;).click();
+        }, 1000);
+      });
+      // - 功能3：鼠标经过哪个小圆点上面，这个小圆点的背景色就是红色(current类名已经提供)，同时大图也在跟着切换
+      $(&quot;ol li&quot;).on(&quot;mouseenter&quot;, function () {
+        $(this).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;)
+        // 得到对应的索引
+        let index = $(this).index();
+        // 图片淡入淡出
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+      })
+      // - 功能4：点击右箭头，图片进行下一张的切换，当切换到最后一张的时候，接着从第一张开始，下面的小圆点也在跟着在切换，对应的背景色变红
+      let index = 0;
+      $(&quot;.arrow-right&quot;).on(&quot;click&quot;, function () {
+        // 得到要切换的图片的索引
+        $(&quot;ol li&quot;).each(function (i, element) {
+          if ($(&quot;ol li&quot;).eq(i).hasClass(&quot;current&quot;)) {
+            // console.log(i);
+            index = i;
+          }
+        });
+        // 得到图片的数量
+        let num = $(&quot;.slider ul li&quot;).length;
+        index++;
+        if (index == num) {
+          index = 0;
+        }
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+        $(&quot;ol li&quot;).eq(index).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+      });
+      // - 功能5：点击左箭头，图片进行上一张的切换，当切换到第一张的时候，接着从最后一张继续倒着切换，下面的小圆点也在跟着切换，对应的背景色变红
+      $(&quot;.arrow-left&quot;).on(&quot;click&quot;, function () {
+        // 得到要切换的图片的索引
+        $(&quot;ol li&quot;).each(function (i, element) {
+          if ($(&quot;ol li&quot;).eq(i).hasClass(&quot;current&quot;)) {
+            index = i;
+            // console.log(index);
+          }
+        });
+        // 得到图片的数量
+        let num = $(&quot;.slider ul li&quot;).length;
+        if (index == 0) {
+          index = num;
+          // console.log(index);
+        }
+        index--;
+        $(&quot;.slider ul li&quot;).eq(index).fadeIn().siblings().fadeOut();
+        $(&quot;ol li&quot;).eq(index).addClass(&quot;current&quot;).siblings().removeClass(&quot;current&quot;);
+
+      });
+      // - 功能6： 自动轮播的效果
+      let timer = setInterval(() =&gt; {
+        $(&quot;.arrow-right&quot;).click();
+      }, 1000);
+      // - 功能7： 当鼠标移动到大盒子上面的时候，停止自动轮播，鼠标离开，自动轮播继续
+
+      //   注意： 在点你鼠标移动上去自动轮播停止，你再去测试上面那些功能，看上面的效果是否依旧没有问题
+    });
+  &lt;/script&gt;
+</code></pre>
+<h2 id="二级联动">二级联动</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+
+&lt;style&gt;
+  select {
+    width: 100px;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;select id=&quot;selid&quot;&gt;
+  &lt;option&gt;选择省市&lt;/option&gt;
+  &lt;option&gt;北京&lt;/option&gt;
+  &lt;option&gt;山东&lt;/option&gt;
+  &lt;option&gt;辽宁&lt;/option&gt;
+  &lt;option&gt;河北&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select id=&quot;subselid&quot;&gt;
+  &lt;option&gt;选择城市&lt;/option&gt;
+&lt;/select&gt;
+&lt;script src=&quot;../../../lib/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  var collCities = [
+    ['选择城市'],
+    ['海淀区', '朝阳区', '东城区', '西城区'],
+    ['济南', '青岛', '烟台', '威海'],
+    ['沈阳', '大连', '鞍山', '抚顺'],
+    ['石家庄', '保定', '邯郸', '廊坊']
+  ];
+  // 点击选择省，城市也再跟着变
+  $('#selid').on('change', function () {
+    // 根据城市的改变，然后选择省
+    var $index = $(this).find('option:selected').index()
+    // 根据索引选择省
+    var cities = collCities[$index]
+    // 但是在创建之前，需要把之前的$(&quot;#subselid&quot;)清空
+    $(&quot;#subselid&quot;).html(&quot;&quot;);
+    //然后遍历数据创建option
+    cities.forEach(function (item, index) {
+      $(&quot;#subselid&quot;).append($(`&lt;option&gt;${item}&lt;/option&gt;`))
+    })
+
+  })
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="五星好评">五星好评</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .container {
+      width: 400px;
+      height: 100px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+
+    }
+
+    ul {
+      display: flex;
+      float: left;
+      margin-right: 10px;
+    }
+
+    ul li {
+      width: 16px;
+      height: 16px;
+      background-image: url(./star2.png);
+    }
+
+    /* 添加类名 */
+    ul li.on {
+      background-image: url(./star1.png);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;!-- 自己引入jq --&gt;
+  &lt;script&gt;
+   // 把文字放到数组里面
+    var textArr = [&quot;极差&quot;, &quot;失望&quot;, &quot;一般&quot;, &quot;满意&quot;, &quot;惊喜&quot;]
+    // 定义全局变量
+    var $num;
+    $('.container li').hover(function () {
+        // 之后获取索引
+        var $index = $(this).index()
+        // 鼠标经过当前的和前面的都有添加类名on,后面的则不添加,addClass不会断链
+        $(this).addClass('on').prevAll().addClass('on')
+        // 后面的都不添加
+        $(this).nextAll().removeClass('on')
+        // 根据不断的滑动，后面显示不同的文字
+        $('.container span').text(textArr[$index])
+        
+      }, function () {
+        // 鼠标离开li
+        // 鼠标离开所有的都移除on类名
+        $('.container li').removeClass('on')
+        // 并且后面的文字清空
+        $('.container span').text(&quot;&quot;)
+        // 让点击的包括之前的都添加on类名
+        $('.container li').eq($num).addClass('on').prevAll().addClass('on')
+        // 并且后面的文字显示
+        $('.container span').text(textArr[$num])
+      })
+      .click(function () {
+        // 鼠标点击li保存索引
+        $num = $(this).index();
+      })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zjp693.github.io/post/zhou-wu-bian-cheng-ti/">
+                  <h3 class="post-title">
+                    周五编程题
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
