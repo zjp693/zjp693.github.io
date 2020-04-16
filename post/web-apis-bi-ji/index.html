@@ -1,52 +1,103 @@
+<!DOCTYPE html>
 <html>
-      <head>
-        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
-        <meta charset="utf-8">
-        <meta name="referrer" content="never">
-        <title>Web APIs笔记 | 学习笔记</title>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
-        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-          <script src="https://zjp693.github.io//media/scripts/mdui.min.js"></script>
-        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
-        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-        <script src="https://zjp693.github.io//media/scripts/script.js"></script>
-        <script >hljs.initHighlightingOnLoad();</script>
-        
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>Web APIs笔记 | 学习笔记</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://zjp693.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://zjp693.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Web APIs笔记 | 学习笔记 » Feed" href="https://zjp693.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://zjp693.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
 
-    </head>
-    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
-        <header class="index-img mdui-m-b-3" >
-                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
-                <ul class="mdui-menu" id="demo-attr-cascade">
-                
-                        <li class="mdui-menu-item">
-                          <a href="https://zjp693.github.io/tags" class="mdui-ripple">首页</a>
-                        </li>
-                
-                        <li class="mdui-menu-item">
-                          <a href="/archives" class="mdui-ripple">归档</a>
-                        </li>
-                
-                        <li class="mdui-menu-item">
-                          <a href="/tags" class="mdui-ripple">标签</a>
-                        </li>
-                
-                        <li class="mdui-menu-item">
-                          <a href="/post/about" class="mdui-ripple">关于</a>
-                        </li>
-                
-                      </ul>
+    <meta property="og:description" content="Web APIs笔记"/>
+    <meta property="og:url" content="https://zjp693.github.io/post/web-apis-bi-ji/"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="学习笔记"/>
+  </head>
+  <body>
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://zjp693.github.io/">学习笔记</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="https://zjp693.github.io/tags">首页</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/archives">归档</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/post/about">关于</a>
+              
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://zjp693.github.io//media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+          	<span class="tags">
+          	 
+        </span>
+            <h1>Web APIs笔记</h1>
+            <span class="meta">
+            	Posted on
+              2020-04-01，114 min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        </header>
-        <div class="mdui-container post">
-                <div class="mdui-row">
-                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
-                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
-                           <div class="mdui-typo-display-1 mdui-m-b-3">Web APIs笔记</div>
-                           <a  class="index-list-biaoqian ">2020-04-01</a>
-                           <div class="mdui-typo mdui-m-t-3 post-neirong"><h1 id="day01-web-apis">day01 - Web APIs</h1>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h1 id="day01-web-apis">day01 - Web APIs</h1>
 <blockquote>
 <p>学习目标：</p>
 <p>能够通过ID来获取元素<br>
@@ -3000,443 +3051,91 @@ function tap (obj, callback) {
 <figure data-type="image" tabindex="36"><img src="images%5C1551800263(1).jpg" alt="1551800263(F:/前端/【27】源码+课件+软件/07-10 JavaScript网页编程/02-WebAPI编程资料/Web APIs-day07/4-笔记/images/1551800263(1).jpg)" loading="lazy"></figure>
 </li>
 </ol>
-</div>
-                              <div class="mdui-divider mdui-m-t-3"></div>
-                              <div class="mdui-row-xs-2 mdui-m-t-2">
-  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://zjp693.github.io/post/zhou-wu-xuan-ze-ti/">周五选择题</a></div></div>
- <div class="mdui-col"><div class="mdui-text-right "><a href="https://zjp693.github.io/post/javas-ji-chu-xuan-ze-ti/">Javacript基础选择题</a></div> </div>
-                                </div>
-                                <div class="mdui-divider mdui-m-t-2"></div>
-   
- <script src="https://zjp693.github.io//media/scripts/Valine.min.js"></script>
- <div class="comment"></div>
 
-<script>
-      new Valine({
-            el: '.comment',
-
-
-
-            path: window.location.pathname,
-            pageSize: 30,
-            avatar:'mm', 
-       })
-
-    </script> 
-<script>
-    if(window.location.hash){
-        var checkExist = setInterval(function() {
-           if ($(window.location.hash).length) {
-              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
-              clearInterval(checkExist);
-           }
-        }, 100);
-    }
-</script>
-                         </article>
-                 <div class="toc-container mdui-float-right">
-                <ul class="markdownIt-TOC">
-<li><a href="#day01-web-apis">day01 - Web APIs</a>
-<ul>
-<li><a href="#11-web-api%E4%BB%8B%E7%BB%8D">1.1. Web API介绍</a>
-<ul>
-<li><a href="#111-api%E7%9A%84%E6%A6%82%E5%BF%B5">1.1.1 API的概念</a></li>
-<li><a href="#112-web-api%E7%9A%84%E6%A6%82%E5%BF%B5">1.1.2 Web  API的概念</a></li>
-<li><a href="#113-api-%E5%92%8C-web-api-%E6%80%BB%E7%BB%93">1.1.3 API 和 Web  API 总结</a></li>
-</ul>
-</li>
-<li><a href="#12-dom-%E4%BB%8B%E7%BB%8D">1.2. DOM 介绍</a>
-<ul>
-<li><a href="#121-%E4%BB%80%E4%B9%88%E6%98%AFdom">1.2.1 什么是DOM</a></li>
-<li><a href="#122-dom%E6%A0%91">1.2.2. DOM树</a></li>
-</ul>
-</li>
-<li><a href="#13-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0">1.3. 获取元素</a>
-<ul>
-<li><a href="#131-%E6%A0%B9%E6%8D%AEid%E8%8E%B7%E5%8F%96">1.3.1. 根据ID获取</a></li>
-<li><a href="#132-%E6%A0%B9%E6%8D%AE%E6%A0%87%E7%AD%BE%E5%90%8D%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0">1.3.2. 根据标签名获取元素</a></li>
-<li><a href="#133-h5%E6%96%B0%E5%A2%9E%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E6%96%B9%E5%BC%8F">1.3.3. H5新增获取元素方式</a></li>
-<li><a href="#134-%E8%8E%B7%E5%8F%96%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0bodyhtml">1.3.4 获取特殊元素（body，html）</a></li>
-</ul>
-</li>
-<li><a href="#14-%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80">1.4. 事件基础</a>
-<ul>
-<li><a href="#141-%E4%BA%8B%E4%BB%B6%E6%A6%82%E8%BF%B0">1.4.1. 事件概述</a></li>
-<li><a href="#142-%E4%BA%8B%E4%BB%B6%E4%B8%89%E8%A6%81%E7%B4%A0">1.4.2. 事件三要素</a></li>
-<li><a href="#143-%E6%89%A7%E8%A1%8C%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%AD%A5%E9%AA%A4">1.4.3. 执行事件的步骤</a></li>
-<li><a href="#144-%E5%B8%B8%E8%A7%81%E7%9A%84%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6">1.4.4. 常见的鼠标事件</a></li>
-<li><a href="#145-%E5%88%86%E6%9E%90%E4%BA%8B%E4%BB%B6%E4%B8%89%E8%A6%81%E7%B4%A0">1.4.5. 分析事件三要素</a></li>
-</ul>
-</li>
-<li><a href="#15-%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0">1.5. 操作元素</a>
-<ul>
-<li><a href="#151-%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9%E8%8E%B7%E5%8F%96%E6%88%96%E8%AE%BE%E7%BD%AE">1.5.1. 改变元素内容（获取或设置）</a></li>
-<li><a href="#152-%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">1.5.2. 常用元素的属性操作</a></li>
-<li><a href="#153-%E6%A1%88%E4%BE%8B%E5%88%86%E6%97%B6%E9%97%AE%E5%80%99">1.5.3. 案例：分时问候</a></li>
-<li><a href="#154-%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">1.5.4. 表单元素的属性操作</a></li>
-<li><a href="#155-%E6%A1%88%E4%BE%8B%E4%BB%BF%E4%BA%AC%E4%B8%9C%E6%98%BE%E7%A4%BA%E5%AF%86%E7%A0%81">1.5.5. 案例：仿京东显示密码</a></li>
-<li><a href="#156-%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">1.5.6. 样式属性操作</a>
-<ul>
-<li><a href="#%E6%96%B9%E5%BC%8F1%E9%80%9A%E8%BF%87%E6%93%8D%E4%BD%9Cstyle%E5%B1%9E%E6%80%A7">方式1：通过操作style属性</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E6%B7%98%E5%AE%9D%E7%82%B9%E5%87%BB%E5%85%B3%E9%97%AD%E4%BA%8C%E7%BB%B4%E7%A0%81">案例：淘宝点击关闭二维码</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E5%BE%AA%E7%8E%AF%E7%B2%BE%E7%81%B5%E5%9B%BE%E8%83%8C%E6%99%AF">案例：循环精灵图背景</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E6%9C%AC%E6%A1%86%E5%86%85%E5%AE%B9">案例：显示隐藏文本框内容</a></li>
-<li><a href="#%E6%96%B9%E5%BC%8F2%E9%80%9A%E8%BF%87%E6%93%8D%E4%BD%9Cclassname%E5%B1%9E%E6%80%A7">方式2：通过操作className属性</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E5%AF%86%E7%A0%81%E6%A1%86%E6%A0%BC%E5%BC%8F%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF">案例：密码框格式提示错误信息</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#16-%E4%BB%8A%E6%97%A5%E6%80%BB%E7%BB%93">1.6. 今日总结</a></li>
-</ul>
-</li>
-<li><a href="#day02-web-apis">day02 - Web APIs</a>
-<ul>
-<li><a href="#11-%E6%8E%92%E4%BB%96%E6%93%8D%E4%BD%9C">1.1. 排他操作</a>
-<ul>
-<li><a href="#111-%E6%8E%92%E4%BB%96%E6%80%9D%E6%83%B3">1.1.1 排他思想</a></li>
-</ul>
-</li>
-<li><a href="#12-%E6%A1%88%E4%BE%8B%E7%99%BE%E5%BA%A6%E6%8D%A2%E8%82%A4">1.2 案例：百度换肤</a></li>
-<li><a href="#13-%E6%A1%88%E4%BE%8B%E8%A1%A8%E6%A0%BC%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2">1.3 案例：表格隔行变色</a></li>
-<li><a href="#14-%E6%A1%88%E4%BE%8B%E5%85%A8%E9%80%89">1.4 案例：全选</a></li>
-<li><a href="#15-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">1.5. 自定义属性操作</a>
-<ul>
-<li><a href="#151-%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7%E5%80%BC">1.5.1 获取属性值</a></li>
-<li><a href="#152-%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7%E5%80%BC">1.5.2. 设置属性值</a></li>
-<li><a href="#153-%E7%A7%BB%E5%87%BA%E5%B1%9E%E6%80%A7">1.5.3. 移出属性</a></li>
-<li><a href="#154-%E6%A1%88%E4%BE%8Btab%E6%A0%8F">1.5.4. 案例：tab栏</a></li>
-<li><a href="#155-h5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7">1.5.5. H5自定义属性</a></li>
-</ul>
-</li>
-<li><a href="#16-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C">1.6. 节点操作</a>
-<ul>
-<li><a href="#161-%E8%8A%82%E7%82%B9%E6%A6%82%E8%BF%B0">1.6.1. 节点概述</a></li>
-<li><a href="#162-%E8%8A%82%E7%82%B9%E5%B1%82%E7%BA%A7">1.6.2. 节点层级</a></li>
-<li><a href="#163-%E7%88%B6%E7%BA%A7%E8%8A%82%E7%82%B9">1.6.3. 父级节点</a></li>
-<li><a href="#164-%E5%AD%90%E8%8A%82%E7%82%B9">1.6.4. 子节点</a></li>
-<li><a href="#165-%E6%A1%88%E4%BE%8B%E6%96%B0%E6%B5%AA%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95">1.6.5. 案例：新浪下拉菜单</a></li>
-<li><a href="#166-%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9">1.6.6. 兄弟节点</a></li>
-<li><a href="#167-%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9">1.6.7. 创建节点</a></li>
-<li><a href="#168-%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9">1.6.8. 添加节点</a></li>
-<li><a href="#169-%E6%A1%88%E4%BE%8B%E7%AE%80%E5%8D%95%E7%89%88%E5%8F%91%E5%B8%83%E7%95%99%E8%A8%80">1.6.9. 案例：简单版发布留言</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#day03-web-apis">day03 - Web APIs</a>
-<ul>
-<li><a href="#11-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C">1.1. 节点操作</a>
-<ul>
-<li><a href="#111-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9">1.1.1 删除节点</a></li>
-<li><a href="#112-%E6%A1%88%E4%BE%8B%E5%88%A0%E9%99%A4%E7%95%99%E8%A8%80">1.1.2 案例：删除留言</a></li>
-<li><a href="#113-%E5%A4%8D%E5%88%B6%E5%85%8B%E9%9A%86%E8%8A%82%E7%82%B9">1.1.3 复制（克隆）节点</a></li>
-<li><a href="#114-%E6%A1%88%E4%BE%8B%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E8%A1%A8%E6%A0%BC">1.1.4 案例：动态生成表格</a></li>
-<li><a href="#115-%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F">1.1.5 创建元素的三种方式</a></li>
-<li><a href="#116-innerthml%E5%92%8Ccreateelement%E6%95%88%E7%8E%87%E5%AF%B9%E6%AF%94">1.1.6 innerTHML和createElement效率对比</a></li>
-</ul>
-</li>
-<li><a href="#12-dom%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%BB%E7%BB%93">1.2. DOM的核心总结</a>
-<ul>
-<li><a href="#121-%E5%88%9B%E5%BB%BA">1.2.1. 创建</a></li>
-<li><a href="#122-%E5%A2%9E%E5%8A%A0">1.2.2. 增加</a></li>
-<li><a href="#123-%E5%88%A0">1.2.3. 删</a></li>
-<li><a href="#124-%E6%94%B9">1.2.4. 改</a></li>
-<li><a href="#125-%E6%9F%A5">1.2.5. 查</a></li>
-<li><a href="#126-%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C">1.2.6. 属性操作</a></li>
-<li><a href="#127-%E4%BA%8B%E4%BB%B6%E6%93%8D%E4%BD%9C%E9%87%8D%E7%82%B9">1.2.7. 事件操作（重点）</a></li>
-</ul>
-</li>
-<li><a href="#13-%E4%BA%8B%E4%BB%B6%E9%AB%98%E7%BA%A7">1.3. 事件高级</a>
-<ul>
-<li><a href="#131-%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B62%E7%A7%8D%E6%96%B9%E5%BC%8F">1.3.1. 注册事件（2种方式）</a></li>
-<li><a href="#132-%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC">1.3.2 事件监听</a>
-<ul>
-<li><a href="#c">c</a></li>
-<li><a href="#attacheevent%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%ACie678%E6%94%AF%E6%8C%81">attacheEvent()事件监听（IE678支持）</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">事件监听兼容性解决方案</a></li>
-</ul>
-</li>
-<li><a href="#133-%E5%88%A0%E9%99%A4%E4%BA%8B%E4%BB%B6%E8%A7%A3%E7%BB%91%E4%BA%8B%E4%BB%B6">1.3.3. 删除事件（解绑事件）</a></li>
-<li><a href="#134-dom%E4%BA%8B%E4%BB%B6%E6%B5%81">1.3.4. DOM事件流</a></li>
-<li><a href="#135-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">1.3.5. 事件对象</a>
-<ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">什么是事件对象</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%BF%E7%94%A8">事件对象的使用</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E5%A4%84%E7%90%86">事件对象的兼容性处理</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95">事件对象的属性和方法</a></li>
-<li><a href="#etarget-%E5%92%8C-this-%E7%9A%84%E5%8C%BA%E5%88%AB">e.target 和 this 的区别</a></li>
-</ul>
-</li>
-<li><a href="#136-%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA">1.3.6 阻止默认行为</a></li>
-<li><a href="#137-%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1">1.3.7 阻止事件冒泡</a></li>
-<li><a href="#138-%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98">1.3.8 事件委托</a>
-<ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98">什么是事件委托</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E7%9A%84%E5%8E%9F%E7%90%86">事件委托的原理</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E7%9A%84%E4%BD%9C%E7%94%A8">事件委托的作用</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#14-%E5%B8%B8%E7%94%A8%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6">1.4. 常用鼠标事件</a>
-<ul>
-<li><a href="#141-%E6%A1%88%E4%BE%8B%E7%A6%81%E6%AD%A2%E9%80%89%E4%B8%AD%E6%96%87%E5%AD%97%E5%92%8C%E7%A6%81%E6%AD%A2%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95">1.4.1 案例：禁止选中文字和禁止右键菜单</a></li>
-<li><a href="#142-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">1.4.2 鼠标事件对象</a></li>
-<li><a href="#143-%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E5%9C%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%9D%90%E6%A0%87">1.4.3 获取鼠标在页面的坐标</a></li>
-<li><a href="#144-%E6%A1%88%E4%BE%8B%E8%B7%9F%E9%9A%8F%E9%BC%A0%E6%A0%87%E7%9A%84%E5%A4%A9%E4%BD%BF">1.4.4 案例：跟随鼠标的天使</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#day04-web-apis">day04 - Web APIs</a>
-<ul>
-<li><a href="#11-%E5%B8%B8%E7%94%A8%E7%9A%84%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6">1.1. 常用的键盘事件</a>
-<ul>
-<li><a href="#111-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6">1.1.1 键盘事件</a></li>
-<li><a href="#112-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">1.1.2 键盘事件对象</a></li>
-<li><a href="#113-%E6%A1%88%E4%BE%8B%E6%A8%A1%E6%8B%9F%E4%BA%AC%E4%B8%9C%E6%8C%89%E9%94%AE%E8%BE%93%E5%85%A5%E5%86%85%E5%AE%B9">1.1.3 案例：模拟京东按键输入内容</a></li>
-<li><a href="#114-%E6%A1%88%E4%BE%8B%E6%A8%A1%E6%8B%9F%E4%BA%AC%E4%B8%9C%E5%BF%AB%E9%80%92%E5%8D%95%E5%8F%B7%E6%9F%A5%E8%AF%A2">1.1.4 案例：模拟京东快递单号查询</a></li>
-</ul>
-</li>
-<li><a href="#12-bom">1.2. BOM</a>
-<ul>
-<li><a href="#121-%E4%BB%80%E4%B9%88%E6%98%AFbom">1.2.1. 什么是BOM</a></li>
-<li><a href="#122-bom%E7%9A%84%E6%9E%84%E6%88%90">1.2.2. BOM的构成</a></li>
-<li><a href="#123-%E9%A1%B6%E7%BA%A7%E5%AF%B9%E8%B1%A1window">1.2.3. 顶级对象window</a></li>
-<li><a href="#124-window%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6">1.2.4. window对象的常见事件</a>
-<ul>
-<li><a href="#%E9%A1%B5%E9%9D%A2%E7%AA%97%E5%8F%A3%E5%8A%A0%E8%BD%BD%E4%BA%8B%E4%BB%B62%E7%A7%8D">页面（窗口）加载事件（2种）</a></li>
-<li><a href="#%E8%B0%83%E6%95%B4%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F%E4%BA%8B%E4%BB%B6">调整窗口大小事件</a></li>
-</ul>
-</li>
-<li><a href="#125-%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%A4%E7%A7%8D">1.2.5. 定时器（两种）</a>
-<ul>
-<li><a href="#settimeout-%E7%82%B8%E5%BC%B9%E5%AE%9A%E6%97%B6%E5%99%A8">setTimeout() 炸弹定时器</a>
-<ul>
-<li><a href="#%E5%BC%80%E5%90%AF%E5%AE%9A%E6%97%B6%E5%99%A8">开启定时器</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B5%E7%A7%92%E5%90%8E%E5%85%B3%E9%97%AD%E5%B9%BF%E5%91%8A">案例：5秒后关闭广告</a></li>
-<li><a href="#%E5%81%9C%E6%AD%A2%E5%AE%9A%E6%97%B6%E5%99%A8">停止定时器</a></li>
-</ul>
-</li>
-<li><a href="#setinterval-%E9%97%B9%E9%92%9F%E5%AE%9A%E6%97%B6%E5%99%A8">setInterval() 闹钟定时器</a>
-<ul>
-<li><a href="#%E5%BC%80%E5%90%AF%E5%AE%9A%E6%97%B6%E5%99%A8-2">开启定时器</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E5%80%92%E8%AE%A1%E6%97%B6">案例：倒计时</a></li>
-<li><a href="#%E5%81%9C%E6%AD%A2%E5%AE%9A%E6%97%B6%E5%99%A8-2">停止定时器</a></li>
-</ul>
-</li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1%E5%80%92%E8%AE%A1%E6%97%B6">案例：发送短信倒计时</a></li>
-</ul>
-</li>
-<li><a href="#126-this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98">1.2.6. this指向问题</a></li>
-<li><a href="#127-location%E5%AF%B9%E8%B1%A1">1.2.7. location对象</a>
-<ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-location-%E5%AF%B9%E8%B1%A1">什么是 location 对象</a></li>
-<li><a href="#url">URL</a></li>
-<li><a href="#location-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7">location 对象的属性</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B5%E5%88%86%E9%92%9F%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2">案例：5分钟自动跳转页面</a></li>
-<li><a href="#%E6%A1%88%E4%BE%8B%E8%8E%B7%E5%8F%96url%E5%8F%82%E6%95%B0">案例：获取URL参数</a></li>
-<li><a href="#location%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95">location对象的常见方法</a></li>
-</ul>
-</li>
-<li><a href="#128-navigator%E5%AF%B9%E8%B1%A1">1.2.8. navigator对象</a></li>
-<li><a href="#129-history%E5%AF%B9%E8%B1%A1">1.2.9 history对象</a></li>
-</ul>
-</li>
-<li><a href="#13-js%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6">1.3. JS执行机制</a>
-<ul>
-<li><a href="#131-js-%E6%98%AF%E5%8D%95%E7%BA%BF%E7%A8%8B">1.3.1 JS 是单线程</a></li>
-<li><a href="#132-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1">1.3.2 同步任务和异步任务</a>
-<ul>
-<li><a href="#%E5%90%8C%E6%AD%A5">同步</a></li>
-<li><a href="#%E5%BC%82%E6%AD%A5">异步</a></li>
-</ul>
-</li>
-<li><a href="#133-js%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF">1.3.3 JS执行机制（事件循环）</a></li>
-<li><a href="#134-%E4%BB%A3%E7%A0%81%E6%80%9D%E8%80%83%E9%A2%98">1.3.4 代码思考题</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#day05-web-apis"><strong>day05 - Web APIs</strong></a>
-<ul>
-<li><a href="#11-%E5%85%83%E7%B4%A0%E5%81%8F%E7%A7%BB%E9%87%8F-offset-%E7%B3%BB%E5%88%97">**1.1. **元素偏移量 offset 系列</a>
-<ul>
-<li><a href="#111-offset-%E6%A6%82%E8%BF%B0">1.1.1 offset 概述</a></li>
-<li><a href="#112-offset-%E4%B8%8E-style-%E5%8C%BA%E5%88%AB">1.1.2 offset 与 style 区别</a>
-<ul>
-<li><a href="#offset">offset</a></li>
-<li><a href="#style">style</a></li>
-</ul>
-</li>
-<li><a href="#113-%E6%A1%88%E4%BE%8B%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E5%9C%A8%E7%9B%92%E5%AD%90%E5%86%85%E7%9A%84%E5%9D%90%E6%A0%87">1.1.3  案例：获取鼠标在盒子内的坐标</a></li>
-<li><a href="#114-%E6%A1%88%E4%BE%8B%E6%A8%A1%E6%80%81%E6%A1%86%E6%8B%96%E6%8B%BD">1.1.4  案例：模态框拖拽</a></li>
-<li><a href="#115-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.1.5. 案例分析:</a></li>
-<li><a href="#116-%E6%A1%88%E4%BE%8B%E4%BB%BF%E4%BA%AC%E4%B8%9C%E6%94%BE%E5%A4%A7%E9%95%9C">1.1.6  案例：仿京东放大镜</a></li>
-<li><a href="#117-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.1.7. 案例分析:</a></li>
-</ul>
-</li>
-<li><a href="#12-%E5%85%83%E7%B4%A0%E5%8F%AF%E8%A7%86%E5%8C%BA-client-%E7%B3%BB%E5%88%97">1.2. 元素可视区 client 系列</a>
-<ul>
-<li><a href="#121-client%E6%A6%82%E8%BF%B0">1.2.1 client概述</a></li>
-<li><a href="#122-%E6%B7%98%E5%AE%9D-flexiblejs-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90">1.2.2. 淘宝 flexible.js 源码分析</a></li>
-</ul>
-</li>
-<li><a href="#13%E5%85%83%E7%B4%A0%E6%BB%9A%E5%8A%A8-scroll-%E7%B3%BB%E5%88%97">1.3.元素滚动 scroll 系列</a>
-<ul>
-<li><a href="#131-scroll-%E6%A6%82%E8%BF%B0">1.3.1. scroll 概述</a></li>
-<li><a href="#132-%E9%A1%B5%E9%9D%A2%E8%A2%AB%E5%8D%B7%E5%8E%BB%E7%9A%84%E5%A4%B4%E9%83%A8">1.3.2. 页面被卷去的头部</a></li>
-<li><a href="#133%E6%A1%88%E4%BE%8B%E4%BB%BF%E6%B7%98%E5%AE%9D%E5%9B%BA%E5%AE%9A%E5%8F%B3%E4%BE%A7%E4%BE%A7%E8%BE%B9%E6%A0%8F">1.3.3.案例：仿淘宝固定右侧侧边栏</a></li>
-<li><a href="#134%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.3.4.案例分析:</a></li>
-<li><a href="#135%E9%A1%B5%E9%9D%A2%E8%A2%AB%E5%8D%B7%E5%8E%BB%E7%9A%84%E5%A4%B4%E9%83%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">1.3.5.页面被卷去的头部兼容性解决方案</a></li>
-</ul>
-</li>
-<li><a href="#14-%E4%B8%89%E5%A4%A7%E7%B3%BB%E5%88%97%E6%80%BB%E7%BB%93">1.4. 三大系列总结</a></li>
-<li><a href="#15-mouseenter-%E5%92%8Cmouseover%E7%9A%84%E5%8C%BA%E5%88%AB">1.5. mouseenter 和mouseover的区别</a></li>
-<li><a href="#16-%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85">1.6. 动画函数封装</a>
-<ul>
-<li><a href="#161-%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86">1.6.1. 动画实现原理</a></li>
-<li><a href="#162-%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%BB%99%E4%B8%8D%E5%90%8C%E5%85%83%E7%B4%A0%E8%AE%B0%E5%BD%95%E4%B8%8D%E5%90%8C%E5%AE%9A%E6%97%B6%E5%99%A8">1.6.2. 动画函数给不同元素记录不同定时器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#day06-web-apis"><strong>day06 - Web APIs</strong></a>
-<ul>
-<li><a href="#11-%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85">**1.1. **动画函数封装</a>
-<ul>
-<li><a href="#111-%E7%BC%93%E5%8A%A8%E6%95%88%E6%9E%9C%E5%8E%9F%E7%90%86">1.1.1 缓动效果原理</a></li>
-<li><a href="#112-%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E5%A4%9A%E4%B8%AA%E7%9B%AE%E6%A0%87%E5%80%BC%E4%B9%8B%E9%97%B4%E7%A7%BB%E5%8A%A8">1.1.2 动画函数多个目标值之间移动</a></li>
-<li><a href="#113-%E5%8A%A8%E5%87%BD%E6%95%B0%E6%B7%BB%E5%8A%A0%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">1.1.3  动函数添加回调函数</a></li>
-<li><a href="#114-%E5%8A%A8%E7%94%BB%E5%AE%8C%E6%95%B4%E7%89%88%E4%BB%A3%E7%A0%81">1.1.4  动画完整版代码:</a></li>
-</ul>
-</li>
-<li><a href="#12-%E5%B8%B8%E8%A7%81%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E6%A1%88%E4%BE%8B">1.2. 常见网页特效案例</a>
-<ul>
-<li><a href="#121-%E6%A1%88%E4%BE%8B%E7%BD%91%E9%A1%B5%E8%BD%AE%E6%92%AD%E5%9B%BE">1.2.1 案例：网页轮播图</a></li>
-<li><a href="#122-%E8%8A%82%E6%B5%81%E9%98%80">1.2.2. 节流阀</a></li>
-<li><a href="#123-%E6%A1%88%E4%BE%8B%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8">1.2.3. 案例：返回顶部</a></li>
-<li><a href="#124-%E6%A1%88%E4%BE%8B%E7%AD%8B%E5%A4%B4%E4%BA%91%E6%A1%88%E4%BE%8B">1.2.4. 案例：筋头云案例</a></li>
-</ul>
-</li>
-<li><a href="#13-%E8%A7%A6%E5%B1%8F%E4%BA%8B%E4%BB%B6">1.3. 触屏事件</a>
-<ul>
-<li><a href="#131-%E8%A7%A6%E5%B1%8F%E4%BA%8B%E4%BB%B6%E6%A6%82%E8%BF%B0">1.3.1. 触屏事件概述</a></li>
-<li><a href="#132-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1touchevent">1.3.2. 触摸事件对象（TouchEvent）</a></li>
-<li><a href="#133%E6%A1%88%E4%BE%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%8B%96%E5%8A%A8%E5%85%83%E7%B4%A0">1.3.3.案例：移动端拖动元素</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#day07-web-apis"><strong>day07 - Web APIs</strong></a>
-<ul>
-<li><a href="#11-%E8%A7%A6%E5%B1%8F%E4%BA%8B%E4%BB%B6"><strong>1.1. 触屏事件</strong></a>
-<ul>
-<li><a href="#111-%E8%A7%A6%E5%B1%8F%E4%BA%8B%E4%BB%B6%E6%A6%82%E8%BF%B0">1.1.1 触屏事件概述</a></li>
-<li><a href="#112-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1touchevent">1.1.2 触摸事件对象（TouchEvent）</a></li>
-<li><a href="#113-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%8B%96%E5%8A%A8%E5%85%83%E7%B4%A0">1.1.3  移动端拖动元素</a></li>
-</ul>
-</li>
-<li><a href="#12-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E7%89%B9%E6%95%88">1.2. 移动端常见特效</a>
-<ul>
-<li><a href="#121-%E6%A1%88%E4%BE%8B-%E7%A7%BB%E5%8A%A8%E8%BD%AE%E6%92%AD%E5%9B%BE">1.2.1 案例: 移动轮播图</a></li>
-<li><a href="#122-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.2.2. 案例分析:</a></li>
-</ul>
-</li>
-<li><a href="#123-classlist-%E5%B1%9E%E6%80%A7">1.2.3 classList 属性</a>
-<ul>
-<li><a href="#124-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.2.4. 案例分析</a></li>
-<li><a href="#131-%E6%A1%88%E4%BE%8B%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8">1.3.1. 案例：返回顶部</a></li>
-<li><a href="#132%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">1.3.2.案例分析</a></li>
-</ul>
-</li>
-<li><a href="#14-click-%E5%BB%B6%E6%97%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">1.4. click 延时解决方案</a></li>
-<li><a href="#15-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6">1.5. 移动端常用开发插件</a>
-<ul>
-<li><a href="#151-%E4%BB%80%E4%B9%88%E6%98%AF%E6%8F%92%E4%BB%B6">1.5.1. 什么是插件</a></li>
-<li><a href="#152-%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8">1.5.2. 插件的使用</a></li>
-<li><a href="#153-swiper-%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8">1.5.3. Swiper 插件的使用</a></li>
-<li><a href="#154-%E5%85%B6%E4%BB%96%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E6%8F%92%E4%BB%B6">1.5.4. 其他移动端常见插件</a></li>
-<li><a href="#155-%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93">1.5.5. 插件的使用总结</a></li>
-<li><a href="#156-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E9%A2%91%E6%8F%92%E4%BB%B6-zymediajs">1.5.6. 移动端视频插件 zy.media.js</a></li>
-</ul>
-</li>
-<li><a href="#16-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6">1.6. 移动端常用开发框架</a>
-<ul>
-<li><a href="#161-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E9%A2%91%E6%8F%92%E4%BB%B6-zymediajs">1.6.1. 移动端视频插件 zy.media.js</a></li>
-<li><a href="#162-bootstrap">1.6.2. Bootstrap</a></li>
-</ul>
-</li>
-<li><a href="#17-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8">1.7. 本地存储</a>
-<ul>
-<li><a href="#171%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E7%89%B9%E6%80%A7">1.7.1.本地存储特性</a></li>
-<li><a href="#172windowsessionstorage">1.7.2.window.sessionStorage</a></li>
-<li><a href="#173windowlocalstorage">1.7.3.window.localStorage</a></li>
-<li><a href="#174%E6%A1%88%E4%BE%8B%E8%AE%B0%E4%BD%8F%E7%94%A8%E6%88%B7%E5%90%8D">1.7.4.案例：记住用户名</a>
-<ul>
-<li><a href="#%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90">案例分析</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-
-                        </div>
-                 </div>
+          
+          <p class="next-post">下一篇：
+            <a href="https://zjp693.github.io/post/javas-ji-chu-xuan-ze-ti/">
+              <span class="post-title">
+                Javacript基础选择题&rarr;
+              </span>
+            </a>
+          </p>
+        
+        <div class="comment">
           
         </div>
-        <script data-no-instant>
-    (function ($) {
-        $.extend({
-            adamsOverload: function () {
-                $.viewImage({
-                    'target'  : '.post-neirong img',
-                    'exclude' : '.vsmile-icons img , .song-links-item img',
-                    'delay'   : 300
-                });
-            }
+      </div>
+    </div>
+  </article>
+ <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <li class="list-inline-item">
+              <a href="https://zjp693.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>学习笔记</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://zjp693.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
         });
-    })(jQuery);
-    jQuery.adamsOverload();
-</script>
-        <footer class="footer mdui-m-t-5 mdui-text-center">
-               <nav class="social-links">
-                      <ul>
-                      
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                            
-                           
-                      </ul>
-                    </nav>
-                  <div class="copyright">
-                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
-                  </div>
-              </footer>
-    </body>
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  </body>
 </html>
+
