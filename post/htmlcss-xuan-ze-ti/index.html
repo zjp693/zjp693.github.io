@@ -1,151 +1,102 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587056841891">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <meta charset="utf-8" >
 
+<title>HTML+CSS选择题 | 学习笔记</title>
+<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587056982600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://zjp693.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587056841891" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E5%8D%95%E9%80%89%E9%A2%98">单选题</a>
-<ul>
-<li><a href="#1%E5%85%B3%E4%BA%8Eweb%E6%A0%87%E5%87%86%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-c">1.关于WEB标准下列说法正确的是：( 	C )</a></li>
-<li><a href="#2web%E6%A0%87%E5%87%86%E9%87%8C%E9%9D%A2%E8%A7%84%E5%AE%9A%E4%B8%89%E5%B1%82%E5%88%86%E7%A6%BB%E4%B8%8D%E5%8C%85%E6%8B%AC%E5%93%AA%E9%83%A8%E5%88%86-d">2.web标准里面规定三层分离不包括哪部分( D )</a></li>
-<li><a href="#3%E5%85%B3%E4%BA%8Eweb%E6%A0%87%E5%87%86%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-b">3.关于WEB标准下列说法正确的是 (	B	)</a></li>
-<li><a href="#4%E5%85%B3%E4%BA%8E%E6%A0%87%E7%AD%BE%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-b">4.关于标签下列说法正确的是 (	B	)</a></li>
-<li><a href="#5%E5%85%B3%E4%BA%8E%E6%A0%87%E7%AD%BE%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-b">5.关于标签下列说法不正确的是 (	B)</a></li>
-<li><a href="#6%E5%BD%93%E7%BD%91%E9%A1%B5%E6%98%BE%E7%A4%BA%E5%9B%BE%E6%A0%87%E6%97%B6%E9%BC%A0%E6%A0%87%E6%BB%91%E4%B8%8A%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97%E6%8F%8F%E8%BF%B0%E6%98%AF%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%AA%E5%B1%9E%E6%80%A7b">6.当网页显示图标时，鼠标滑上图片显示文字描述是以下哪个属性(	B)</a></li>
-<li><a href="#7%E5%9C%A8html%E4%B8%AD%E4%BD%BF%E7%94%A8img%E6%A0%87%E7%AD%BE%E6%8F%92%E5%85%A5%E5%9B%BE%E5%83%8F%E4%B8%8B%E5%88%97%E9%80%89%E9%A1%B9%E5%85%B3%E4%BA%8Eimg%E7%9A%84src%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFb">7.在HTML中，使用<img>标签插入图像，下列选项关于<img>的src属性说法正确的是(	B)</a></li>
-<li><a href="#8%E5%9C%A8html%E4%B8%AD%E5%85%B3%E4%BA%8Ea%E6%A0%87%E7%AD%BE%E8%AF%B4%E6%B3%95%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFc">8.在HTML中，关于a标签说法不正确的是(	C)</a></li>
-<li><a href="#9%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E6%98%AF%E9%82%A3%E7%A7%8D-c">9.在页面中看不见的表单元素是那种？( C)</a></li>
-<li><a href="#10%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E6%B2%A1%E6%9C%89%E4%B8%8B%E5%88%92%E7%BA%BF%E7%9A%84%E8%B6%85%E9%93%BE%E6%8E%A5-a">10.如何显示没有下划线的超链接？ ( A)</a></li>
-<li><a href="#11css%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%98%BE%E7%A4%BA%E6%96%B9%E5%BC%8F-a">11.CSS元素有哪几种显示方式( A )</a></li>
-<li><a href="#12%E6%A0%B9%E6%8D%AE%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E8%AE%A1%E7%AE%97-%E7%9B%92%E5%AD%90%E5%AE%BD%E9%AB%98%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFa">12.根据下列代码计算 盒子宽高下列说法正确的是(A	)</a></li>
-<li><a href="#13%E6%A0%B9%E6%8D%AE%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E8%AE%A1%E7%AE%97-%E7%9B%92%E5%AD%90%E5%AE%BD%E9%AB%98%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFa">13.根据下列代码计算 盒子宽高下列说法正确的是(	A)</a></li>
-<li><a href="#14%E6%A0%B9%E6%8D%AE%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E8%AE%A1%E7%AE%97-%E7%9B%92%E5%AD%90%E5%AE%BD%E9%AB%98%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFa">14.根据下列代码计算 盒子宽高下列说法正确的是(A)</a></li>
-<li><a href="#15%E5%85%B3%E4%BA%8Ehtml%E8%AF%AD%E4%B9%89%E5%8C%96%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%AA%E8%AF%B4%E6%B3%95%E6%98%AF%E6%AD%A3%E7%A1%AE%E7%9A%84d">15.关于HTML语义化，以下哪个说法是正确的（D）？</a></li>
-<li><a href="#16%E5%88%B6%E4%BD%9C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2-%E4%BB%A5%E4%B8%8B%E5%93%AA%E7%A7%8D%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F%E4%B8%8D%E5%90%88%E9%80%82c">16.制作移动端页面, 以下哪种布局方式不合适(C )</a></li>
-<li><a href="#17%E4%B8%8B%E9%9D%A2%E9%80%89%E9%A1%B9%E4%B8%AD%E5%85%B3%E4%BA%8Ebox-sizingborder-box%E7%9A%84%E8%AE%A1%E7%AE%97%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF%E5%93%AA%E9%A1%B9d">17.下面选项中关于box-sizing:border-box的计算正确的是哪项（D）？</a></li>
-<li><a href="#18%E5%A6%82%E6%9E%9C%E6%83%B3%E8%AE%BE%E7%BD%AE%E4%B8%8B%E5%88%97-the-first-paragraph%E6%A0%87%E7%AD%BE%E7%9A%84%E8%83%8C%E6%99%AF%E8%89%B2%E4%B8%BA%E7%BA%A2%E8%89%B2%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFb">18.如果想设置下列” The first paragraph”标签的背景色为红色，正确的是（B）</a></li>
-<li><a href="#19%E4%BD%BF%E7%94%A8css%E7%9A%84flexbox%E5%B8%83%E5%B1%80%E4%B8%8D%E8%83%BD%E5%AE%9E%E7%8E%B0%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%80%E4%B8%AA%E6%95%88%E6%9E%9Cd">19.使用CSS的flexbox布局，不能实现以下哪一个效果（D）？</a></li>
-<li><a href="#20%E4%BB%A5%E4%B8%8B%E4%BD%8D%E4%BA%8E-head-%E9%97%B4%E7%9A%84%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84-meta-name-viewport-content-widthdevice-width-initial-scale1-d">20.以下位于 &lt; head &gt; 间的代码片段是做什么用的 &lt; meta name = &quot;viewport&quot; content = &quot;width=device-width, initial-scale=1&quot; &gt; （D）？</a></li>
-<li><a href="#21%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%AA%E4%B8%8D%E6%98%AF%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8c">21.以下哪个不是伪类选择器（C）</a></li>
-<li><a href="#22%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8beforeafter%E5%BF%85%E9%A1%BB%E5%8C%85%E5%90%AB%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AFc">22.伪元素选择器before&amp;after必须包含的属性是（C）</a></li>
-<li><a href="#23css3%E4%B8%AD%E8%AE%BE%E7%BD%AE%E8%BE%B9%E6%A1%86%E9%98%B4%E5%BD%B1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AFa">23.CSS3中设置边框阴影的属性是（A）</a></li>
-<li><a href="#24%E5%9C%A8%E8%B0%83%E7%94%A8%E5%8A%A8%E7%94%BB%E4%B8%ADanimation-delay%E5%B1%9E%E6%80%A7%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AFb">24.在调用动画中animation-delay属性的作用是（B）</a></li>
-<li><a href="#25%E6%8C%87%E5%AE%9A%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E4%B8%BA%E4%BC%B8%E7%BC%A9%E7%9B%92%E5%AD%90%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AFc">25.指定一个盒子为伸缩盒子需要设置的属性是（C）</a></li>
-<li><a href="#26sass%E4%B8%AD-%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E7%AC%A6%E5%8F%B7%E5%BC%80%E5%A4%B4a">26.sass中 变量的命令使用什么符号开头（A）</a></li>
-<li><a href="#27%E4%B8%80%E4%B8%AAa%E6%A0%87%E7%AD%BE%E6%83%B3%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9C%86%E9%82%A3%E4%B9%88%E4%BB%A5%E4%B8%8B%E6%A0%B7%E5%BC%8F%E4%B9%A6%E5%86%99%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFc">27.一个a标签，想实现一个圆，那么以下样式书写正确的是（C）</a></li>
-<li><a href="#28%E4%B8%8B%E9%9D%A2%E5%85%B3%E4%BA%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E8%AF%B4%E6%B3%95%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFa">28.下面关于背景样式，说法不正确的是（A）</a></li>
-<li><a href="#29%E5%9C%A8%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%A6%82%E6%9E%9C%E6%83%B3%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E4%B8%8D%E5%8F%AF%E8%BF%9B%E8%A1%8C%E7%BC%A9%E6%94%BE%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF%E5%93%AA%E4%B8%80%E4%B8%AAd">29.在移动端如果想要设置用户不可进行缩放，以下代码中正确的是哪一个？（D）</a></li>
-<li><a href="#30%E4%B8%8B%E9%9D%A2%E5%93%AA%E4%B8%AA%E5%8D%95%E4%BD%8D%E5%8F%96%E5%86%B3%E4%BA%8Ehtml%E6%A0%87%E7%AD%BE%E7%9A%84font-size%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BCb">30.下面哪个单位，取决于html标签的font-size属性的值？（B）</a></li>
-<li><a href="#31%E5%85%B3%E4%BA%8E%E5%AE%9A%E4%BD%8D%E9%94%99%E8%AF%AF%E7%9A%84%E6%98%AFc">31.关于定位，错误的是：（C）</a></li>
-<li><a href="#32%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E4%B8%AD%E4%BB%A5%E4%B8%8B%E6%8F%8F%E8%BF%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFc">32.移动端页面布局中,以下描述不正确的是:（C）</a></li>
-<li><a href="#33%E8%A7%86%E5%8F%A3%E4%B8%AD-%E8%83%BD%E5%A4%9F%E6%8E%A7%E5%88%B6%E6%9C%80%E5%A4%A7%E7%BC%A9%E6%94%BE%E7%9A%84%E5%B1%9E%E6%80%A7%E6%98%AFd">33.视口中, 能够控制最大缩放的属性是（D）</a></li>
-<li><a href="#34%E5%85%B3%E4%BA%8E%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E9%80%89%E9%A1%B9%E9%94%99%E8%AF%AF%E7%9A%84%E6%98%AFb">34.关于伪元素的选项错误的是（B）？</a></li>
-</ul>
-</li>
-<li><a href="#%E5%A4%9A%E9%80%89%E9%A2%98">多选题</a>
-<ul>
-<li><a href="#%E4%B8%8B%E5%88%97%E5%93%AA%E4%BA%9B%E6%98%AFcss3%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7%E5%A4%9A%E9%80%89abcde">下列哪些是CSS3的新特性【多选】（ABCDE）？</a></li>
-<li><a href="#2%E4%BB%A5%E4%B8%8B%E5%85%B3%E4%BA%8Eless%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFabc">2.以下关于less的使用正确的是:（ABC）</a></li>
-<li><a href="#3%E4%BB%A5%E4%B8%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%8F%8F%E8%BF%B0%E8%AF%B4%E6%98%8E%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF%E5%A4%9A%E9%80%89abc">3.以下媒体查询的描述说明正确的是【多选】（ABC）？</a></li>
-<li><a href="#4rem%E4%B8%8Eem%E7%9A%84%E7%9B%B8%E5%85%B3%E6%8F%8F%E8%BF%B0%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFbcd">4.rem与em的相关描述正确的是:（BCD）</a></li>
-<li><a href="#5%E4%B8%8B%E9%9D%A2%E5%93%AA%E4%B8%AA%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E6%97%A0%E6%B3%95%E5%AE%9E%E7%8E%B0abcd">5.下面哪个媒体查询无法实现:（ABCD）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    <div id="app" class="main">
 
-          </div>
-        </div>
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zjp693.github.io/">
+        <img src="https://zjp693.github.io//images/avatar.png?v=1587056982600" class="site-logo">
+        <h1 class="site-title">学习笔记</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
+        
+          <a href="https://zjp693.github.io/tags" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一起努力💪，一起自律👍|顶端相见🎈🎈
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
     </div>
   </div>
 </div>
 
-<div class="menu-container">
-  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">HTML+CSS选择题</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-03-08 / 12 min read
-        </div>
-        
-        <div class="post-content yue">
-          <h4 id="单选题">单选题</h4>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">HTML+CSS选择题</h2>
+            <div class="post-date">2020-03-08</div>
+            
+            <div class="post-content">
+              <h4 id="单选题">单选题</h4>
 <h5 id="1关于web标准下列说法正确的是-c">1.关于WEB标准下列说法正确的是：( 	C )</h5>
 <p>A.html决定页面的行为，css决定页面的样式，js决定页面的结构。<br>
 B.html决定页面的样式，css决定页面的结构，js决定页面的行为。<br>
@@ -357,141 +308,54 @@ D: &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-s
 <p>C:  @media screen and (max-width:500px;){ };</p>
 <p>D:  @ media screen and (max-width:500px){ };</p>
 
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://zjp693.github.io/tag/Knvzf19HH/">
-            <span class="flex-auto">HTML CSS</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://zjp693.github.io/post/javas-ji-chu-xuan-ze-ti/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  Javacript基础选择题
-                </h3>
-              </a>
             </div>
-          
+            
+              <div class="tag-container">
+                
+                  <a href="https://zjp693.github.io/tag/Knvzf19HH/" class="tag">
+                    HTML CSS
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zjp693.github.io/post/htmlcss-jian-da-ti/">
+                  <h3 class="post-title">
+                    HTML+CSS简答题
+                  </h3>
+                </a>
+              </div>
+            
 
-          
-            <div class="next-post">
-              <a href="https://zjp693.github.io/post/htmlcss-jian-da-ti/">
-                <h3 class="post-title">
-                  HTML+CSS简答题
-                  <i class="ri-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
+            
+
+          </div>
+
         </div>
-
-        
-
       </div>
     </div>
 
-    <script src="https://zjp693.github.io//media/prism.js"></script>  
-<script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-Prism.highlightAll()
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+<script type="application/javascript">
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+AOS.init();
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+hljs.initHighlightingOnLoad()
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
+
+
+
+
   </body>
 </html>
