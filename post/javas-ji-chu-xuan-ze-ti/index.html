@@ -1,128 +1,52 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587052580553">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://zjp693.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587052580553" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#1-%E4%BB%A5%E4%B8%8B%E5%85%B3%E4%BA%8E-function%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AF%B4%E6%B3%95%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFd">1、以下关于 Function函数对象的说法不正确的是（D ）</a></li>
-<li><a href="#2-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E8%BE%93%E5%87%BA-b">2、以下代码运行的结果是输出( B)</a></li>
-<li><a href="#3-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E8%BE%93%E5%87%BA-a">3、以下代码运行后的结果是输出( A  )</a></li>
-<li><a href="#4-%E5%9C%A8-js-%E4%B8%AD15553-%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">4、在 JS 中，’1555’+3 的运行结果是(  C )</a></li>
-<li><a href="#5-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E5%BC%B9%E5%87%BA%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF-b">5、以下代码运行后弹出的结果是(  B )</a></li>
-<li><a href="#6-%E5%85%B3%E4%BA%8E%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-abcde">6、关于变量的命名规则，下列说法正确的是（  ABCDE ）</a></li>
-<li><a href="#7-%E4%B8%8B%E5%88%97%E7%9A%84%E5%93%AA%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%86%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%BA%E5%81%87-b">7、下列的哪一个表达式将返回值为假（ B   ）</a></li>
-<li><a href="#8-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81k%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-b">8、下面代码，k的运行结果是（  B  ）</a></li>
-<li><a href="#9-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E4%B8%BA-d">9、下面代码的输出结果为（ D ）</a></li>
-<li><a href="#10-1-2-3-4join0split%E7%9A%84%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">10、[1, 2, 3, 4].join(&quot;0&quot;).split(&quot;&quot;);的执行结果是（  C ）</a></li>
-<li><a href="#11-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">11、下面代码的运行结果是（   C）</a></li>
-<li><a href="#12-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E7%BB%93%E6%9E%9C%E4%B8%BA-b">12、以下代码运行后，结果为（  B ）</a></li>
-<li><a href="#13-var-n-miao-wei-ke-tangindexofwei-6">13、var n = &quot;miao wei ke tang&quot;.indexOf(&quot;wei&quot;, 6);</a></li>
-<li><a href="#14-%E4%B8%8B%E9%9D%A2%E5%AF%B9-substring-%E6%96%B9%E6%B3%95%E6%8F%8F%E8%BF%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-c">14、下面对 substring() 方法描述不正确的是（  C ）</a></li>
-<li><a href="#15-%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81alert%E7%9A%84%E5%80%BC%E8%BE%93%E5%87%BA%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91-b">15、回答以下代码，alert的值输出分别是多少?( B)</a></li>
-<li><a href="#16-%E5%88%86%E6%9E%90%E4%B8%8B%E6%AE%B5%E4%BB%A3%E7%A0%81%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%98%AFb">16、分析下段代码输出结果是（B）</a></li>
-<li><a href="#17-%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81alert%E7%9A%84%E5%80%BC%E8%BE%93%E5%87%BA%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91-a">17、 回答以下代码，alert的值输出分别是多少？( A)</a></li>
-<li><a href="#18-%E4%BB%A5%E4%B8%8B%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9D%9F%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFb">18、以下程序运行结束正确的是（B）</a></li>
-<li><a href="#%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E7%9A%84%E6%89%A7%E7%BB%93%E6%9E%9C%E6%98%AF-a">下列代码的执结果是(  A )</a></li>
-<li><a href="#20%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-a">20.下列代码的运行结果是( A)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Javacript基础选择题</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-03-08 / 5 min read
-        </div>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>Javacript基础选择题 | 学习笔记</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+          <script src="https://zjp693.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://zjp693.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
         
-        <div class="post-content yue">
-          <h5 id="1-以下关于-function函数对象的说法不正确的是d">1、以下关于 Function函数对象的说法不正确的是（D ）</h5>
+
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="index-img mdui-m-b-3" >
+                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu" id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://zjp693.github.io/tags" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/post/about" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+
+        </header>
+        <div class="mdui-container post">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
+                           <div class="mdui-typo-display-1 mdui-m-b-3">Javacript基础选择题</div>
+                           <a  class="index-list-biaoqian ">2020-03-08</a>
+                           <div class="mdui-typo mdui-m-t-3 post-neirong"><h5 id="1-以下关于-function函数对象的说法不正确的是d">1、以下关于 Function函数对象的说法不正确的是（D ）</h5>
 <pre><code class="language-js">A．函数可有可无返回值   
 B．调用函数时传递的参数是实参 
 C．函数调用时候，可以用一个变量来接收函数返回值 
@@ -279,142 +203,133 @@ for (; i &lt; len; i++) {
 </code></pre>
 <p>A、SaabFord        B、 SaabVolvo<br>
 C、 VolvoBMW      D、FordBMW</p>
+</div>
+                              <div class="mdui-divider mdui-m-t-3"></div>
+                              <div class="mdui-row-xs-2 mdui-m-t-2">
+  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://zjp693.github.io/post/web-apis-bi-ji/">Web APIs笔记</a></div></div>
+ <div class="mdui-col"><div class="mdui-text-right "><a href="https://zjp693.github.io/post/htmlcss-xuan-ze-ti/">HTML+CSS选择题</a></div> </div>
+                                </div>
+                                <div class="mdui-divider mdui-m-t-2"></div>
+   
+ <script src="https://zjp693.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
 
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://zjp693.github.io/tag/ewUxVMzkr/">
-            <span class="flex-auto">javascript</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://zjp693.github.io/post/web-apis-bi-ji/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  Web APIs笔记
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://zjp693.github.io/post/htmlcss-xuan-ze-ti/">
-                <h3 class="post-title">
-                  HTML+CSS选择题
-                  <i class="ri-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
-        </div>
-
-        
-
-      </div>
-    </div>
-
-    <script src="https://zjp693.github.io//media/prism.js"></script>  
 <script>
+      new Valine({
+            el: '.comment',
 
-Prism.highlightAll()
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
     }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
-  </body>
+                         </article>
+                 <div class="toc-container mdui-float-right">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-%E4%BB%A5%E4%B8%8B%E5%85%B3%E4%BA%8E-function%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AF%B4%E6%B3%95%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFd">1、以下关于 Function函数对象的说法不正确的是（D ）</a></li>
+<li><a href="#2-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E8%BE%93%E5%87%BA-b">2、以下代码运行的结果是输出( B)</a></li>
+<li><a href="#3-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E8%BE%93%E5%87%BA-a">3、以下代码运行后的结果是输出( A  )</a></li>
+<li><a href="#4-%E5%9C%A8-js-%E4%B8%AD15553-%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">4、在 JS 中，’1555’+3 的运行结果是(  C )</a></li>
+<li><a href="#5-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E5%BC%B9%E5%87%BA%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF-b">5、以下代码运行后弹出的结果是(  B )</a></li>
+<li><a href="#6-%E5%85%B3%E4%BA%8E%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E4%B8%8B%E5%88%97%E8%AF%B4%E6%B3%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-abcde">6、关于变量的命名规则，下列说法正确的是（  ABCDE ）</a></li>
+<li><a href="#7-%E4%B8%8B%E5%88%97%E7%9A%84%E5%93%AA%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%86%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%BA%E5%81%87-b">7、下列的哪一个表达式将返回值为假（ B   ）</a></li>
+<li><a href="#8-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81k%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-b">8、下面代码，k的运行结果是（  B  ）</a></li>
+<li><a href="#9-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E4%B8%BA-d">9、下面代码的输出结果为（ D ）</a></li>
+<li><a href="#10-1-2-3-4join0split%E7%9A%84%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">10、[1, 2, 3, 4].join(&quot;0&quot;).split(&quot;&quot;);的执行结果是（  C ）</a></li>
+<li><a href="#11-%E4%B8%8B%E9%9D%A2%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-c">11、下面代码的运行结果是（   C）</a></li>
+<li><a href="#12-%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E5%90%8E%E7%BB%93%E6%9E%9C%E4%B8%BA-b">12、以下代码运行后，结果为（  B ）</a></li>
+<li><a href="#13-var-n-miao-wei-ke-tangindexofwei-6">13、var n = &quot;miao wei ke tang&quot;.indexOf(&quot;wei&quot;, 6);</a></li>
+<li><a href="#14-%E4%B8%8B%E9%9D%A2%E5%AF%B9-substring-%E6%96%B9%E6%B3%95%E6%8F%8F%E8%BF%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF-c">14、下面对 substring() 方法描述不正确的是（  C ）</a></li>
+<li><a href="#15-%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81alert%E7%9A%84%E5%80%BC%E8%BE%93%E5%87%BA%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91-b">15、回答以下代码，alert的值输出分别是多少?( B)</a></li>
+<li><a href="#16-%E5%88%86%E6%9E%90%E4%B8%8B%E6%AE%B5%E4%BB%A3%E7%A0%81%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%98%AFb">16、分析下段代码输出结果是（B）</a></li>
+<li><a href="#17-%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81alert%E7%9A%84%E5%80%BC%E8%BE%93%E5%87%BA%E5%88%86%E5%88%AB%E6%98%AF%E5%A4%9A%E5%B0%91-a">17、 回答以下代码，alert的值输出分别是多少？( A)</a></li>
+<li><a href="#18-%E4%BB%A5%E4%B8%8B%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9D%9F%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AFb">18、以下程序运行结束正确的是（B）</a></li>
+<li><a href="#%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E7%9A%84%E6%89%A7%E7%BB%93%E6%9E%9C%E6%98%AF-a">下列代码的执结果是(  A )</a></li>
+<li><a href="#20%E4%B8%8B%E5%88%97%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E6%98%AF-a">20.下列代码的运行结果是( A)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+
+                        </div>
+                 </div>
+          
+        </div>
+        <script data-no-instant>
+    (function ($) {
+        $.extend({
+            adamsOverload: function () {
+                $.viewImage({
+                    'target'  : '.post-neirong img',
+                    'exclude' : '.vsmile-icons img , .song-links-item img',
+                    'delay'   : 300
+                });
+            }
+        });
+    })(jQuery);
+    jQuery.adamsOverload();
+</script>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
 </html>

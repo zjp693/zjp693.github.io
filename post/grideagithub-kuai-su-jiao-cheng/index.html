@@ -1,121 +1,52 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587052580553">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://zjp693.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587052580553" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%83%B3%E7%9F%A5%E9%81%93%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gridea%E5%90%97">想知道如何使用Gridea吗？</a></li>
-<li><a href="#%E4%B8%8B%E8%BD%BD%E5%90%8E%E5%AE%89%E8%A3%85">下载后安装</a></li>
-<li><a href="#github">Github</a></li>
-<li><a href="#%E4%BB%93%E5%BA%93">仓库</a></li>
-<li><a href="#%E5%8B%BE%E9%80%89public">勾选Public</a></li>
-<li><a href="#token">Token</a></li>
-<li><a href="#%E6%89%BE%E5%88%B0%E6%9C%80%E5%90%8E%E7%9A%84personal-access-tokensgenerate-new-token%E5%A1%AB%E5%86%99note%E5%8B%BE%E9%80%89repogenerate-token">找到最后的Personal access tokens——&gt;Generate new token——&gt;填写Note——&gt;勾选repo——&gt;Generate token</a></li>
-<li><a href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85">下载安装</a></li>
-<li><a href="#%E5%A1%AB%E9%85%8D%E7%BD%AE">填配置</a></li>
-<li><a href="#platform-github-pages">Platform  Github Pages</a></li>
-<li><a href="#cname-%E5%8F%AF%E4%B8%8D%E5%A1%AB">CNAME    可不填</a></li>
-<li><a href="#defender">Defender</a></li>
-<li><a href="#%E6%9B%B4%E6%8D%A2walker%E4%B8%BB%E9%A2%98">更换Walker主题</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Gridea+Github快速教程</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-05 / 4 min read
-        </div>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>Gridea+Github快速教程 | 学习笔记</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+          <script src="https://zjp693.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://zjp693.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
         
-        <div class="post-content yue">
-          <h5 id="想知道如何使用gridea吗">想知道如何使用Gridea吗？</h5>
+
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="index-img mdui-m-b-3" >
+                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu" id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://zjp693.github.io/tags" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/post/about" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+
+        </header>
+        <div class="mdui-container post">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
+                           <div class="mdui-typo-display-1 mdui-m-b-3">Gridea+Github快速教程</div>
+                           <a  class="index-list-biaoqian ">2020-01-05</a>
+                           <div class="mdui-typo mdui-m-t-3 post-neirong"><h5 id="想知道如何使用gridea吗">想知道如何使用Gridea吗？</h5>
 <p>Git</p>
 <p>Git https://git-scm.com</p>
 <h5 id="下载后安装">下载后安装</h5>
@@ -170,129 +101,126 @@
 <p>在https://gridea.dev/themes/购买Walker主题，购买完后点击【下载文件】，下载后解压。</p>
 <p>点击客户端里的【系统】，找到【源文件夹】，自己打开路径。退出Gridea客户端。</p>
 <p>点击【themes】，把walker文件夹复制过来，打开Gridea客户端，打开【主题】，选择主题，滚动下鼠标，选中最后的Walker，保存。</p>
+</div>
+                              <div class="mdui-divider mdui-m-t-3"></div>
+                              <div class="mdui-row-xs-2 mdui-m-t-2">
+  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">Jsvascript基础简答题</a></div></div>
+ <div class="mdui-col"></div>
+                                </div>
+                                <div class="mdui-divider mdui-m-t-2"></div>
+   
+ <script src="https://zjp693.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
 
-        </div>
-
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  Jsvascript基础简答题
-                </h3>
-              </a>
-            </div>
-          
-
-          
-        </div>
-
-        
-
-      </div>
-    </div>
-
-    <script src="https://zjp693.github.io//media/prism.js"></script>  
 <script>
+      new Valine({
+            el: '.comment',
 
-Prism.highlightAll()
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
     }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
-  </body>
+                         </article>
+                 <div class="toc-container mdui-float-right">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%83%B3%E7%9F%A5%E9%81%93%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gridea%E5%90%97">想知道如何使用Gridea吗？</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E5%90%8E%E5%AE%89%E8%A3%85">下载后安装</a></li>
+<li><a href="#github">Github</a></li>
+<li><a href="#%E4%BB%93%E5%BA%93">仓库</a></li>
+<li><a href="#%E5%8B%BE%E9%80%89public">勾选Public</a></li>
+<li><a href="#token">Token</a></li>
+<li><a href="#%E6%89%BE%E5%88%B0%E6%9C%80%E5%90%8E%E7%9A%84personal-access-tokensgenerate-new-token%E5%A1%AB%E5%86%99note%E5%8B%BE%E9%80%89repogenerate-token">找到最后的Personal access tokens——&gt;Generate new token——&gt;填写Note——&gt;勾选repo——&gt;Generate token</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85">下载安装</a></li>
+<li><a href="#%E5%A1%AB%E9%85%8D%E7%BD%AE">填配置</a></li>
+<li><a href="#platform-github-pages">Platform  Github Pages</a></li>
+<li><a href="#cname-%E5%8F%AF%E4%B8%8D%E5%A1%AB">CNAME    可不填</a></li>
+<li><a href="#defender">Defender</a></li>
+<li><a href="#%E6%9B%B4%E6%8D%A2walker%E4%B8%BB%E9%A2%98">更换Walker主题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+
+                        </div>
+                 </div>
+          
+        </div>
+        <script data-no-instant>
+    (function ($) {
+        $.extend({
+            adamsOverload: function () {
+                $.viewImage({
+                    'target'  : '.post-neirong img',
+                    'exclude' : '.vsmile-icons img , .song-links-item img',
+                    'delay'   : 300
+                });
+            }
+        });
+    })(jQuery);
+    jQuery.adamsOverload();
+</script>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
 </html>
