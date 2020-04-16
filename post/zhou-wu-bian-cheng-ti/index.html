@@ -1,102 +1,119 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
-<title>周五编程题 | 学习笔记</title>
-<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587056823842">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>学习笔记</title>
+<meta name="description" content="一起努力💪，一起自律👍|顶端相见🎈🎈" />
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587056841891">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://zjp693.github.io/">
-        <img src="https://zjp693.github.io//images/avatar.png?v=1587056823842" class="site-logo">
-        <h1 class="site-title">学习笔记</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://zjp693.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1587056841891" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
       </div>
-    </div>
-    <div>
       
-        
-          <a href="https://zjp693.github.io/tags" class="site-nav">
-            首页
-          </a>
-        
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#tab%E5%88%87%E6%8D%A2">tab切换</a></li>
+<li><a href="#%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2">隔行变色</a>
+<ul>
+<li><a href="#%E7%99%BE%E5%BA%A6%E6%8D%A2%E8%82%A4">百度换肤</a></li>
+<li><a href="#%E6%B7%98%E5%AE%9D%E7%B2%BE%E5%93%81%E6%A1%88%E4%BE%8B">淘宝精品案例</a></li>
+<li><a href="#%E8%84%B8%E8%B0%B1">脸谱</a></li>
+<li><a href="#%E5%9B%BA%E5%AE%9A%E5%AF%BC%E8%88%AA">固定导航</a></li>
+<li><a href="#%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8">返回顶部</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC%E7%BC%96%E8%BE%91">表格编辑</a></li>
+<li><a href="#%E9%94%AE%E7%9B%98">键盘</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8B%96%E5%8A%A8%E7%9A%84%E6%A8%A1%E6%80%81%E6%A1%86">拖动的模态框</a>
+<ul>
+<li><a href="#%E6%B6%88%E5%A4%B1%E7%9A%84%E5%A4%B4">消失的头</a></li>
+<li><a href="#%E6%BB%91%E5%8A%A8%E5%8A%A8%E7%94%BB">滑动动画</a></li>
+<li><a href="#%E6%96%B0%E6%B5%AA%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95">新浪下拉菜单</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%AC%E4%B8%9C%E8%BD%AE%E6%92%AD%E5%9B%BE">京东轮播图</a></li>
+<li><a href="#%E6%89%8B%E9%A3%8E%E7%90%B4">手风琴</a></li>
+<li><a href="#%E6%97%8B%E8%BD%AC%E6%9C%A8%E9%A9%AC">旋转木马</a></li>
+<li><a href="#%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95">历史记录</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
       
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      一起努力💪，一起自律👍|顶端相见🎈🎈
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
     </div>
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">周五编程题</h2>
-            <div class="post-date">2020-04-16</div>
-            
-            <div class="post-content">
-              <h2 id="tab切换">tab切换</h2>
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">周五编程题</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-04-16 / 52 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="tab切换">tab切换</h2>
 <pre><code class="language-js">  &lt;script&gt;
     // 1.给li添加点击事件
     $('li').click(function () {
@@ -2151,46 +2168,137 @@
 &lt;/html&gt;
 </code></pre>
 
-            </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
-                  <h3 class="post-title">
-                    周五简答题
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-
-          </div>
-
         </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://zjp693.github.io/post/mei-ri-zuo-ye-de-bian-cheng-ti/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  每日作业的编程题
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
+                <h3 class="post-title">
+                  周五简答题
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://zjp693.github.io//media/prism.js"></script>  
+<script>
 
-<script type="application/javascript">
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-AOS.init();
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
 
-hljs.initHighlightingOnLoad()
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
 </script>
-
-
-
-
+  
   </body>
 </html>
