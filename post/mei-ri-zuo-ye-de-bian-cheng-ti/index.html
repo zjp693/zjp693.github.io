@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587084384926">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587120221316">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zjp693.github.io/">
-        <img src="https://zjp693.github.io//images/avatar.png?v=1587084384926" class="site-logo">
+        <img src="https://zjp693.github.io//images/avatar.png?v=1587120221316" class="site-logo">
         <h1 class="site-title">学习笔记</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -686,6 +686,260 @@
         $num = $(this).index();
       })
   &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="搜索商品保存本地">搜索商品保存本地</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/index.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;app&quot;&gt;
+    &lt;!--搜索框--&gt;
+    &lt;div class=&quot;nav&quot;&gt;
+      &lt;div class=&quot;navL fl&quot;&gt;
+        &lt;img src=&quot;./img/icon_search.png&quot; alt=&quot;&quot;&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;输入您想找的商品&quot; class=&quot;record_input&quot;&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;record_btn fl&quot;&gt;搜索&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hot_history&quot;&gt;
+      &lt;!--搜索历史--&gt;
+      &lt;div class=&quot;history&quot;&gt;
+        &lt;p class=&quot;history_tit&quot;&gt;搜索历史&lt;/p&gt;
+        &lt;ul class=&quot;history_list&quot;&gt;
+          &lt;!--搜索历史循环列表--&gt;
+          &lt;!-- &lt;li&gt;全部搜索记录 &lt;img src=&quot;./img/del.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt; --&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--  清空 --&gt;
+    &lt;div class=&quot;close_whole&quot;&gt;清空记录&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;../../../lib/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // 将用户搜索商品的记录保存在本地， 形成历史搜索记录
+    //  如果本地有历史搜索记录就显示， 如果没有则隐藏
+    //  在input中输入内容， 点击按钮进行搜索， 要同时在本地保存历史搜索记录
+
+    // 先上来获取本地存储的数据，看是否有，有了就需要渲染，
+    var searchRecord = JSON.parse(localStorage.getItem('searchRecord') || &quot;[]&quot;)
+
+    // 先渲染一下
+    render()
+
+    // 封装渲染的函数
+    function render() {
+      // 先上来清空
+      $('.history_list').html(&quot;&quot;)
+      //然后判断数据是否为空
+      if (searchRecord.length) {
+        // 搜索记录显示
+        $('.history,.close_whole').css('display', &quot;block&quot;)
+        // 遍历数组创建li
+        searchRecord.forEach(function (item, i) {
+          // 创建li元素添加到history_list
+          $('.history_list').append(
+            `&lt;li data-index=${i}&gt;${item.keyword}&lt;img src=&quot;./img/del.png&quot; class=&quot;del&quot; alt=&quot;&quot;&gt;&lt;/li&gt;`)
+
+        })
+      }
+
+    }
+
+    // 点击搜索
+    $('.record_btn').on('click', function () {
+      // 获取表单的值
+      var $val = $('.record_input').val().trim()
+      if ($val.length == 0) {
+        alert(&quot;请输入搜索内容,内容不能为空&quot;)
+      } else {
+        // 将数据添加到数组
+        searchRecord.push({keyword: $val})
+        // 将数据保存在本地存储中
+        localStorage.setItem('searchRecord', JSON.stringify(searchRecord))
+        // 再次进行渲染
+        render()
+      }
+      // 之后清空表单
+      $('.record_input').val(&quot;&quot;)
+
+    })
+
+    // 点击清空记录
+    $('.close_whole').on('click', function () {
+      // 将本地存储清空
+      localStorage.clear()
+      // 直接将history_list清空
+      $('.history_list').html(&quot;&quot;)
+      // 历史记录和下面的清除记录记录都要隐藏
+      $('.history,.close_whole').css('display', &quot;none&quot;)
+    })
+
+    // 点击每一项后面的删除每一项
+    $('.history').on('click', '.del', function () {
+      // 获取索引
+      var index = $(this).parent().data(&quot;index&quot;);
+      // 之后将数据从数组里面删除一条
+      searchRecord.splice(index, 1)
+      // 然后重置本地存储
+      localStorage.setItem('searchRecord', JSON.stringify(searchRecord))
+      // 重新渲染
+      render(searchRecord)
+      // 如果searchRecord里面的数据如果为空的话，隐藏历史记录和清空历史记录
+      if (!searchRecord.length) {
+        // 历史记录和下面的清除记录记录都要隐藏
+        $('.history,.close_whole').css('display', &quot;none&quot;)
+      }
+
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="正在进行的任务">正在进行的任务</h2>
+<pre><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/index.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- 输入框 --&gt;
+  &lt;div class=&quot;plan&quot;&gt;
+    &lt;h1&gt;ToDoList&lt;/h1&gt;
+    &lt;div&gt;
+      &lt;input class=&quot;txt&quot; placeholder=&quot;请输入目标...&quot; type=&quot;text&quot;&gt;
+      &lt;input type=&quot;button&quot; class=&quot;add&quot; value=&quot;添加&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;w&quot;&gt;
+    &lt;!-- 正在完成的任务 --&gt;
+    &lt;h2&gt;正在进行的任务&lt;/h2&gt;
+    &lt;ol&gt;
+      &lt;!-- &lt;li&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span&gt;吃饭&lt;/span&gt;
+      &lt;/li&gt; --&gt;
+
+
+    &lt;/ol&gt;
+    &lt;!-- 已经完成的任务 --&gt;
+    &lt;h2&gt;已经完成的任务&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;!-- &lt;li&gt;
+        &lt;span&gt;吃饭&lt;/span&gt;
+      &lt;/li&gt; --&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+ &lt;script src=&quot;../../../lib/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+   // 功能一：先看本地存储是否有数据，有数据渲染，没有数据新添加
+
+   var todolist = window.localStorage.getItem('todolist') || '[]'
+
+todolist = JSON.parse(todolist)
+
+// 先判断有没有数据，进行数据的渲染
+if (todolist.length !== 0) {
+  // 将数据渲染到ol中
+  // 	[{&quot;name&quot;:&quot;吃饭&quot;,&quot;isOk&quot;:true},{&quot;name&quot;:&quot;睡觉&quot;,&quot;isOk&quot;:false}]
+  for (var i = 0; i &lt; todolist.length; i++) {
+
+    if (todolist[i]['isOk']) {
+      // 完成
+      $('&lt;li&gt;&lt;span&gt;' + todolist[i]['name'] + '&lt;/span&gt;&lt;/li&gt;').appendTo('ul')
+    } else {
+      // 没完成
+      $('&lt;li index=' + i + '&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;' + todolist[i]['name'] + '&lt;/span&gt;&lt;/li&gt;').appendTo('ol')
+    }
+
+  }
+
+}
+
+// 功能二：点击添加俺按钮，降内容添加到ol中，  &lt;li&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;吃饭&lt;/span&gt;&lt;/li&gt;
+$('.add').click(function () {
+  // 获取表单里面的内容
+  var $content = $('.txt').val()
+  // 校验内容是否为空
+  if(!$content.trim()){
+    alert('内容不能为空')
+     return;
+  }
+
+  $('&lt;li index=' + todolist.length + '&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;' + $content + '&lt;/span&gt;&lt;/li&gt;').appendTo(
+    'ol')
+
+  $('li').slideDown();
+
+  // 重置表单的数据
+  $('.txt').val(&quot;&quot;)
+  // 将数据添加到本地存储当中
+  todolist.push({
+    &quot;name&quot;: $content,
+    &quot;isOk&quot;: false
+  })
+
+  // 重置本地存储的数据
+  window.localStorage.setItem('todolist', JSON.stringify(todolist))
+
+})
+
+
+// 功能三 :点击li里面的input，将任务添加到ul中，并且添加到本地存储里面
+$('ol').on('click', 'input[type=&quot;checkbox&quot;]', function () {
+
+  // 获取表单的选中状态，然后将对应数据里面的isOK相应的变化
+  var $checked = $(this).prop('checked')
+
+  // 获取选中框下面的li索引
+  var $index = $(this).parent().attr('index') * 1
+
+  // 找到todolist对应的数组的索引的哪项
+  todolist.find(function (item, index) {
+    return index == $index
+  }).isOk = true
+
+  // 重置本地存储的数据
+  window.localStorage.setItem('todolist', JSON.stringify(todolist))
+
+  // 将点击的这一项添加到ul中,对应的ol里面的这个li标签以及内部的内容清除
+
+ // 将点击的这一项添加到ul中
+  var $spanContent = $(this).parent().find('span').text()
+ 
+   $('&lt;li&gt;&lt;span&gt;'+ $spanContent+'&lt;/span&gt;&lt;/li&gt;').appendTo('ul')
+
+   // 对应的ol里面的这个li标签以及内部的内容清除
+   $(this).parent().remove();
+  
+
+})
+
+
+// 按下回车键之后也能输入内容
+$(document).keydown(function(e){
+   if(e.keyCode == 13){
+     // 在这里再次触发click事件,事件给谁注册，谁就去触发
+     $('.add').trigger('click')
+   }
+})
+&lt;/script&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;
