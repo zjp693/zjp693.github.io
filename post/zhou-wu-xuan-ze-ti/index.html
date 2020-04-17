@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587084172070">
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1587084384926">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zjp693.github.io/">
-        <img src="https://zjp693.github.io//images/avatar.png?v=1587084172070" class="site-logo">
+        <img src="https://zjp693.github.io//images/avatar.png?v=1587084384926" class="site-logo">
         <h1 class="site-title">学习笔记</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -96,7 +96,8 @@
             <div class="post-date">2020-04-16</div>
             
             <div class="post-content">
-              <ol>
+              <h2 id="第一天">第一天</h2>
+<ol>
 <li>
 <p>下列选项中不属于jQuery的选择器的是(D )</p>
 <p>A、 基本选择器</p>
@@ -148,6 +149,7 @@
 <p>B、$().ready( function(){//写代码} )</p>
 <p>C、window.onload=function(){//写代码}</p>
 <p>D、$(function(){//写代码});</p>
+<h2 id="第二天">第二天</h2>
 <ol>
 <li>在jQuery中，下面哪项( D  )是遍历同辈节点的方法</li>
 </ol>
@@ -219,6 +221,7 @@
 <p>​     B、prev( ) 用于获取紧邻匹配元素之前的一个同辈元素。</p>
 <p>​     C、siblings( )用于获取位于匹配元素前后所有同辈元素。</p>
 <p>​     D、以上说法均正确</p>
+<h2 id="第三天">第三天</h2>
 <ol>
 <li>
 <p>在jQuery中，如果想要获取当前窗口的宽度值，下面哪个是实现该功能的  ( A)</p>
@@ -261,6 +264,7 @@ A、width()方法设置或返回元素的宽度（不包括内边距、边框或
 <p>C、siblings() 取得匹配元素的所有同辈元素</p>
 <p>D、children() 取得匹配元素的所有后代元素// 取得匹配元素的所有子代代元素（只取其亲儿子元素）</p>
 <p>find()取得匹配元素的所有后代元素</p>
+<h2 id="第四天">第四天</h2>
 <ol>
 <li>下面选项中，关于jQuery阻止事件冒泡的选项正确的是(B)</li>
 </ol>
@@ -306,6 +310,7 @@ A、width()方法设置或返回元素的宽度（不包括内边距、边框或
 <p>元素的值是通过 value 属性设置的</p>
 <p>​     C、$('h2').attr('value,'asdf')执行时，由于h2元素没有value属性，所有该代码不会产生任何效果</p>
 <p>​     D、<code>$('#btn').val('asdf')</code>和$('#btn').attr('value','asdf')可以实现相同的效果('#btn'为按钮)</p>
+<h2 id="第五天">第五天</h2>
 <ol>
 <li>在jQuery中，下列选项能隐藏下面的元素的是(C)</li>
 </ol>
@@ -345,6 +350,7 @@ A、width()方法设置或返回元素的宽度（不包括内边距、边框或
 <p>​     B、$(&quot;img&quot;).slideDown(1000)</p>
 <p>​     C、$(&quot;img&quot;).fadeOut(1000)</p>
 <p>​     D、$(&quot;img&quot;).slideUp(1000)</p>
+<h2 id="第六天">第六天</h2>
 <ol>
 <li>
 <p>在jquery中，如果想要从DOM中删除所有匹配的元素，下面哪一个是正确的(C )</p>
@@ -401,6 +407,74 @@ jQuery代码：$(&quot;p&quot;).append(&quot;&lt;b&gt;快乐编程&lt;/b&gt;&quo
 <p>​     B、$('ul li:eq(1)').remove();是删除ul下&quot;橘子&quot;的那个节点</p>
 <p>​     C、$('ul').append('<li>哈密瓜</li>');是将&quot;哈密瓜&quot;添加到ul的末尾</p>
 <p>​     D、以上说法都不正确</p>
+<h2 id="第七天">第七天</h2>
+<ol>
+<li>
+<p>在jQuery中，下列选项中( A  )是属性选择器</p>
+<p>A、$(&quot;input[type='button']&quot;)</p>
+<p>B、$(&quot;:input&quot;)  //类选择器</p>
+<p>C、$(&quot;#btn&quot;)//id选择器</p>
+<p>D、$(&quot;div&gt;span&quot;)//标签选择器</p>
+</li>
+<li>
+<p>在jQuery中，下面选项中(  C D )能获取焦点</p>
+<p>A、blur( )//失去焦点</p>
+<p>B、select( )//表单</p>
+<p>C、focus( )</p>
+<p>D、onfocus( )</p>
+</li>
+<li>
+<p>在页面中有如下的HTML代码，</p>
+</li>
+</ol>
+<pre><code class="language-js">&lt;div id=&quot;box&quot;&gt;
+
+    &lt;h2 id=&quot;top1&quot; name=&quot;header1&quot;&gt;1&lt;/h2&gt;
+
+    &lt;h2 id=&quot;top2&quot; name=&quot;header2&quot;&gt;2&lt;/h2&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>下列能输出&quot;1&quot;的jQuery代码是(  C )</p>
+<p>A、alert($(&quot;.top1&quot;).html( );</p>
+<p>B、alert($(&quot;[name='header1]'&quot;).html( ));</p>
+<p>C、alert($(&quot;[name='header1']&quot;).html( ));</p>
+<p>D、alert($('#header1').html( ));</p>
+<ol start="4">
+<li>
+<p>在jQuery中，下列选项说法错误的是( C  )</p>
+<p>A、只有jQuery对象才能使用jQuery提供的方法</p>
+<p>B、在使用jQuery方法前应先引入jQuery库文件</p>
+<p>C、jQuery代码必须写在<code>$(function( ){})</code>或<code>$(document).ready(function( ){})</code>的函数方法体中</p>
+<p>D、jQuery对象与DOM对象可以相互转换</p>
+</li>
+<li>
+<p>在网页中有如下HTML代码：</p>
+</li>
+</ol>
+<pre><code class="language-js">  &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;man&quot;/&gt;男
+
+  &lt;input tpe=&quot;radio&quot; name=&quot;sex&quot; value=&quot;woman&quot;/&gt;女
+</code></pre>
+<p>则设置选中状态为“女”，正确jQuery实现代码为( C   )</p>
+<p>A、$(&quot;input:radio&quot;).get(0).prop(&quot;checked&quot;,true);</p>
+<p>B、$(&quot;input[type=radio]&quot;)[1].prop(&quot;checked&quot;,true);</p>
+<p>C、$(&quot;input[type='radio']&quot;).eq(1).prop(&quot;checked&quot;,true);</p>
+<p>D、$(&quot;sex:radio&quot;).eq(1).prop(&quot;checked&quot;,true)</p>
+<ol start="6">
+<li>以下关于Jquery优点的说法中错误的是( C  )</li>
+</ol>
+<p>​       A、相对于javascript，jquery语法更为简单，能大幅提高开发效率</p>
+<p>​       B、jquery封装了大量的选择器、DOM操作、事件处理，使用起来比JavaScript简单得多</p>
+<p>​       C、jquery的浏览器兼容很好，能兼容所有的浏览器</p>
+<p>​       D、jquery易扩展，开发者可以自己编写jQuery的扩展插件</p>
+<ol start="7">
+<li>下列关于localStorage的说法中不正确的是（B）</li>
+</ol>
+<p>​       A、localStorage.getItem(&quot;key&quot;),该方法用于获取指定key本地存储的值</p>
+<p>​      B、localStorage.setItem(&quot;key&quot;,&quot;value&quot;),该方法用于存储名字为key的一个值value，但是不能更新value</p>
+<p>​      C、localStorage.removeItem(&quot;key&quot;),该方法用于删除指定key本地存储的值</p>
+<p>​       D、localStorage.clear(),该方法用于清空localStorage中所有信息</p>
 
             </div>
             
