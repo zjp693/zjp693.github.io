@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-04-16T17:09:45.276Z</updated>
+    <updated>2020-04-17T00:42:54.692Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
@@ -2680,7 +2680,8 @@
         <link href="https://zjp693.github.io/post/zhou-wu-jian-da-ti/">
         </link>
         <updated>2020-04-16T15:39:24.000Z</updated>
-        <content type="html"><![CDATA[<ol>
+        <content type="html"><![CDATA[<h2 id="第一天">第一天</h2>
+<ol>
 <li>(document).ready() (functiion({}))方法和window.onload有什么区别？</li>
 </ol>
 <pre><code class="language-js">// 前者在DOM加载完毕后便可反复被访问
@@ -2726,11 +2727,13 @@ ${'element'}.toggleClass('ClassName')
 // 检测
 ${'element'}.hasClass('ClassName')
 </code></pre>
+<h2 id="第二天">第二天</h2>
 <ol>
 <li>如何解决多库共存问题</li>
 </ol>
 <pre><code class="language-js">通过jQuery自带的noConflict函数将$或者jQuery映射回给之前使用过$和jQuery对象的js类库
 </code></pre>
+<h2 id="第三天">第三天</h2>
 <ol>
 <li>jQuery中的width()、inneWidth()、outerWidth()三者的区别是什么？</li>
 </ol>
@@ -2754,6 +2757,7 @@ outerWidth()获取匹配元素包括边框 包括内边距的宽度
 <pre><code class="language-js">对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。
 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。
 </code></pre>
+<h2 id="第四天">第四天</h2>
 <ol>
 <li>jQuery中绑定事件，移除事件的方式有哪些?</li>
 </ol>
@@ -2801,6 +2805,7 @@ $(&quot;#btn&quot;).unbind(&quot;click&quot;);
 //easing:(Optional) 用来指定切换效果
 //fn:在动画完成时执行的函数，每个元素执行一次。
 </code></pre>
+<h2 id="第五天">第五天</h2>
 <ol>
 <li>请列举几个jQuery的常用动画，分别说明其作用是什么？</li>
 </ol>
@@ -2817,6 +2822,7 @@ toggle([speed],[easing],[fn])
 </ol>
 <pre><code class="language-js">animate(params,[speed],[easing],[fn])
 </code></pre>
+<h2 id="第六天">第六天</h2>
 <ol>
 <li>jQuery怎么操作样式(样式的设置和获取)?</li>
 </ol>
@@ -2867,6 +2873,16 @@ toggle([speed],[easing],[fn])
       //  某个元素的其他兄弟元素
       // console.log($('b').siblings())
  $('.box').append($('b').clone(true))
+</code></pre>
+<h2 id="第七天">第七天</h2>
+<ol>
+<li>简述本地存储的语法和作用分别是什么？</li>
+</ol>
+<pre><code class="language-js">setItem (key, value) —— 保存数据，以键值对的方式储存信息。
+getItem (key) —— 获取数据，将键值传入，即可获取到对应的value值。
+removeItem (key) —— 删除单个数据，根据键值移除对应的信息。
+clear () —— 删除所有的数据
+某一个key = localStorage.key (index) —— 获取某个索引的key
 </code></pre>
 ]]></content>
     </entry>
