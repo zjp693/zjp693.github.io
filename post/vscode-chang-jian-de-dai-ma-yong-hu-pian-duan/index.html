@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>学习笔记</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://zjp693.github.io//favicon.ico?v=1589622966492">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://zjp693.github.io//styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://zjp693.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://zjp693.github.io//images/avatar.png?v=1589622966492" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">学习笔记</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="https://zjp693.github.io/tags" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://zjp693.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">VScode常见的代码用户片段</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-05-16 / 8 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>下面的代码片段是js中常用的一些代码结构，复制粘贴到对应的javascript.json文件中即可<br>
+{<br>
+// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and<br>
+// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:<br>
+// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the<br>
+// same ids are connected.<br>
+// Example:<br>
+&quot;Print to console&quot;: {<br>
+&quot;prefix&quot;: &quot;log&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;console.log('<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 55: …t to console&quot;
+	}̲,
+	&quot;zhe shi aja…'>1&#039;);&quot;,
+		],
+		&quot;description&quot;: &quot;Log output to console&quot;
+	},
+	&quot;zhe shi ajax kuai jie jian&quot;: {
+		&quot;prefix&quot;: &quot;get&quot;,
+		&quot;body&quot;: [
+			&quot;//(1)创建小黄人对象&quot;,
+			&quot;var xhr = new XMLHttpRequest();&quot;,
+			&quot;//(2)设置请求方法与地址&quot;,
+			&quot;xhr.open(&#039;get&#039;,&#039;https://autumnfish.cn/api/hero/simple?name=凯特琳&#039;)&quot;,
+			&quot;//(3)发送请求&quot;,
+			&quot;xhr.send();&quot;,
+			&quot;//(4)注册响应回调&quot;,
+			&quot;xhr.onload = function(){&quot;,
+			&quot;\tconsole.log(xhr.responseText);&quot;,
+			&quot;};&quot;,
+		],
+		&quot;description&quot;: &quot;这是ajax快捷键&quot;
+	},
+	&quot;yulan tupian&quot;: {
+		&quot;prefix&quot;: &quot;ajax_yulan&quot;,
+		&quot;body&quot;: [
+			&quot;//1.给file表单元素注册onchange事件&quot;,
+			&quot;</span>('file表单').change(function () {&quot;,<br>
+&quot;\t//1.2 获取用户选择的图片&quot;,<br>
+&quot;\tvar file = this.files[0];&quot;,<br>
+&quot;\t//1.3 将文件转为src路径&quot;,<br>
+&quot;\tvar url = URL.createObjectURL(file);&quot;,<br>
+&quot;\t//1.4 将url路径赋值给img标签的src&quot;,<br>
+&quot;\t<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 35: …&#039;, url);&quot;,
+			&quot;}̲);&quot;
+		],
+		&quot;des…'>(&#039;img元素&#039;).attr(&#039;src&#039;, url);&quot;,
+			&quot;});&quot;
+		],
+		&quot;description&quot;: &quot;图片预览固定四个步骤&quot;
+	},
+	&quot;comment for function&quot;: {
+		&quot;prefix&quot;: &quot;///&quot;,
+		&quot;body&quot;: [
+			&quot;/**&quot;,
+			&quot;* @description:&quot;,
+			&quot;* @param {type} &quot;,
+			&quot;* @return: &quot;,
+			&quot;*/&quot;,
+		],
+		&quot;description&quot;: &quot;函数标准注释快捷键&quot;
+	},
+	&quot;jquery to ajax&quot;: {
+		&quot;prefix&quot;: &quot;ajax&quot;,
+		&quot;body&quot;: [
+			&quot;</span>.ajax({&quot;,<br>
+&quot;\turl:'',&quot;,<br>
+&quot;\ttype:'get',&quot;,<br>
+&quot;\tdataType:'json',&quot;,<br>
+&quot;\tdata:'',&quot;,<br>
+&quot;\tsuccess: function(backData){&quot;,<br>
+&quot;&quot;,<br>
+&quot;\t}&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;ajax请求&quot;<br>
+},<br>
+&quot;get for XMLHTTPRequest&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//(1).实例化ajax对象&quot;,<br>
+&quot;var xhr = new XMLHttpRequest();&quot;,<br>
+&quot;//(2).设置请求方法和地址&quot;,<br>
+&quot;//get请求的数据直接添加在url的后面 格式是 url?key=value&quot;,<br>
+&quot;xhr.open('get', '接口url');&quot;,<br>
+&quot;//(3).发送请求&quot;,<br>
+&quot;xhr.send();&quot;,<br>
+&quot;//(4).注册回调函数&quot;,<br>
+&quot;xhr.onload = function() {&quot;,<br>
+&quot;\tconsole.log(xhr.responseText)&quot;,<br>
+&quot;};&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;get-原生XMLHTTPRequest实现ajax&quot;<br>
+},<br>
+&quot;post for XMLHTTPRequest&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//(1).实例化ajax对象&quot;,<br>
+&quot;var xhr = new XMLHttpRequest();&quot;,<br>
+&quot;//(2).设置请求方法和地址&quot;,<br>
+&quot;xhr.open('post', '接口url');&quot;,<br>
+&quot;//(3).设置请求头（post请求才需要设置）&quot;,<br>
+&quot;xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');&quot;,<br>
+&quot;//(4).发送请求 ： 参数格式  'key=value' &quot;,<br>
+&quot;xhr.send('key=value');&quot;,<br>
+&quot;//(5).注册回调函数&quot;,<br>
+&quot;xhr.onload = function () {&quot;,<br>
+&quot;\tconsole.log(xhr.responseText);&quot;,<br>
+&quot;};&quot;<br>
+],<br>
+&quot;description&quot;: &quot;post-原生XMLHTTPRequest实现ajax&quot;<br>
+},<br>
+&quot;file to ajax&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax-file&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \t at position 40: …tion(e){&quot;,
+			&quot;\̲t̲//禁用表单默认提交事件&quot;,
+…'>(&#039;提交按钮&#039;).on(&#039;click&#039;,function(e){&quot;,
+			&quot;\t//禁用表单默认提交事件&quot;,
+			&quot;\te.preventDefault();&quot;,
+			&quot;\t//创建FormData对象：参数是表单dom对象&quot;,
+			&quot;\tvar fd = new FormData(&#039;form表单DOM对象&#039;)&quot;,
+			&quot;\t</span>.ajax({&quot;,<br>
+&quot;\t\turl:'',&quot;,<br>
+&quot;\t\ttype:'post',&quot;,<br>
+&quot;\t\tdataType:'json',&quot;,<br>
+&quot;\t\tdata:fd,&quot;,<br>
+&quot;\t\tcontentType: false,&quot;,<br>
+&quot;\t\tprocessData: false,&quot;,<br>
+&quot;\t\tsuccess: function(backData){&quot;,<br>
+&quot;\t\t}&quot;,<br>
+&quot;\t});&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;表单提交ajax请求&quot;<br>
+},<br>
+&quot;express-server&quot;: {<br>
+&quot;prefix&quot;: &quot;express&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//1.导入模块&quot;,<br>
+&quot;const express = require('express');&quot;,<br>
+&quot;//2.创建服务器&quot;,<br>
+&quot;let app = express();&quot;,<br>
+&quot;//3.开启服务器&quot;,<br>
+&quot;app.listen(3000,()=&gt;{&quot;,<br>
+&quot;console.log('success');&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;快速搭建express服务器&quot;<br>
+},<br>
+&quot;get element by id&quot;: {<br>
+&quot;prefix&quot;: &quot;gid&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var box = document.getElementById('box')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据id获取元素&quot;<br>
+},<br>
+&quot;enmu arr&quot;: {<br>
+&quot;prefix&quot;: &quot;forin&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;for(var i = 0;i&lt;arr.length;i++){&quot;,<br>
+&quot;console.log(arr[i]);&quot;,<br>
+&quot;}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;数组快速for循环遍历&quot;<br>
+},<br>
+&quot;get elment by tagname&quot;: {<br>
+&quot;prefix&quot;: &quot;gtg&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var liList = document.getElementsByTagName('li')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据标签名获取元素&quot;<br>
+},<br>
+&quot;get elment by classname&quot;: {<br>
+&quot;prefix&quot;: &quot;gcn&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var oneList = document.getElementsByClassName('one')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据类名获取元素&quot;<br>
+},<br>
+&quot;quick event&quot;: {<br>
+&quot;prefix&quot;: &quot;click&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//注册事件&quot;,<br>
+&quot;box.onclick = function(){}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;快速注册点击事件&quot;<br>
+},<br>
+&quot;需求分析&quot;: {<br>
+&quot;prefix&quot;: &quot;silu1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;/<em>&quot;,<br>
+&quot;1.分析需求(交互)：&quot;,<br>
+&quot;2.思路分析（事件三要素）&quot;,<br>
+&quot;\t获取元素：事件源：&quot;,<br>
+&quot;\t注册事件：事件类型&quot;,<br>
+&quot;\t事件处理：&quot;,<br>
+&quot;</em>/&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;分析需求&quot;<br>
+},<br>
+&quot;根据思路实现需求&quot;: {<br>
+&quot;prefix&quot;: &quot;silu2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//1.获取元素&quot;,<br>
+&quot;var box = document.getElementById('box');&quot;,<br>
+&quot;//2.注册事件&quot;,<br>
+&quot;box.onclick = function () {&quot;,<br>
+&quot;\t//3.事件处理:&quot;,<br>
+&quot;};&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据思路实现需求&quot;<br>
+},<br>
+&quot;遍历对象&quot;: {<br>
+&quot;prefix&quot;: &quot;forin1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;for(var key in obj){&quot;,<br>
+&quot;\tvar value = obj[key]&quot;,<br>
+&quot;}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;遍历对象快捷语法&quot;<br>
+},<br>
+&quot;axios&quot;: {<br>
+&quot;prefix&quot;: &quot;axios&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;axios({&quot;,<br>
+&quot;\turl:'请求路径',&quot;,<br>
+&quot;\tmethod:'get',&quot;,<br>
+&quot;\tdata: { 'post请求参数'},&quot;,<br>
+&quot;\tparams: { 'get请求参数'}&quot;,<br>
+&quot;}).then(res=&gt;{&quot;,<br>
+&quot;\t//成功回调&quot;,<br>
+&quot;\tconsole.log(res)&quot;,<br>
+&quot;});&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;axios请求&quot;<br>
+},<br>
+}</p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://zjp693.github.io/post/mei-ri-zuo-ye-de-bian-cheng-ti/">
+                <h3 class="post-title">
+                  每日作业的编程题
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://zjp693.github.io//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

@@ -2,13 +2,258 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-05-05T01:12:34.475Z</updated>
+    <updated>2020-05-16T09:56:14.050Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
     <logo>https://zjp693.github.io/images/avatar.png</logo>
     <icon>https://zjp693.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[VScode常见的代码用户片段]]></title>
+        <id>https://zjp693.github.io/post/vscode-chang-jian-de-dai-ma-yong-hu-pian-duan/</id>
+        <link href="https://zjp693.github.io/post/vscode-chang-jian-de-dai-ma-yong-hu-pian-duan/">
+        </link>
+        <updated>2020-05-16T09:54:58.000Z</updated>
+        <content type="html"><![CDATA[<p>下面的代码片段是js中常用的一些代码结构，复制粘贴到对应的javascript.json文件中即可<br>
+{<br>
+// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and<br>
+// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:<br>
+// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the<br>
+// same ids are connected.<br>
+// Example:<br>
+&quot;Print to console&quot;: {<br>
+&quot;prefix&quot;: &quot;log&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;console.log('<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 55: …t to console&quot;
+	}̲,
+	&quot;zhe shi aja…'>1&#039;);&quot;,
+		],
+		&quot;description&quot;: &quot;Log output to console&quot;
+	},
+	&quot;zhe shi ajax kuai jie jian&quot;: {
+		&quot;prefix&quot;: &quot;get&quot;,
+		&quot;body&quot;: [
+			&quot;//(1)创建小黄人对象&quot;,
+			&quot;var xhr = new XMLHttpRequest();&quot;,
+			&quot;//(2)设置请求方法与地址&quot;,
+			&quot;xhr.open(&#039;get&#039;,&#039;https://autumnfish.cn/api/hero/simple?name=凯特琳&#039;)&quot;,
+			&quot;//(3)发送请求&quot;,
+			&quot;xhr.send();&quot;,
+			&quot;//(4)注册响应回调&quot;,
+			&quot;xhr.onload = function(){&quot;,
+			&quot;\tconsole.log(xhr.responseText);&quot;,
+			&quot;};&quot;,
+		],
+		&quot;description&quot;: &quot;这是ajax快捷键&quot;
+	},
+	&quot;yulan tupian&quot;: {
+		&quot;prefix&quot;: &quot;ajax_yulan&quot;,
+		&quot;body&quot;: [
+			&quot;//1.给file表单元素注册onchange事件&quot;,
+			&quot;</span>('file表单').change(function () {&quot;,<br>
+&quot;\t//1.2 获取用户选择的图片&quot;,<br>
+&quot;\tvar file = this.files[0];&quot;,<br>
+&quot;\t//1.3 将文件转为src路径&quot;,<br>
+&quot;\tvar url = URL.createObjectURL(file);&quot;,<br>
+&quot;\t//1.4 将url路径赋值给img标签的src&quot;,<br>
+&quot;\t<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 35: …&#039;, url);&quot;,
+			&quot;}̲);&quot;
+		],
+		&quot;des…'>(&#039;img元素&#039;).attr(&#039;src&#039;, url);&quot;,
+			&quot;});&quot;
+		],
+		&quot;description&quot;: &quot;图片预览固定四个步骤&quot;
+	},
+	&quot;comment for function&quot;: {
+		&quot;prefix&quot;: &quot;///&quot;,
+		&quot;body&quot;: [
+			&quot;/**&quot;,
+			&quot;* @description:&quot;,
+			&quot;* @param {type} &quot;,
+			&quot;* @return: &quot;,
+			&quot;*/&quot;,
+		],
+		&quot;description&quot;: &quot;函数标准注释快捷键&quot;
+	},
+	&quot;jquery to ajax&quot;: {
+		&quot;prefix&quot;: &quot;ajax&quot;,
+		&quot;body&quot;: [
+			&quot;</span>.ajax({&quot;,<br>
+&quot;\turl:'',&quot;,<br>
+&quot;\ttype:'get',&quot;,<br>
+&quot;\tdataType:'json',&quot;,<br>
+&quot;\tdata:'',&quot;,<br>
+&quot;\tsuccess: function(backData){&quot;,<br>
+&quot;&quot;,<br>
+&quot;\t}&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;ajax请求&quot;<br>
+},<br>
+&quot;get for XMLHTTPRequest&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//(1).实例化ajax对象&quot;,<br>
+&quot;var xhr = new XMLHttpRequest();&quot;,<br>
+&quot;//(2).设置请求方法和地址&quot;,<br>
+&quot;//get请求的数据直接添加在url的后面 格式是 url?key=value&quot;,<br>
+&quot;xhr.open('get', '接口url');&quot;,<br>
+&quot;//(3).发送请求&quot;,<br>
+&quot;xhr.send();&quot;,<br>
+&quot;//(4).注册回调函数&quot;,<br>
+&quot;xhr.onload = function() {&quot;,<br>
+&quot;\tconsole.log(xhr.responseText)&quot;,<br>
+&quot;};&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;get-原生XMLHTTPRequest实现ajax&quot;<br>
+},<br>
+&quot;post for XMLHTTPRequest&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//(1).实例化ajax对象&quot;,<br>
+&quot;var xhr = new XMLHttpRequest();&quot;,<br>
+&quot;//(2).设置请求方法和地址&quot;,<br>
+&quot;xhr.open('post', '接口url');&quot;,<br>
+&quot;//(3).设置请求头（post请求才需要设置）&quot;,<br>
+&quot;xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');&quot;,<br>
+&quot;//(4).发送请求 ： 参数格式  'key=value' &quot;,<br>
+&quot;xhr.send('key=value');&quot;,<br>
+&quot;//(5).注册回调函数&quot;,<br>
+&quot;xhr.onload = function () {&quot;,<br>
+&quot;\tconsole.log(xhr.responseText);&quot;,<br>
+&quot;};&quot;<br>
+],<br>
+&quot;description&quot;: &quot;post-原生XMLHTTPRequest实现ajax&quot;<br>
+},<br>
+&quot;file to ajax&quot;: {<br>
+&quot;prefix&quot;: &quot;ajax-file&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \t at position 40: …tion(e){&quot;,
+			&quot;\̲t̲//禁用表单默认提交事件&quot;,
+…'>(&#039;提交按钮&#039;).on(&#039;click&#039;,function(e){&quot;,
+			&quot;\t//禁用表单默认提交事件&quot;,
+			&quot;\te.preventDefault();&quot;,
+			&quot;\t//创建FormData对象：参数是表单dom对象&quot;,
+			&quot;\tvar fd = new FormData(&#039;form表单DOM对象&#039;)&quot;,
+			&quot;\t</span>.ajax({&quot;,<br>
+&quot;\t\turl:'',&quot;,<br>
+&quot;\t\ttype:'post',&quot;,<br>
+&quot;\t\tdataType:'json',&quot;,<br>
+&quot;\t\tdata:fd,&quot;,<br>
+&quot;\t\tcontentType: false,&quot;,<br>
+&quot;\t\tprocessData: false,&quot;,<br>
+&quot;\t\tsuccess: function(backData){&quot;,<br>
+&quot;\t\t}&quot;,<br>
+&quot;\t});&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;表单提交ajax请求&quot;<br>
+},<br>
+&quot;express-server&quot;: {<br>
+&quot;prefix&quot;: &quot;express&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//1.导入模块&quot;,<br>
+&quot;const express = require('express');&quot;,<br>
+&quot;//2.创建服务器&quot;,<br>
+&quot;let app = express();&quot;,<br>
+&quot;//3.开启服务器&quot;,<br>
+&quot;app.listen(3000,()=&gt;{&quot;,<br>
+&quot;console.log('success');&quot;,<br>
+&quot;});&quot;<br>
+],<br>
+&quot;description&quot;: &quot;快速搭建express服务器&quot;<br>
+},<br>
+&quot;get element by id&quot;: {<br>
+&quot;prefix&quot;: &quot;gid&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var box = document.getElementById('box')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据id获取元素&quot;<br>
+},<br>
+&quot;enmu arr&quot;: {<br>
+&quot;prefix&quot;: &quot;forin&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;for(var i = 0;i&lt;arr.length;i++){&quot;,<br>
+&quot;console.log(arr[i]);&quot;,<br>
+&quot;}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;数组快速for循环遍历&quot;<br>
+},<br>
+&quot;get elment by tagname&quot;: {<br>
+&quot;prefix&quot;: &quot;gtg&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var liList = document.getElementsByTagName('li')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据标签名获取元素&quot;<br>
+},<br>
+&quot;get elment by classname&quot;: {<br>
+&quot;prefix&quot;: &quot;gcn&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;var oneList = document.getElementsByClassName('one')&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据类名获取元素&quot;<br>
+},<br>
+&quot;quick event&quot;: {<br>
+&quot;prefix&quot;: &quot;click&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//注册事件&quot;,<br>
+&quot;box.onclick = function(){}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;快速注册点击事件&quot;<br>
+},<br>
+&quot;需求分析&quot;: {<br>
+&quot;prefix&quot;: &quot;silu1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;/<em>&quot;,<br>
+&quot;1.分析需求(交互)：&quot;,<br>
+&quot;2.思路分析（事件三要素）&quot;,<br>
+&quot;\t获取元素：事件源：&quot;,<br>
+&quot;\t注册事件：事件类型&quot;,<br>
+&quot;\t事件处理：&quot;,<br>
+&quot;</em>/&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;分析需求&quot;<br>
+},<br>
+&quot;根据思路实现需求&quot;: {<br>
+&quot;prefix&quot;: &quot;silu2&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;//1.获取元素&quot;,<br>
+&quot;var box = document.getElementById('box');&quot;,<br>
+&quot;//2.注册事件&quot;,<br>
+&quot;box.onclick = function () {&quot;,<br>
+&quot;\t//3.事件处理:&quot;,<br>
+&quot;};&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;根据思路实现需求&quot;<br>
+},<br>
+&quot;遍历对象&quot;: {<br>
+&quot;prefix&quot;: &quot;forin1&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;for(var key in obj){&quot;,<br>
+&quot;\tvar value = obj[key]&quot;,<br>
+&quot;}&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;遍历对象快捷语法&quot;<br>
+},<br>
+&quot;axios&quot;: {<br>
+&quot;prefix&quot;: &quot;axios&quot;,<br>
+&quot;body&quot;: [<br>
+&quot;axios({&quot;,<br>
+&quot;\turl:'请求路径',&quot;,<br>
+&quot;\tmethod:'get',&quot;,<br>
+&quot;\tdata: { 'post请求参数'},&quot;,<br>
+&quot;\tparams: { 'get请求参数'}&quot;,<br>
+&quot;}).then(res=&gt;{&quot;,<br>
+&quot;\t//成功回调&quot;,<br>
+&quot;\tconsole.log(res)&quot;,<br>
+&quot;});&quot;,<br>
+],<br>
+&quot;description&quot;: &quot;axios请求&quot;<br>
+},<br>
+}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[每日作业的编程题]]></title>
         <id>https://zjp693.github.io/post/mei-ri-zuo-ye-de-bian-cheng-ti/</id>
@@ -8233,121 +8478,6 @@ for (var i = 0; i &lt; newans.length; i++) {
         j++
 }
 console.log(`${j * 3}分`);
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jsvascript基础简答题]]></title>
-        <id>https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/</id>
-        <link href="https://zjp693.github.io/post/javascript-ji-chu-jian-da-ti/">
-        </link>
-        <updated>2020-03-05T04:01:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>文章收集于学校上课练习，互联网</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>文章收集于学校上课练习，互联网</p>
-<!-- more -->
-<ol>
-<li>
-<h5 id="js数据类型有哪些怎么判断一个变量的数据类型">js数据类型有哪些，怎么判断一个变量的数据类型？</h5>
-</li>
-</ol>
-<pre><code class="language-js">jS数据类型有：Number数字、String字符串、Boolean布尔、Null空、Undefined未定义、Object对象
-使用 typeof 变量 可以判断该变量的数据类型，但是typeof只能判断的是简单数据类型，不能判断复杂数据类型。
-</code></pre>
-<ol start="2">
-<li>
-<h5 id="列举数组中常用的方法并说明各自的作用">列举数组中常用的方法，并说明各自的作用？</h5>
-</li>
-</ol>
-<pre><code class="language-js">unshift();向数组的开头添加一个或更多元素，并返回新的长度。			 会改变数组的长度
-push(); 向数组的末尾添加一个或多个元素，并返回新的长度。			 会改变数组的长度
-
-shift();把数组的第一个元素从其中删除，并返回第一个元素的值。		    会改变数组的长度
-pop(); 用于删除数组的最后一个元素并返回删除的元素。				   会改变数组的长度
-
-indexOf(); 查看某个元素在数组中的下标位置，有返回下标，无返回-1
-splice(开始元素，删除个数，添加元素); 增删改作用集一身  			   会改变原始数组。
-
-slice(); 截取元素，返回的是截取之后元素组成的数组					不会改变原始数组
-concat(); 合并数组，返回值是合并之后的新数组
-</code></pre>
-<ol start="3">
-<li>
-<h5 id="javascript中的循环有哪些while循环和dowhile的区别是什么">javascript中的循环有哪些，while循环和do...while的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">for循环、while循环、do...while循环
-
-区别：while先判断条件再执行，do..while先执行一次再判断条件是否继续执行
-</code></pre>
-<ol start="4">
-<li>
-<h5 id="javascript中的有几层含义分别是什么">javascript中的‘+’有几层含义，分别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">第一层意义，当 + 号的两边都是number类型的时候，此时 + 号 代表数学符号加法
-
-第二层意义，当 + 号的两边，只要有一边是string类型的时候，此时 + 号代表字符串的连接符
-
-第三层意义，+可以进行数据类型的隐式转换，给一个string类型的数据前面加上+号，就会把这个字符串变成数字
-</code></pre>
-<ol start="5">
-<li>
-<h5 id="js中break-和-continue-的区别是什么">js中break 和 continue 的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">break：跳出整个循环执行下面的代码
- continue：跳出本轮循环执行下一轮循环
-</code></pre>
-<ol start="6">
-<li>
-<h5 id="列举目前你遇到undefined的情况">列举目前你遇到undefined的情况？</h5>
-</li>
-</ol>
-<pre><code class="language-js">1）变量只声明没有赋值，会返回undefined；
-
-2）当下标超过数组或字符串的范围 ，会返回undefined；
-
-3）当对象调用不存在的属性时，会返回undefined；
-
-4）当return没有返回值，会返回undefined；
-</code></pre>
-<ol start="7">
-<li>
-<h5 id="产生一个10-50的随机数包含10也包含50">产生一个10-50的随机数(包含10也包含50)?</h5>
-</li>
-</ol>
-<pre><code class="language-js">Math.random() * (50 - 10 + 1) + 10
-
-【注意通用公式是: 产生一个[n,m]的整数，包含（n和m）
-
-Math.ceil (Math.random()*(m-n)+n)】
-</code></pre>
-<ol start="8">
-<li>
-<h5 id="列举5个字符串的方法并说明各自的作用">列举5个字符串的方法，并说明各自的作用？</h5>
-</li>
-</ol>
-<pre><code class="language-js">charAt(索引); 返回对象字符
-
-concat(); 拼接字符串
-
-indexOf(); 查找某串字符在字符串内的索引，有返回索引无返回-1
-
-trim(); 去掉字符串前后的空格
-
-slice() 从start位置 截取到end位置
-
-split() 选择字符分割成数组储存
-</code></pre>
-<ol start="9">
-<li>
-<h5 id="join和split的区别是什么">join()和split()的区别是什么？</h5>
-</li>
-</ol>
-<pre><code class="language-js">join()；是数组方法，把数组中的元素转成字符串连接
-
-split(); 是字符串的方法，方法用于把一个字符串分割成字符串数组
 </code></pre>
 ]]></content>
     </entry>
