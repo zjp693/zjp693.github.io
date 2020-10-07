@@ -2,13 +2,65 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2020-09-26T15:58:43.020Z</updated>
+    <updated>2020-10-07T01:46:57.409Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
     <logo>https://zjp693.github.io/images/avatar.png</logo>
     <icon>https://zjp693.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[Vue基础_指令]]></title>
+        <id>https://zjp693.github.io/post/vue-ji-chu-_-zhi-ling/</id>
+        <link href="https://zjp693.github.io/post/vue-ji-chu-_-zhi-ling/">
+        </link>
+        <updated>2020-10-07T01:45:45.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="指令">指令</h2>
+<h4 id="v-show-显示隐藏">v-show 显示隐藏</h4>
+<ul>
+<li>v-show指令的作用是：根据真假切换元素的显示状态</li>
+<li>原理是修改元素的display,实现显示隐藏</li>
+<li>指令后面的内容，最终都会解析为布尔值</li>
+<li>数据改变之后，对应元素的显示状态会同步更新</li>
+</ul>
+<h4 id="v-if-条件判断">v-if  条件判断</h4>
+<ul>
+<li>v-if指令的作用是：根据表达式的真假切换元素的显示状态</li>
+<li>本质是通过操纵dom元素来切换显示状态</li>
+<li>表达式的值为true,元素存在dom树中，为false,从dom树中移除</li>
+<li>频繁的切换v-show ,反之使用v-if,前者的切换消耗小</li>
+</ul>
+<h4 id="v-bind-属性绑定">v-bind 属性绑定</h4>
+<ul>
+<li>v-bind指令的作用是：为元素绑定属性</li>
+<li>完整的写法是v-bind属性名</li>
+<li>简写的话可以直接省略v-bind,只保留属性名</li>
+<li>需要动态的增删class建议使用对象的方式</li>
+</ul>
+<h4 id="v-for-循环">v-for 循环</h4>
+<ul>
+<li>v-for指令的作用是：根据数据生成列表结构</li>
+<li>数组经常和v-for结合使用</li>
+<li>语法是（item,index) in 数据</li>
+<li>item和index可以结合其他指令一起使用</li>
+<li>数组长度的更新会同步到页面，是响应式</li>
+</ul>
+<h4 id="v-on-绑定事件">v-on  绑定事件</h4>
+<ul>
+<li>事件绑定的方法写成函数调用的形式，可以传入自定义参数</li>
+<li>定义方法时需要形参来接收传入的实参</li>
+<li>事件的后面跟上.修饰符可以对事件进行限制</li>
+<li>.enter可以限制触发的按键为回车</li>
+<li>事件修饰符有多种</li>
+</ul>
+<h4 id="v-model-双向数据绑定">v-model  双向数据绑定</h4>
+<ul>
+<li>v-model指令的作用是便携的设置和获取表单元素的值</li>
+<li>绑定的元素会和表单元素值相关联</li>
+<li>绑定数据  ==  表单元素的值</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VScode常见的代码用户片段]]></title>
         <id>https://zjp693.github.io/post/vscode-chang-jian-de-dai-ma-yong-hu-pian-duan/</id>
