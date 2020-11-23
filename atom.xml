@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zjp693.github.io/</id>
     <title>学习笔记</title>
-    <updated>2021-01-06T03:28:23.527Z</updated>
+    <updated>2020-11-23T03:33:14.279Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zjp693.github.io/"/>
     <link rel="self" href="https://zjp693.github.io/atom.xml"/>
     <logo>https://zjp693.github.io/images/avatar.png</logo>
     <icon>https://zjp693.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 学习笔记</rights>
+    <rights>All rights reserved 2020, 学习笔记</rights>
     <entry>
         <title type="html"><![CDATA[测试文章]]></title>
         <id>https://zjp693.github.io/post/ce-shi-wen-zhang/</id>
